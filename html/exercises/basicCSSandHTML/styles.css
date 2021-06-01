@@ -1,0 +1,21 @@
+h3 {
+    color: green;
+    text-decoration: underline;
+}
+
+h2 {
+    color: blue;
+    border: solid black 1px;
+    margin-bottom: 0;
+}
+
+li:nth-child(2) {
+    background-color: black;
+    color: orange;
+}
+
+h2+p {
+    padding-left: 2em;
+    background-color: teal;
+    margin-top: 0;
+}

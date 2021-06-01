@@ -1,0 +1,100 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+    background-color: #AAA;
+}
+
+tr:nth-child(2) {
+    background-color: #DDD;
+}
+
+tr:nth-child(4) {
+    background-color: #DDD;
+}
+
+tr:nth-child(6) {
+    background-color: #DDD;
+}
+
+nav {
+    background-color: #5f5f5f;
+    padding: 0;
+}
+
+nav a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+div {
+    padding: 5px;
+}
+
+nav a:last-child {
+    float: right;
+}
+
+table {
+    clear: both;
+    width: 100%;
+}
+
+#listDiv,
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#listDiv div {
+    margin: 3px;
+}
+
+.movies-list {
+    background-color: #ddd;
+}
+
+.movies-list>div {
+    color: rgb(68, 77, 85);
+    padding-top: 15px;
+    display: flex;
+    width: 280px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+
+.columns {
+    column-count: 4;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+}
+
+button:active {
+    background-color: red;
+}
+
+.required::after {
+    content: '*';
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
