@@ -1,0 +1,64 @@
+1.) create a component that has two buttons.
+One button will be disabled by default.
+When either button is clicked, the other will 
+become enabled and the button that was just clicked 
+will become disabled.
+
+
+
+
+Change the app.component
+so that when a hero is selected,
+it is displayed as the "Hero Selected"
+and is not shown in the #heroes div
+
+
+1.) Create a component that displays a 10 by 10 grid 
+where each grid cell is a solid color.
+There will be 10 possible colors for each grid cell.
+Black, white, gray,
+red, green, blue, 
+cyan, magenta, yellow, and pink
+
+Use a 2D array of numbers as the model. Each index of the 
+2D array will be a random number 0-9. Each number
+will determine the color that will be in the cell on your 
+component.
+
+If two cells are touching (not diagonally), then use the 
+border style property to draw an outline between all 
+connected cells of the same color. The border cannot
+be drawn inbetween two cells of the same color (therefore
+partitioning them)
+
+2.) Create MineSweeper
+
+The rules of minesweeper:
+easy, medium, and hard settings have a different number 
+of randomly placed bombs on differently sized grids. 
+
+All positions of the grid playing area are hidden at the 
+start of the game. When the player clicks on any cell,
+the cell will be revealed. If the cell contains a bomb, 
+then the player loses. If the space does not contain a bomb,
+then play continues. Once all spaces are cleared leaving 
+only bomb spaces remaining, then the player wins.
+
+If a space does not have a bomb, but borders a bomb in 
+any of its 8 neighboring cells, then that cell will 
+contain a number. When that cell is revealed, the number 
+will display the total number of bombs in all 8 neighboring
+cells.
+
+If a space has no neighboring bombs, then when it is revealed,
+all neighboring cells will also be revealed.
+
+The player may right click a cell to place a flag on that space.
+The flag may be used by the player to mark a bomb space or a 
+potential bomb space for later reference.
+
+Easy:    8 x 10 - 10 bombs
+Med:    14 x 18 - 40 bombs
+Hard:   20 x 24 - 99 bombs
+
+possible html/css tricks. Maybe try grid or table

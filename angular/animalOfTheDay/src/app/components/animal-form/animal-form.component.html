@@ -1,0 +1,70 @@
+<div class="root">
+    <ng-container *ngTemplateOutlet="addNewAnimal">
+    </ng-container>
+
+    <button *ngIf="animal && !newAnimal && !showForm" type="button" (click)="onEditClicked()">Edit {{animal.name}}</button>
+
+    <ng-container *ngIf="showForm">
+        <ng-container *ngTemplateOutlet="theForm">
+        </ng-container>
+    </ng-container>
+</div>
+
+<ng-template #addNewAnimal>
+    <button type="button" (click)="onCreateNewClicked()">
+        + New
+    </button>
+</ng-template>
+
+<ng-template #theForm>
+    <div class="form-container">
+        <form #itemForm="ngForm">
+
+            <div class="select-container">
+                <input required type="text" name="name" [(ngModel)]="animal.name" placeholder="Animal Name">
+            </div>
+            <div class="select-container">
+                <input required type="text" name="latinName" [(ngModel)]="animal.latinName" placeholder="Scientific Name">
+            </div>
+            <div class="select-container">
+                <input required type="number" name="numLegs" [(ngModel)]="animal.numLegs" placeholder="Number of legs">
+            </div>
+            <div class="select-container">
+                <input required type="text" name="habitat" [(ngModel)]="animal.habitat" placeholder="Habitat">
+            </div>
+            <div class="select-container">
+
+                <select required [(ngModel)]="animal.className" name="className">
+                <option disabled
+                        value="">Select a class</option>
+                <option *ngFor="let option of classes"
+                        [value]="option">{{option | titlecase}}</option>
+            </select>
+            </div>
+
+            <div class="select-container">
+
+                <select required [(ngModel)]="animal.diet" name="diet">
+                <option disabled value="">Select a diet</option>
+                <option *ngFor="let diet of diets"
+                        [value]="diet">{{diet | titlecase }}</option>
+            </select>
+
+            </div>
+
+            <ng-container *ngIf="!newAnimal; else create">
+                <button type="submit" (click)="onUpdateClicked()">Update {{originalName}}</button>
+                <button type="button" class="delete" (click)="onDeleteClicked()">Delete Animal</button>
+            </ng-container>
+
+            <!-- this template must be defined 
+        inside the form tag to allow access 
+        to 'itemForm' variable -->
+            <ng-template #create>
+                <button type="submit" (click)="onSubmitNewClicked()" [disabled]="!itemForm.valid">
+                    Submit New Animal
+                </button>
+            </ng-template>
+        </form>
+    </div>
+</ng-template>

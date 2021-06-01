@@ -1,0 +1,38 @@
+<p>minesweeper works!</p>
+
+<table>
+    <tr>
+        <th [attr.colspan]="grid[0].length">
+            <div class="header">
+                <div class="select">
+                    <select [(ngModel)]="difficulty" (change)="difficultyChange()" style="float: left;">
+                        <option value="0">Easy</option>
+                        <option value="1">Medium</option>
+                        <option value="2">Hard</option>
+                    </select>
+                </div>
+                <div class="flag-timer">
+                    <div class="flag-count">
+                        <img src="https://www.google.com/logos/fnbx/minesweeper/flag_icon.png">
+                        <!-- The flag symbol -->
+                        {{flagsRemaining}}
+                    </div>
+                    <div class="timer">
+                        <img src="https://www.google.com/logos/fnbx/minesweeper/clock_icon.png">
+                    </div>
+                </div>
+                <div class="links">
+                    X
+                </div>
+            </div>
+        </th>
+    </tr>
+    <tr *ngFor="let row of grid; index as i">
+        <td *ngFor="let cell of row; index as j" (click)="cellClicked(i,j)" (contextmenu)="cellRightClicked($event, i, j)" [ngClass]="{'revealed': cell.isRevealed, 'one': cell.neighborBombs == 1, 'two': cell.neighborBombs == 2, 'three': cell.neighborBombs == 3, 'four': cell.neighborBombs == 4, 'five': cell.neighborBombs == 5, 'six': cell.neighborBombs == 6, 'seven': cell.neighborBombs == 7, 'eight': cell.neighborBombs == 8}">
+            <img *ngIf="!cell.isRevealed && cell.flag" src="https://www.google.com/logos/fnbx/minesweeper/flag_iconpng">
+            <span> {{cell.isRevealed ? (cell.isBomb ? "*" : (cell.neighborBombs > 0 ? cell.neighborBombs : "")) : ""}}
+            </span>
+
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,51 @@
+.root {
+    width: calc(100% - 1em);
+    height: calc(100% - 1em);
+    border-radius: 1em;
+    margin: 0;
+    background-color: var(--green);
+    border: solid var(--darkGreen) 0.5em;
+}
+
+.splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.splash * {
+    margin: 1em;
+    text-align: center;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: calc(100%);
+    background-color: var(--darkGreen);
+    margin: 0;
+    height: 4em;
+}
+
+.name>* {
+    margin: 0;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    color: var(--text);
+}
+
+.name> :first-child {
+    text-transform: capitalize;
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 0 0.5em;
+}

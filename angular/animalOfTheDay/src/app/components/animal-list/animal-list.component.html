@@ -1,0 +1,8 @@
+<div class="root">
+    <div class="list">
+        <div *ngFor="let animal of animals; index as i" (click)="onClick(i)" [ngClass]="{'animal': true, 'selected': i == animalSelectedIndex}">
+            <span [class]="animal.className"></span>
+            <span class="name">{{animal.name}}</span>
+        </div>
+    </div>
+</div>

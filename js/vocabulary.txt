@@ -1,0 +1,34 @@
+variable - something in code that is a value - that you can reference - it is changable
+identifier - the word for a variable - the technical term
+operator - + - * % =    == >= < !=
+
+decleration - state that a variable exists
+initialization - assign a value to the variable
+assignment - giving a variable a new value
+
+keyword - reserved word defined by the programming language and its libraries
+datatype - type of data, number, string, boolean, ...
+literal - a literal value not in a variable ex: 5, "5", "Hello world!"
+
+type casting - turn a value from one data type to another data type
+
+compile - put code into assembly language - checking for errors - seeing if syntax is correct
+execute - running the program
+
+library - file or files that have functions defined that we can use in out files
+
+increment/decrement - add or subtract 1 with ++ or --
+
+scope - how much vision does the program have - can it see my variables?
+function - some code that can be called multiple times as a way to reuse code - accepts arguments
+local variable - varaible in scope - meaning the local code block has access to this variable 
+global bariable - a variable that "has no scope" - can be used in the whole "file"
+
+(stack) overflow - when you run out of memory because you kept calling too many functions
+        (you're revcursive function is infinite)
+out of bounds - an index that does not exist in an array
+
+enumeration - a strict set of values in a list for future use
+
+primitive - a 'literal' value - ex. string, number, bool 
+non-primitive - a pointer or reference to another value - ex. array, obj

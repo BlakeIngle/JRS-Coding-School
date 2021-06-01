@@ -1,0 +1,95 @@
+table,
+th {
+    border: solid black 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    font-size: 18pt;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: solid rgb(11, 61, 11) 2px;
+}
+
+td {
+    background-color: rgb(0, 151, 0);
+}
+
+span {
+    font-family: 'Lato';
+    font-weight: 600;
+}
+
+tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: rgb(188, 255, 157);
+}
+
+td:hover {
+    cursor: pointer;
+    background-color: rgb(0, 68, 0);
+}
+
+tr:nth-child(even) td:nth-child(even):hover,
+tr:nth-child(odd) td:nth-child(odd):hover {
+    background-color: rgb(118, 175, 33);
+}
+
+.revealed {
+    background-color: whitesmoke !important;
+}
+
+.header,
+.select,
+.timer,
+.flag-count,
+.flag-timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: row nowrap;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.one {
+    color: rgb(114, 149, 255);
+}
+
+.two {
+    color: rgb(90, 175, 81);
+}
+
+.three {
+    color: rgb(255, 93, 93);
+}
+
+.four {
+    color: rgb(187, 78, 255);
+}
+
+.five {
+    color: rgb(255, 177, 83);
+}
+
+.six {
+    color: rgb(58, 232, 255);
+}
+
+.seven {
+    color: rgb(26, 26, 26);
+}
+
+.eight {
+    color: gray;
+}

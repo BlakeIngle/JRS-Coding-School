@@ -1,0 +1,36 @@
+<div>
+    <div>
+        <div *ngIf="!submitted">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" required [(ngModel)]="pepper.name" name="name" />
+            </div>
+
+            <div>
+                <label for="color">Color</label>
+                <select id="color" required name="color" [(ngModel)]="pepper.color">
+                    <option disabled value="">Select a color</option>
+                    <option *ngFor="let color of colors">{{color}}</option>
+                </select>
+                <!-- <input type="text" id="color" required [(ngModel)]="pepper.color" name="color" /> -->
+            </div>
+
+            <div>
+                <label for="min">Min S.H.U.</label>
+                <input type="text" id="min" required [(ngModel)]="pepper.shu.min" name="min" />
+            </div>
+
+            <div>
+                <label for="max">Max S.H.U.</label>
+                <input type="text" id="max" required [(ngModel)]="pepper.shu.max" name="max" />
+            </div>
+            <p>{{pepper.name}} {{pepper.color}} {{pepper.shu.min}} {{pepper.shu.max}}</p>
+            <button (click)="savePepper()">Submit</button>
+        </div>
+
+        <div *ngIf="submitted">
+            <h4>Pepper was submitted</h4>
+            <button (click)="newPepper()">Add</button>
+        </div>
+    </div>
+</div>

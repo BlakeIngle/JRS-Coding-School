@@ -1,0 +1,31 @@
+<div>
+    <div *ngIf="currentPepper">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" required [(ngModel)]="currentPepper.name" name="name" />
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <select id="color" required name="color" [(ngModel)]="currentPepper.color">
+                <option disabled value="">Select a color</option>
+                <option *ngFor="let color of colors">{{color}}</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="min">Min S.H.U.</label>
+            <input type="text" id="min" required [(ngModel)]="currentPepper.shu.min" name="min" />
+        </div>
+
+        <div>
+            <label for="max">Max S.H.U.</label>
+            <input type="text" id="max" required [(ngModel)]="currentPepper.shu.max" name="max" />
+        </div>
+
+        <button (click)="updatePepper()">Update</button>
+    </div>
+
+    <div *ngIf="!currentPepper">
+        <p>Select a pepper</p>
+    </div>
+</div>

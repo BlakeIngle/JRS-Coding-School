@@ -1,0 +1,18 @@
+<div class="root">
+    <div *ngIf="animal; else noAnimalSelected">
+        <div class="name">
+            <h1>{{animal.name}} :</h1>
+            <h3><i> {{animal.latinName}}</i></h3>
+        </div>
+        <div class="inner-card">
+            <p>Information about the {{animal.name}}: The {{animal.name}} is part of the {{animal.className}} class. The {{animal.name}} is {{animal.diet == "carnivore" ? "a" : "an"}} {{animal.diet}}. The {{animal.name}} has the following habitat(s): {{animal.habitat}}.</p>
+
+        </div>
+    </div>
+
+    <ng-template #noAnimalSelected>
+        <div class="splash">
+            <h2>Select an animal to see more detail</h2>
+        </div>
+    </ng-template>
+</div>

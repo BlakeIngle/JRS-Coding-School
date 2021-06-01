@@ -1,0 +1,23 @@
+<!-- <div>
+    <nav>
+        <a href="#"></a>
+        <div>
+            <li>
+                <a routerLink="peppers">Peppers</a>
+            </li>
+            <li>
+                <a routerLink="add">Add</a>
+            </li>
+        </div>
+    </nav>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div> -->
+
+<div>
+    <peppers-list (selectPepper)="onPepperSelected($event)"></peppers-list>
+    <pepper-adder></pepper-adder>
+    <pepper-card [currentPepper]="selectedPepper"></pepper-card>
+</div>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+:root {
+    --green: rgb(165, 255, 155);
+    --darkGreen: rgb(113, 138, 109);
+    --darkestGreen: rgb(47, 62, 44);
+    --text: rgb(40, 40, 40);
+    --sand: rgb(212, 204, 178);
+}
+
+body {
+    background-color: var(--sand);
+    background-image: url(../src/assets/images/animals.jpg);
+}
+
+*:not(input) {
+    font-family: 'Rock Salt', cursive;
+}

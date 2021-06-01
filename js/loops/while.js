@@ -1,0 +1,3 @@
+while (false) {
+    // do something
+}

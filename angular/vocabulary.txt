@@ -1,0 +1,14 @@
+interpolation - {{ }} embedding expressions into marked up text.
+input - [ ] send values to a comopnent from the parent
+output - ( ) emit values from a child to its parent
+        (send output with EventEmitter objects)
+
+data-binding - [ ] send input as a variable
+two-way-binding - [()] bind a value with a variable in the parent
+    updates the value in the parent automatically from output from the child
+
+template variable - # used inside of a tag to refer to that component (as an html template)
+
+directive 
+    structural directives:
+        *ngIf - create an element on the DOM or not

@@ -1,0 +1,33 @@
+ul {
+    list-style-type: none;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    color: rgb(230, 230, 230);
+}
+
+.green {
+    background-color: rgb(102, 195, 79);
+}
+
+.red {
+    background-color: rgb(219, 99, 88);
+}
+
+.yellow {
+    background-color: rgb(249, 251, 87);
+    color: black;
+}
+
+.brown {
+    background-color: rgb(75, 65, 48);
+}
+
+.orange {
+    background-color: rgb(221, 151, 59);
+}

@@ -1,0 +1,5 @@
+var fs = require('fs')
+
+fs.readFile('numbers.txt', function(err, data) {
+    console.log(data.toString())
+});

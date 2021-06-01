@@ -1,0 +1,54 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    height: 10vh;
+    background-color: var(--darkGreen);
+    border-radius: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+}
+
+.header,
+.footer {
+    margin: 0.5em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 1em);
+    max-width: calc(850px - 1em);
+}
+
+.body {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 850px;
+}
+
+.body :first-child {
+    width: 50%;
+    max-width: 250px;
+}
+
+.body>* {
+    height: 60vh;
+    margin: 0 0.5em;
+}
+
+.grow {
+    flex-grow: 2;
+}
+
+.footer {
+    height: 20vh;
+}

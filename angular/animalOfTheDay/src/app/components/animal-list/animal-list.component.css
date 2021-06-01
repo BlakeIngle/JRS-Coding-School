@@ -1,0 +1,73 @@
+.root {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--darkestGreen) 0%, var(--darkGreen) 5%, var(--darkGreen) 95%, var(--darkestGreen) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+}
+
+.list {
+    width: calc(100% - 2em);
+    height: calc(100% - 4em);
+    padding: 1em 1em;
+    overflow-y: scroll;
+    mask-image: linear-gradient(transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.animal {
+    margin: 0.5em;
+    background-color: var(--green);
+    padding: 0.25em;
+    height: 2em;
+    border-radius: 0.5em;
+    transition: transform 0.2s ease-out;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+}
+
+.animal:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 3px var(--darkestGreen);
+    transform: scale(1.05);
+}
+
+.animal.selected {
+    box-shadow: 0 0 2px 3px var(--darkestGreen);
+    transform: scale(1.05) translateX(10px);
+}
+
+.name {
+    padding-left: 0.5em;
+    font-size: 8pt;
+    letter-spacing: 2px;
+}
+
+
+/* 🦁 🐸 🦅 🐠 🦎 🪱 */
+
+.mammal::before {
+    content: "🦁";
+}
+
+.bird::before {
+    content: "🦅"
+}
+
+.reptile::before {
+    content: "🦎"
+}
+
+.invertebrate::before {
+    content: "🪱"
+}
+
+.fish::before {
+    content: "🐠"
+}
+
+.amphibian::before {
+    content: "🐸"
+}

@@ -1,0 +1,64 @@
+[{
+    "name": "tiger",
+    "latinName": "Panthera tigris",
+    "className": "mammal",
+    "numLegs": 4,
+    "diet": "carnivore",
+    "habitat": "tropical rainforest, temperate forest, savannas"
+}, {
+    "name": "elephant",
+    "latinName": "Loxondonta",
+    "className": "mammal",
+    "numLegs": 4,
+    "diet": "herbivore",
+    "habitat": "rainforest, savanna"
+}, {
+    "name": "peacock butterfly",
+    "latinName": "Aglais io",
+    "className": "invertebrate",
+    "numLegs": 6,
+    "diet": "herbivore",
+    "habitat": "grassland, tropical rainforest"
+}, {
+    "name": "green tree python",
+    "latinName": "Morelia viridis",
+    "className": "reptile",
+    "numLegs": 0,
+    "diet": "carnivore",
+    "habitat": "rainforest"
+}, {
+    "name": "red fox",
+    "latinName": "Vulpes vulpes",
+    "className": "mammal",
+    "numLegs": 4,
+    "diet": "omnivore",
+    "habitat": "farmland, forest"
+}, {
+    "name": "Koi fish",
+    "latinName": "Cyprinus rubrofuscus",
+    "className": "fish",
+    "numLegs": 0,
+    "diet": "omnivore",
+    "habitat": "fresh-water pond"
+}, {
+    "name": "red-crowned crane",
+    "latinName": "Grus japonensis",
+    "className": "bird",
+    "numLegs": 2,
+    "diet": "omnivor",
+    "habitat": "wetland, marsh"
+}, {
+    "name": "red-eyed tree frog",
+    "latinName": "Agalychnis callidryas",
+    "className": "amphibian",
+    "numLegs": 4,
+    "diet": "carnivore",
+    "habitat": "rainforest, pond, river"
+}, {
+    "name": "fire salamander",
+    "latinName": "Salamandra salamandra",
+    "className": "amphibian",
+    "numLegs": 4,
+    "diet": "carnivore",
+    "habitat": "deciduous forest, pond"
+}]

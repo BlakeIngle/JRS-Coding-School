@@ -1,0 +1,5 @@
+name the file - fileName.js
+write code - console.log("Hello world!")
+execute: node fileName.ext 
+
+output - Hello world!

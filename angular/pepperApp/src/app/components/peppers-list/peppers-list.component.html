@@ -1,0 +1,52 @@
+<!-- <div>
+    <div>
+        <div>
+            <input type="text" placeholder="Search by name" [(ngModel)]="name" />
+            <div>
+                <button type="button" (click)="searchName()"></button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4>Peppers List</h4>
+        <ul *ngFor="let pepper of peppers; index as i" (click)="setActivePepper(pepper, i)">
+            <li>{{ pepper.name }}</li>
+        </ul>
+
+        <button type="button" (click)="removeAllPeppers()">
+            Remove All
+        </button>
+    </div>
+
+    <div>
+        <div *ngIf="currentPepper">
+            <h4>Pepper</h4>
+            <div>
+                <label><strong>Name:</strong></label> {{ currentPepper.name }}
+            </div>
+            <div>
+                <label><strong>Color:</strong></label> {{ currentPepper.color }}
+            </div>
+
+            <div *ngIf="!currentPepper">
+                <br>
+                <p>Please click on a pepper...</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div *ngIf="peppers">
+    <ul>
+        <li *ngFor="let pepper of peppers">
+
+            <div class="card" (click)="onPepperClick(pepper)" [ngClass]="{'red': pepper.color == 'red', 'green': pepper.color == 'green', 'brown': pepper.color == 'brown', 'yellow': pepper.color == 'yellow', 'orange': pepper.color == 'orange'}">
+                <h4>{{ pepper.name }}</h4>
+                <p *ngIf="pepper.shu">🔥 {{ pepper.shu.min }} - {{ pepper.shu.max }}</p>
+                <button type="button" (click)="deletePepper(pepper)">Delete</button>
+            </div>
+
+        </li>
+    </ul>
+</div>
