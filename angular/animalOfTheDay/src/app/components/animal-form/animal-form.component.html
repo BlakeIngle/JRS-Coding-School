@@ -35,20 +35,21 @@
             <div class="select-container">
 
                 <select required [(ngModel)]="animal.className" name="className">
-                <option disabled
-                        value="">Select a class</option>
-                <option *ngFor="let option of classes"
-                        [value]="option">{{option | titlecase}}</option>
-            </select>
+                    <option disabled
+                            value="">Select a class</option>
+                    <option *ngFor="let option of classes"
+                            [value]="option">{{option | titlecase}}</option>
+                </select>
             </div>
 
             <div class="select-container">
 
                 <select required [(ngModel)]="animal.diet" name="diet">
-                <option disabled value="">Select a diet</option>
-                <option *ngFor="let diet of diets"
-                        [value]="diet">{{diet | titlecase }}</option>
-            </select>
+                    <option disabled
+                            value="">Select a diet</option>
+                    <option *ngFor="let diet of diets"
+                            [value]="diet">{{diet | titlecase }}</option>
+                </select>
 
             </div>
 

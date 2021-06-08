@@ -5,6 +5,7 @@
     margin: 0;
     background-color: var(--green);
     border: solid var(--darkGreen) 0.5em;
+    box-shadow: inset 0 0 1em var(--darkestGreen);
 }
 
 .splash {

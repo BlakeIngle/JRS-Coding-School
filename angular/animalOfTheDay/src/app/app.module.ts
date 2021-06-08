@@ -10,6 +10,7 @@ import { AnimalFormComponent } from './components/animal-form/animal-form.compon
 import { AnimalListComponent } from './components/animal-list/animal-list.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { AnimalMainPageComponent } from './components/animal-main-page/animal-main-page.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AnimalMainPageComponent } from './components/animal-main-page/animal-ma
     AnimalFormComponent,
     AnimalListComponent,
     ConfirmDialogComponent,
-    AnimalMainPageComponent
+    AnimalMainPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

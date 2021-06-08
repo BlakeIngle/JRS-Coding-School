@@ -46,12 +46,6 @@ export class AnimalFormComponent implements OnInit {
 
   }
 
-  ngOnChange() {
-
-    console.log(this.animal.diet)
-    console.log(this.diets)
-  }
-
   reset() {
     this.showForm = false;
     this.newAnimal = true;
@@ -107,7 +101,6 @@ export class AnimalFormComponent implements OnInit {
       this.animalAPIService.deleteAnimalById(this.animal._id)
       .subscribe(data => {
 
-        console.log("refreshing emit")
         this.selectedAnimalService.refreshList$.next()
         this.reset();
       },

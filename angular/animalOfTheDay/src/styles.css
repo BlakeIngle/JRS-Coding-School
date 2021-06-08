@@ -14,6 +14,23 @@ body {
     background-image: url(../src/assets/images/animals.jpg);
 }
 
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
 *:not(input) {
     font-family: 'Rock Salt', cursive;
+}
+
+button {
+    color: var(--darkestGreen);
+    background-color: var(--green);
+    border: none;
+    border-radius: 1em;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin: 0.5em;
+    box-shadow: 0 0 1em var(--darkestGreen);
 }

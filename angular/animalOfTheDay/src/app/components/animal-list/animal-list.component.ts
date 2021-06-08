@@ -23,7 +23,7 @@ export class AnimalListComponent implements OnInit {
 
       this.refreshSubscription = this.animalSelectedService.refreshList$
       .subscribe(() => {
-        console.log("event recieved; refreshing")
+        
         this.refreshList();
       });
     }
@@ -46,5 +46,4 @@ export class AnimalListComponent implements OnInit {
     this.animalSelectedIndex = index;
     this.animalSelectedService.newAnimalSelected$.next(this.animals[index])
   }
-
 }

@@ -1,6 +1,17 @@
 <div class="root">
+
+
+
+
+    <!-- <a routerLink="/login"><button>click me</button></a> -->
+
+    <!-- <button type="button" (click)="goToLogin()"></button> -->
+    <!-- <login></login> -->
+
     <div class="header">
-        <h1> * Animal Of The Day * </h1>
+        <h1> * Animals * </h1>
+        <a *ngIf="!user" routerLink="/login" title="Sign In"><button type="button">Sign In</button></a>
+        <p *ngIf="user">{{user.username}}</p>
     </div>
 
     <div class="body">

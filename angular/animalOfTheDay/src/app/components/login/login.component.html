@@ -1,0 +1,26 @@
+<div class="root">
+
+    <div class="main">
+
+
+        <a routerLink="">HOME</a>
+        <div class="login">
+            <p *ngIf="loginFailed">** username or password was incorrect **</p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username" (ngModelChange)="removeSpaces($event, true)">
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" [(ngModel)]="password" (ngModelChange)="removeSpaces($event, false)">
+            <br>
+            <button type="button" (click)="login()">
+                <div *ngIf="loading"
+                     class="spinner"> </div>
+                <span *ngIf="!loading"> Login </span>
+            </button>
+        </div>
+
+        <hr>
+
+        <button type="button" (click)="createUser()" class="secondary">create new user</button>
+    </div>
+</div>

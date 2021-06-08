@@ -33,4 +33,12 @@ export class AnimalAPIService {
     console.log("sending delete request")
     return this.http.delete(`${baseUrl}/animal/${id}`)
   }
+
+  login(username: string, password: string): Observable<any> {
+    return this.http.post(`${baseUrl}/user/login/`, { username: username, password: password })
+  }
+
+  createUser(username: string, password: string): Observable<any> {
+    return this.http.post(`${baseUrl}/user/create/`, {username: username, password: password});
+  }
 }
