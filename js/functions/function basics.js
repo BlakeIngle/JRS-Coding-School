@@ -67,3 +67,13 @@ for (let i = 0; i < 4; i++) {
 
 
 // hw.concat()
+
+
+function functionName() {
+    // first way
+}
+
+functionNameArrow =
+    () => {
+        // second way
+    }

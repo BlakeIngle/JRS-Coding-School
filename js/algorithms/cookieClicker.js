@@ -1,7 +1,6 @@
 // C = cost of farm
 // F = rate of farm (F=4 -> +4 cookies / s)
 // X = total goal
-// 
 
 function fastestPossibleCookie(C, F, X) {
     let t = 0;
@@ -17,7 +16,6 @@ function fastestPossibleCookie(C, F, X) {
         }
     }
 }
-
 
 console.log(fastestPossibleCookie(2000, 500, 4))
 console.log(fastestPossibleCookie(30, 1, 2))

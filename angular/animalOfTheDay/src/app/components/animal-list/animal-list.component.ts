@@ -23,7 +23,6 @@ export class AnimalListComponent implements OnInit {
 
       this.refreshSubscription = this.animalSelectedService.refreshList$
       .subscribe(() => {
-        
         this.refreshList();
       });
     }

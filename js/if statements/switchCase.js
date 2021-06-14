@@ -50,3 +50,18 @@ switch (month) {
 }
 
 console.log(monthName);
+
+switch (month) {
+    case 9:
+    case 4:
+    case 6:
+    case 11:
+        numDays = 30;
+        break;
+    case 2:
+        numDays = 29;
+        break;
+    default:
+        numDays = 31;
+        break;
+}

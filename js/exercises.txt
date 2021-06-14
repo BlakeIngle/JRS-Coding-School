@@ -96,6 +96,7 @@ Ex: isCoerced(5,"5") returns true. isCoerced(5,5) returns false. isCoerced(4,"sh
 
 
 
+
 17) Write a function called isEven() that returns true if a given argument is even.
 18) Write a function called isOdd() that returns true if a given argument is odd. Do this by only using the 
 isEven() function you wrote previously.
@@ -136,6 +137,8 @@ in non-decreasing order. (i.e. each element in the array is less than or equal t
 28) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
 29) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array 
 containing the numbers from both of the arrays given as arguments. Call this function merge().
+
+
 30) Leibniz's formula can compute pi. the formula is given below:
 pi = 4 * (1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
 The elipsis (the three dots) means this pattern continues forever.

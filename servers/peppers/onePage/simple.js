@@ -1,7 +1,6 @@
 import 'dotenv/config';
 const url = "mongodb+srv://admin:admin@cluster0.ogaif.mongodb.net/mydb"
 
-
 import express from 'express';
 
 const app = express();

@@ -25,13 +25,13 @@ prev2 = 0
 prev1 = 1
 
 
-for(let i = 0; i < 10; i++) {
-     if (i == 0) {
-          console.log(0)
-     } else {
-          next = prev1 + prev2
-          prev2 = prev1
-          prev1 = next
-          console.log(next)
-     }
+for (let i = 0; i < 10; i++) {
+    if (i == 0 || i == 1) {
+        console.log(i);
+    } else {
+        next = prev1 + prev2
+        prev2 = prev1
+        prev1 = next
+        console.log(next)
+    }
 }

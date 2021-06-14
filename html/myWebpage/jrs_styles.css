@@ -1,3 +1,4 @@
 div {
-    border: tomato dashed 2px;
+    --varName: #ff6347;
+    border: var(--varName) dashed 2px;
 }

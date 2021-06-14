@@ -42,7 +42,7 @@ class Circle {
 
     constructor(obj) {
 
-        this = Object.assign({}, obj)
+        this = Object.assign(this, obj)
         if (obj.list) {
             this.list = [];
             for (let i = 0; i < obj.list.length; i++) {
