@@ -109,8 +109,7 @@ export class PeppersListComponent implements OnInit {
         alert("Pepper removed")
       }, (error) => {
         alert("ERROR: Pepper was not removed")
-      })
-
+      });
   }
 
   onPepperClick(pepper: Pepper) {

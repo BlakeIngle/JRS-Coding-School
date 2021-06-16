@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cell } from '../cell.class';
-import { MinesweeperService } from '../minesweeper.service';
+import { MinesweeperService } from '../services/minesweeper.service';
 
 @Component({
   selector: 'minesweeper',
@@ -23,7 +23,7 @@ export class MinesweeperComponent implements OnInit {
   }
 
   setupGrid(): void {
-    this.grid = this.minesweeperService.generateGrid(this.difficulty)
+    this.grid = this.minesweeperService.generateGrid(this.difficulty);
     this.cellsRevealed = 0;
     if (this.difficulty == 0) {
       this.totalBombs = this.minesweeperService.BOMBS_EASY;
