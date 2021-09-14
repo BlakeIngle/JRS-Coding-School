@@ -12,7 +12,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+// this is a comment
 require("./app/index");
 require("./app/routes/appointments.routes")(app);
 require("./app/routes/barbers.routes")(app);
