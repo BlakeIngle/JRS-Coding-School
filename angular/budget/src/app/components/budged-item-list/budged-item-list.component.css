@@ -1,0 +1,67 @@
+.budget-items-section {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.budget-items-container {
+    display: flex;
+    max-width: 680px;
+    height: 100%;
+    width: 100%;
+}
+
+.income-column,
+.expenses-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+h1 {
+    font-family: 'Lato';
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.income-column {
+    margin-right: 35px;
+
+    color: var(--green);
+}
+
+.expenses-column {
+    color: var(--red);
+}
+
+.dialog {
+    width: fit-content;
+    padding: 2em;
+    height: fit-content;
+    border-radius: 8px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.dialog-background {
+    background-color: #22222273;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.shown {
+    display: initial;
+}

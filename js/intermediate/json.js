@@ -12,7 +12,7 @@ var myKitchen = {
 
 function buyBananas() {
     myKitchen.bananas += 5;
-    myKitchen.moneySpent += BANANA_PRICE * 6;
+    myKitchen.moneySpent += BANANA_PRICE * 5;
     myKitchen.storeVisist++;
 }
 
@@ -25,7 +25,7 @@ function eatBanana() {
 }
 
 
-// eat 10 bananas
+// eat 100 bananas
 for (let i = 0; i < 100; i++) {
     eatBanana();
 }

@@ -1,6 +1,6 @@
 function makeRandomArray() {
     let arr = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 100000; i++) {
         arr.push(Math.floor(Math.random() * 100));
     }
     return arr;
@@ -35,9 +35,6 @@ function mergeSort(arr) {
     // sort each individually
     left = mergeSort(left)
     right = mergeSort(right)
-
-    console.log(left)
-    console.log(right)
 
     //merge them together
     return merge(left, right);

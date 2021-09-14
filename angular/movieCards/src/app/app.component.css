@@ -1,0 +1,19 @@
+.movies-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.movies-container {
+    background-color: rgb(32, 40, 59);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70vh;
+    overflow: scroll;
+    width: 90%;
+    max-width: 1000px;
+    min-width: 700px;
+}
+

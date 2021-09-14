@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Cell } from './cell.class';
+import { Cell } from '../cell.class';
+
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +38,7 @@ export class MinesweeperService {
     }
 
     let grid: Cell[][] = [];
-    
+
     for (let i = 0; i < rows; i++) {
       grid.push([]);
       for (let j = 0; j < columns; j++) {
@@ -59,14 +60,14 @@ export class MinesweeperService {
    */
   private populateBombs(grid: Cell[][], difficulty) {
     let numBombs: number;
-    if(difficulty == 0) {
+    if (difficulty == 0) {
       numBombs = this.BOMBS_EASY;
     } else if (difficulty == 1) {
       numBombs = this.BOMBS_MED;
-    } else if( difficulty == 2) {
+    } else if (difficulty == 2) {
       numBombs = this.BOMBS_HARD;
     }
-    
+
     for (let i = 0; i < numBombs; i++) {
       let j = this.randomBetween(0, grid.length - 1);
       let k = this.randomBetween(0, grid[0].length - 1);

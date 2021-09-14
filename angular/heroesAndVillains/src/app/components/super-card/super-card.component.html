@@ -1,0 +1,14 @@
+<div class="root">
+    <ng-container *ngIf="super; else noneSelected">
+
+        <h2>Super!</h2>
+        <p>Name: {{super.name}}</p>
+        <p>Power: {{super.power}}</p>
+        <p>Nemesis: {{super.nemesisName}}</p>
+
+    </ng-container>
+</div>
+
+<ng-template #noneSelected>
+    <h2>Select a super to see more information!</h2>
+</ng-template>

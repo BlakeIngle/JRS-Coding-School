@@ -53,9 +53,19 @@ if (operator == "+") {
     // you did not type a valid operator
     // error handling is a very important part of programming
     // sometimes you get a result you weren't expecting
-    
+
     // if you are writing a program for someone else to use
     // they might use it wrong. We will cover error handling more later
 }
 
 console.log(user + ", a " + operator + " b = " + answer)
+
+
+
+
+var question = "What does a dog wag?";
+var answer = prompt(question);
+
+if (answer == "tail") {
+    console.log("Correct!")
+}

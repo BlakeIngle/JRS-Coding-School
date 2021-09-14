@@ -1,0 +1,68 @@
+<div class="root">
+    <div class="container">
+        <div class="header">header</div>
+
+        <div class="main-content">
+
+            <div class="calendar-container">
+                <div class="navigation">
+                    <button (click)="adjustMonthWithArrows(-1)">&lt;</button>
+                    <div>{{selectedDate | date: 'MMMM'}}</div>
+                    <button (click)="adjustMonthWithArrows(1)">&gt;</button>
+                </div>
+                <table class="calendar">
+                    <tr>
+                        <th>
+                            <div>Su</div>
+                        </th>
+                        <th>
+                            <div>M</div>
+                        <th>
+                            <div>Tu</div>
+                        </th>
+                        <th>
+                            <div>W</div>
+                        <th>
+                            <div>Th</div>
+                        </th>
+                        <th>
+                            <div>F</div>
+                        <th>
+                            <div>Sa</div>
+                        </th>
+                    </tr>
+                    <tr *ngFor="let week of month; index as i"
+                        class="week">
+                        <td *ngFor="let day of week"
+                            (click)="newDateSelected(day, i)">
+                            <div class="day"
+                                 [ngClass]="{'active': day.getDate() == selectedDate.getDate() && day.getMonth() == selectedDate.getMonth(), 
+                                            'other-month': day.getMonth() != selectedDate.getMonth()}">
+                                {{day.getDate()}}
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="right">
+                <div class="time-select">
+                    <!-- what actually goes here -->
+                    <button type="button"
+                            class="time-slot"
+                            *ngFor="let timeSlot of timeSlots; index as i"
+                            [ngClass]="{'booked': !timeSlot.available, 'selected': selectedTime == timeSlot}"
+                            (click)="onTimeSlotClicked(timeSlot)">{{timeSlot.time}} {{timeSlot.pm ? "pm" : "am"}}</button>
+                </div>
+                <div class="footer">{{(selectedDate.getMonth() + 1) + "/" + selectedDate.getDate()}} - {{selectedTime.time ? selectedTime.time : "No\
+                    time selected."}}
+                    <button type="button"
+                            [disabled]="!selectedTime.time"
+                            (click)="onConfirmClicked()">Confirm appointment</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

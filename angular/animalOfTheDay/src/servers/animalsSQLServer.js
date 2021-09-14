@@ -159,7 +159,7 @@ app.post("/api/user/login", (req, res) => {
 
     query = "SELECT * FROM users WHERE UserName=?;"
 
-    db.query(query, [username], async(err, data, fields) => {
+    db.query(query, [username], async (err, data, fields) => {
         if (err) {
             res.status(500).send({ error: err, message: "error retrieving user" });
         } else if (data && data.length == 0) {
@@ -181,7 +181,7 @@ app.post("/api/user/login", (req, res) => {
     });
 });
 
-app.post("/api/user/create", async(req, res) => {
+app.post("/api/user/create", async (req, res) => {
     if (!req.body.username || !req.body.password) {
         res.status(400).send({ message: "A user must contain a username and password" });
         return;

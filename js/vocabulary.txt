@@ -1,6 +1,6 @@
 variable - something in code that is a value - that you can reference - it is changable
 identifier - the word for a variable - the technical term
-operator - + - * % =    == >= < !=
+operator - + - * / % =    == >= < != === ^
 
 decleration - state that a variable exists
 initialization - assign a value to the variable
@@ -8,7 +8,7 @@ assignment - giving a variable a new value
 
 keyword - reserved word defined by the programming language and its libraries
 datatype - type of data, number, string, boolean, ...
-literal - a literal value not in a variable ex: 5, "5", "Hello world!"
+literal - a literal value not in a variable ex: 5, "5", "Hello world!", [], true
 
 type casting - turn a value from one data type to another data type
 

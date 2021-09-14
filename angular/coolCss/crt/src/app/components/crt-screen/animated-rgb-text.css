@@ -1,0 +1,67 @@
+.r, .g, .b {
+    mix-blend-mode: color-dodge;
+}
+
+.r {
+    animation: rMove ease 3s infinite;
+}
+.g {
+    animation: gMove ease 3s infinite;
+}
+.b {
+    animation: bMove ease 3s infinite;
+}
+
+@keyframes rMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(2em, 1em);
+    }
+    50% {
+        transform: translate(3em, 3em);
+    }
+    75% {
+        transform: translate(1em, 2em);
+    }
+    90% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes gMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-1em, -2em);
+    }
+    50% {
+        transform: translate(-3em, -3em);
+    }
+    75% {
+        transform: translate(-2em, -1em);
+    }
+    90% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes bMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(1em, -2em);
+    }
+    50% {
+        transform: translate(3em, -3em);
+    }
+    75% {
+        transform: translate(2em, -1em);
+    }
+    90% {
+        transform: translate(0, 0);
+    }
+}

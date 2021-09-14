@@ -1,0 +1,6 @@
+<div *ngFor="let super of supers"
+     (click)="superClicked(super)"
+     [ngClass]="{'selected': selectedSuper == super}">
+    <span class="id">{{super.id}}</span>
+    <span class="name">{{super.name}}</span>
+</div>

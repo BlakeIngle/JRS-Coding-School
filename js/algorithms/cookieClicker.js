@@ -10,7 +10,7 @@ function fastestPossibleCookie(C, F, X) {
         if (X / rate < ((C / rate) + (X / (rate + F)))) {
             return t + (X / rate);
         } else {
-            console.log("faster to farm")
+            // console.log("faster to farm")
             t += C / rate;
             rate += F
         }

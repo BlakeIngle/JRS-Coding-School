@@ -1,0 +1,8 @@
+<villain-card *ngFor="let villain of villains"
+              (click)="selectVillain(villain)"
+              [villain]="villain"></villain-card>
+
+<div *ngIf="selectedVillain">
+  <h2>{{selectedVillain.name}}</h2>
+  <p>{{selectedVillain.power}}</p>
+</div>

@@ -1,0 +1,35 @@
+div {
+    font-size: 1.5em;
+    width: 100%;
+    margin-bottom: 0.3em;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0.3em 0;
+    padding-left: 0;
+    background-color: #EEE;
+    text-overflow: ellipsis;
+}
+
+div:hover {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #222;
+}
+
+.id {
+    background-color: #337;
+    color: white;
+    padding: 0.3em;
+    margin: 0;
+}
+
+.name {
+    margin-left: 0.5em;
+    white-space: nowrap;
+}
+
+.selected {
+    background-color: #444;
+    color: white;
+}

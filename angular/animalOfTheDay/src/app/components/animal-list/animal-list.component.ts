@@ -19,13 +19,13 @@ export class AnimalListComponent implements OnInit {
 
   constructor(
     private animalService: AnimalAPIService,
-    private animalSelectedService: SelectedAnimalService) { 
+    private animalSelectedService: SelectedAnimalService) {
 
-      this.refreshSubscription = this.animalSelectedService.refreshList$
+    this.refreshSubscription = this.animalSelectedService.refreshList$
       .subscribe(() => {
         this.refreshList();
       });
-    }
+  }
 
   ngOnInit(): void {
     this.refreshList();
@@ -35,10 +35,10 @@ export class AnimalListComponent implements OnInit {
     this.animalService.getAllAnimals()
       .subscribe(data => {
         this.animals = data;
-      }, 
-      error => {
-        console.error("ERROR: ", error)
-      });
+      },
+        error => {
+          console.error("ERROR: ", error)
+        });
   }
 
   onClick(index: number) {

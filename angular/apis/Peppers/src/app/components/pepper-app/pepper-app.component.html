@@ -1,0 +1,10 @@
+<p>pepper-app works!</p>
+<p *ngFor="let pepper of peppers"
+   [ngStyle]="{ 'background-color': pepper.color}"
+   (click)="onPepperClicked(pepper)">
+   {{pepper.name}}
+   <button type="button"
+           (click)="onDeleteClicked(pepper)">Delete</button>
+</p>
+
+<new-pepper-form [newPepper]="selectedPepper"></new-pepper-form>

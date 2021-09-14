@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --mainColor: 300;
+    --white: #DDDDE8;
+    --lightest: hsl(var(--mainColor), 100%, 65%);
+    --light: #29648A;
+    --dark: #464866;
+    --darkest: hsl(var(--mainColor), 50%, 20%);
+    --black: #101010;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}

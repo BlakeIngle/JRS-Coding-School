@@ -1,0 +1,41 @@
+input {
+    background-color: var(--light-gray);
+    border-color: transparent;
+}
+
+.amount {
+    width: 100px;
+}
+
+button {
+    background-color: var(--purple);
+    border: none;
+    width: 80px;
+    color: white;
+}
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    filter: brightness(1.2);
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.field-body {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    flex-grow: 2;
+}
+
+input, button {
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin: 0.25em;
+    padding: 0.5em;
+}

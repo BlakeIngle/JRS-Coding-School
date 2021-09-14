@@ -1,0 +1,21 @@
+<nav-bar></nav-bar>
+
+<input type="text"
+       [(ngModel)]="searchQuery">
+<button (click)="search()">Search</button>
+<button (click)="searchSeries()">Search Series</button>
+<button (click)="searchCompany()">Search Company</button>
+
+<div class="movies-root">
+  <!-- search bar goes -->
+  <div class="movies-container">
+    <movie-card *ngFor="let movie of movies; index as i"
+                [movie]="movie"
+                (click)="selectMovie(i)"></movie-card>
+
+  </div>
+</div>
+
+<!-- <counter></counter> -->
+
+<p>{{movies[selectMovieIndex] ? movies[selectMovieIndex].flavorText : "Click on a movie"}}</p>

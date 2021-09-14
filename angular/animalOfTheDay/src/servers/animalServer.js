@@ -79,24 +79,24 @@ app.get("/api/animals/", (req, res) => {
 // post one animal
 app.post("/api/animal", (req, res) => {
     console.log("Request recieved: posting animal\n")
-        // validate req body
-        {
-            if (!req.body) {
-                res.status(400).send({ message: "Cannot post animal. No body defined in request." })
-            } else if (!req.body.name) {
-                res.status(400).send({ message: "Cannot post animal. Animals must have a name." })
-            } else if (!req.body.latinName) {
-                res.status(400).send({ message: "Cannot post animal. Animals must have a scientific name." })
-            } else if (!req.body.className) {
-                res.status(400).send({ message: "Cannot post animal. Animals must belong to a class: bird, mammal, fish, ..." })
-            } else if (!req.body.diet) {
-                res.status(400).send({ message: "Cannot post animal. Animals diet must be defined: herbivore, carnivore, or omnivore." })
-            } else if (!req.body.numLegs) {
-                res.status(400).send({ message: "Cannot post animal. You must define the number of legs." })
-            } else if (!req.body.habitat) {
-                res.status(400).send({ message: "Cannot post animal. You must define the animal's habitat." })
-            }
+    // validate req body
+    {
+        if (!req.body) {
+            res.status(400).send({ message: "Cannot post animal. No body defined in request." })
+        } else if (!req.body.name) {
+            res.status(400).send({ message: "Cannot post animal. Animals must have a name." })
+        } else if (!req.body.latinName) {
+            res.status(400).send({ message: "Cannot post animal. Animals must have a scientific name." })
+        } else if (!req.body.className) {
+            res.status(400).send({ message: "Cannot post animal. Animals must belong to a class: bird, mammal, fish, ..." })
+        } else if (!req.body.diet) {
+            res.status(400).send({ message: "Cannot post animal. Animals diet must be defined: herbivore, carnivore, or omnivore." })
+        } else if (!req.body.numLegs) {
+            res.status(400).send({ message: "Cannot post animal. You must define the number of legs." })
+        } else if (!req.body.habitat) {
+            res.status(400).send({ message: "Cannot post animal. You must define the animal's habitat." })
         }
+    }
 
     const animal = new Animal({
         name: req.body.name,

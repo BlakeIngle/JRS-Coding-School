@@ -1,0 +1,35 @@
+<h1>Heroes and Villains!</h1>
+
+<select [(ngModel)]="listSelected"
+        (ngModelChange)="changeList()">
+    <option [value]="0">Heroes</option>
+    <option [value]="1">Villains</option>
+    <option [value]="2">All Supers</option>
+</select>
+<input type="text"
+       [(ngModel)]="query.name"
+       placeholder="Name">
+<input type="text"
+       [(ngModel)]="query.id"
+       placeholder="ID">
+<input type="text"
+       [(ngModel)]="query.power"
+       placeholder="Power">
+<input type="text"
+       [(ngModel)]="query.nemesisName"
+       placeholder="Nemesis Name">
+
+<button type="button"
+        (click)="onSearchClicked()">Search</button>
+
+<div class="list-container">
+    <super-list [supers]="supers"
+                [selectedSuper]="selectedSuper"
+                (superSelected)="selectSuper($event)"></super-list>
+</div>
+
+<div class="card-container">
+    <super-card [super]="selectedSuper"></super-card>
+</div>
+
+<new-super-form [listSelected]="listSelected"></new-super-form>

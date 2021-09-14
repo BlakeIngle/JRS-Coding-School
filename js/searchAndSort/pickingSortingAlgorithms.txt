@@ -1,0 +1,68 @@
+
+1 ) 
+a list of 30 students in a (Math) class
+each student has a list of all their grades in that class 
+including homework, quizes, and tests
+
+please sort the students from highest grade to lowest grade.
+
+We will use this sorting algorithm for each class in the school
+and each future class from her on out.
+
+Q )
+what is the range of grades
+0 - 110 (Number)
+students range: 20 - 35
+final grade is already calculated
+the Data:
+[
+    {
+        name: "student name",
+        grades: [
+            68, 79, 68, 89, 77, 87, 87, 77, 78, 97, 98, 87, 87, 96, 98, 80, 98, 78 
+        ],
+        "finalGrade": 87
+    }
+]
+
+
+
+
+The Pentagon has unreleased Alien video footage
+and data about radio brodcasts from outer space
+there are actually 2,000,000 pieces of data 
+in the list of recorded audio
+
+They need you to sort the data from highest peak frequency
+to lowest peak frequency
+
+Q ) Data: wavelengths:
+[
+    [1234, 234, 56, 5768,67564 ,234657,68 45,62 43],
+    [...]
+]
+
+frequency: higher when wavelengths is smaller
+
+
+3 )
+We run a software company and are writing code to handle 
+http server requests.
+We recieve requests millions of times each day.
+Each requests can have up to 100,000 pieces of data to return.
+
+We need you to sort each response before it is returned as a data.
+
+Q )
+{
+    "data": [
+        {
+            "bar": 40
+        },
+        {
+            "bar: 50
+        }
+    ]
+}
+
+avg package size: 75,000

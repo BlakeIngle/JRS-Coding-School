@@ -1,0 +1,47 @@
+body {
+    font-size: 20pt;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.left, 
+.right {
+    padding: 1em;
+    outline: solid black 1px;
+    width: calc(50% - 2em);
+    height: calc(100vh - 3.25em);
+    overflow: auto;
+}
+
+.square,
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+}
+
+.circle {
+    margin-top: 1em;
+    border-radius: 50%;
+}
+
+input,
+button {
+    font-size: inherit;
+    border: solid rgb(111, 255, 255) 3px;
+    border-radius: 7px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+button:hover {
+    cursor: pointer;
+}

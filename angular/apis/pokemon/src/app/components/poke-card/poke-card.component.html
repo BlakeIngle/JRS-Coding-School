@@ -1,0 +1,13 @@
+<div *ngIf="pokemon">
+    <h2>{{pokemon.name}}</h2>
+    <p>id: {{pokemon.id}}</p>
+    <p>Types:</p>
+    <ul>
+        <li *ngFor="let type of pokemon.types">{{type.type.name}}</li>
+    </ul>
+    <img *ngIf="pokemon.sprites"
+         [src]="pokemon.sprites.front_default"
+         height="100">
+    <button (click)="loadNeighbor(-1)">Prev.</button>
+    <button (click)="loadNeighbor(1)">Next</button>
+</div>

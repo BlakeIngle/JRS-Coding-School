@@ -16,8 +16,7 @@ if (a == 4) {
 //      // every condition before was 
 //      // false and this condition is true
 // }
-
-if (a == 1) {
+if (a === 1) {
     console.log("a is 1")
 } else if (a == 2) {
     console.log("a is 2")
@@ -32,7 +31,6 @@ if (a == 1) {
 //      // code that will execute when
 //      // the condition is false
 // }
-
 if (a == 9) {
     console.log("a is 9")
 } else {

@@ -1,0 +1,13 @@
+<input type="text"
+       [(ngModel)]="searchQuery"
+       (ngModelChange)="queryChanged($event)">
+
+<poke-card [pokemonName]="selectedPokemon"></poke-card>
+
+<section class="list"
+         *ngIf="pokemonResults">
+    <div *ngFor="let pokemon of pokemonResults"
+         (click)="onSelectPokemon(pokemon)">
+        {{pokemon}}
+    </div>
+</section>

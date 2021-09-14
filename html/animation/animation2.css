@@ -1,0 +1,37 @@
+.loading {
+    --dark: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 15em;
+}
+
+.ball {
+    --ballSize: calc(80vh / 6);
+    height: var(--ballSize);
+    width: var(--ballSize);
+    background-color: var(--dark);
+    border-radius: 50%;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: calc(var(--count) * 0.2s);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(2em);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,26 @@
+<p>Create a new super!</p>
+
+<form #itemForm="ngForm"
+      (ngSubmit)="onFormSubmitted(itemForm)">
+
+    <input type="text"
+           placeholder="Name"
+           [(ngModel)]="name"
+           name="name"
+           required>
+
+    <input type="text"
+           placeholder="Power"
+           [(ngModel)]="power"
+           name="power"
+           required>
+
+    <input type="text"
+           placeholder="Nemesis"
+           [(ngModel)]="nemesisName"
+           name="namesisName"
+           required>
+
+    <button type="submit"
+            [disabled]="!itemForm.valid">Add New Super</button>
+</form>

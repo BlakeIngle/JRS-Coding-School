@@ -67,8 +67,6 @@
  * neither A nor B contains any digit that is a 4, and A + B = N. 
  * 
  * Please help us find any pair of values A and B that satisfy these conditions.
- * 
- * (either parse int or do / 10 and % 4)
  */
 
 // Cookie Clicker

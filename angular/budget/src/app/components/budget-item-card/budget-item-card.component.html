@@ -1,0 +1,17 @@
+<div class="root">
+    <div class="budget-item">
+
+        <div class="description">
+            <p>{{item.description}}</p>
+        </div>
+
+        <div class="amount"
+             [ngClass]="{'income': isIncome, 'expense': !isIncome}">
+            <p>{{item.amount}}</p>
+        </div>
+
+    </div>
+
+    <div class="x-icon-button"
+         (click)="onXClicked()">X</div>
+</div>

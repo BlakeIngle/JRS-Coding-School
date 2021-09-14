@@ -1,0 +1,125 @@
+1) Write a function that displays the result of 5+6+7+8+9+10.
+
+2) Write a function that returns the perimeter of a
+rectangle with a width of 5 and a height of 8.
+
+3) Write a function that converts 83deg fahrenheit to celcius.
+
+4) Write a function that converts 30deg celcius to fahrenheit.
+
+5) Write a function that calculates the total bill including a 25% tip on a bill of $15.84
+
+6) Write a function that converts 45278962345 seconds to years
+rounded to 1 decimal.
+
+7) Write a function that generates a random integer (rounded number) from 1-10
+
+8) Write a function that prints a message if 
+a random number (that is generated) is 7;
+
+
+
+9) Create an empty array
+10) Push one random value into the array
+11) Use a for loop to push 3 more random values 
+into the array
+12) Calculate the sum of the numbers in the array 
+(and display it in the console)
+
+
+
+13) Write a function that returns the perimeter of a
+rectangle with a widht and height sent as parameters.
+
+14) Write a function that converts a number in fahrenheit 
+(given as a parameter) to celcius.
+
+15) Write a function that converts a number in celcius
+(given as a parameter) to fahrenheit.
+
+16) Write a function that calculates the total bill including 
+a 25% tip on a bill (sent as a parameter)
+
+17) Write a function that converts a number in seconds
+(given as a parameter) to years rounded to 1 decimal.
+
+
+
+
+18) Write a function that takes a number an an argument and returns the sum of each individual digit. 
+So an input of 998 would return 26 (because 9 + 9 + 8) is 26.
+
+19) Write a function that randomly generates an integer between 1 and 12, and returns the name 
+of the corresponding month. (Hint: Look up how to get a random number in JavaScript.)
+
+20) Write a function called isEven() that returns true if a given 
+argument is even.
+
+21) Write a function called isOdd() that returns true if a given argument is odd. Do this by only using the 
+isEven() function you wrote previously.
+
+22) Write a function that returns true if a given argument is a multiple of 3. 
+Examples of multiples of 3 are 0,3,6,9 ...
+
+23) Write a function that takes two arguments. Check if the first argument is 
+the multiple of the second argument. 
+Return the appropriate boolean.
+Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
+
+24) Write a function that takes an array of numbers as an argument and 
+returns the sum of all numbers in the array
+
+25) Write a function that takes an array of numbers as an argument and 
+returns the smallest number in the array.
+
+
+
+
+26) Write a function that takes three numbers as arguments, and returns the same 3 numbers 
+in ascending order (more specifically, non-decreasing order if multiple numbers are the same).
+
+27) Write a function that returns true when two inputs are equivalent when using coercion, but not equivalent 
+without coercion.
+Ex: isCoerced(5,"5") returns true. isCoerced(5,5) returns false. isCoerced(4,"shoe") returns false.
+
+28) Write a function that takes a string as an argument and returns the reverse of that string.
+
+29) Write a function that counts the occurences of a specific element in an array, specified as a function 
+argument.
+For example, for the array [5,7,12,5,3,3,5], the function countOccurences(3) would return a value of 2.
+
+30) Write a function that returns a multidimensional array that contains number of occurences for every element 
+of an array.
+For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would 
+return: [[5,3],[7,1],[12,1],[3,2]]
+
+
+
+
+31) Write a function that takes an array of numbers as an input, and returns true if the array is sorted 
+in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
+
+32) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array 
+containing the numbers from both of the arrays given as arguments. Call this function merge().
+
+33) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
+
+
+
+34) Assuming constant acceleration, a falling object's height 
+can be calculated with the following equation:
+y = y₀ + v₀t + (0.5gt^2)
+where g = -9.8.
+meters and seconds are the units
+Write a function that, given some starting height, will return true
+or false if the object will hit the ground after a given time (in seconds)
+(Assume the object's starting velocity is 0.)
+
+35) Write a function that will take an array of 'animal' objects as an argument 
+and return the 'name' of the animal with the heaviest 'weight.'
+
+36) Bob and Tom are racing. Bob is faster than Tom, so he will start
+farther away from the finish line. If Bob runs at a constant 18 mph
+and Tom runs at a constant 15 mph. 
+Write a function that will return true or false if Bob will win the race
+when Bob has to run 0.3 miles and Tom only has to run 0.25 miles.

@@ -1,0 +1,24 @@
+<form #itemForm="ngForm"
+      (ngSubmit)="onFormSubmitted(itemForm)">
+       <div class="field-body">
+
+              <input type="number"
+                     placeholder="Amount"
+                     class="amount"
+                     name="amount"
+                     required
+                     [(ngModel)]="budgetItem.amount">
+
+              <input type="text"
+                     placeholder="Description"
+                     class="description"
+                     name="description"
+                     required
+                     [(ngModel)]="budgetItem.description">
+
+              <button type="submit"
+                      class="add"
+                      [disabled]="itemForm.invalid">{{isNew ? 'Add' : 'Save'}}</button>
+
+       </div>
+</form>

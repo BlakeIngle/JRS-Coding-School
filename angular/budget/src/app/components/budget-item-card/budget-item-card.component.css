@@ -1,0 +1,79 @@
+.root {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+    font-family: 'Lato';
+}
+
+.x-icon-button {
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: var(--dark);
+    border-radius: 50%;
+    right: -0.75em;
+    top: -0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato";
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--red);
+
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+.root:hover .x-icon-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.root:hover .x-icon-button:hover {
+    transform: scale(1.2);
+}
+
+.budget-item {
+    display: flex;
+    width: 100%;
+    background-color: var(--light-gray);
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: filter 0.2s ease-out;
+}
+
+.budget-item:hover {
+    filter: brightness(0.95);
+}
+
+.description {
+    flex-grow: 1;
+    font-size: 18px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.amount {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.amount.income {
+    background-color: var(--light-green);
+}
+
+.amount.expense {
+    background-color: var(--light-red);
+}
+
+p {
+    margin: 0;
+}

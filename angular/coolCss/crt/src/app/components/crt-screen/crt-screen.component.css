@@ -1,0 +1,55 @@
+.crt {
+    color: #F0F0F0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    
+    background-color:#202020;
+}
+
+.crt::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(rgb(17, 17, 17) 0, rgb(17, 17, 17), 2px, transparent 4px, transparent 10px);
+    background-size:100% 5px;
+    mix-blend-mode:color-dodge; 
+    
+    animation: scan 3s ease-out infinite;
+}
+
+@keyframes scan {
+    from { background-position: 0 0; }
+    to { background-position: 0 25px; }
+}
+
+.rgb-text {
+    position: absolute;
+    font-size: 50px;
+    filter: blur(0.05em);
+}
+
+.rgb-text.w {
+    color: white;
+    filter: blur(0.02em);
+    text-shadow:0 0 1.5em rgba(255,255,255,0.4);
+}
+
+.rgb-text.r {
+    color: red;
+    margin-left: -0.07em;
+}
+
+.rgb-text.g {
+    color: green;
+    margin: 0.1em 0 0 0.04em;
+}
+
+.rgb-text.b {
+    color: blue;
+    margin-left: 0.07em;
+}

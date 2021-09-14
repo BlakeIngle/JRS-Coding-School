@@ -1,0 +1,17 @@
+.list div {
+    border: solid rgb(255, 84, 84) 1px;
+    padding: 0.25em;
+    margin: 0.25em;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.list div:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+.list div:active {
+    transform: translateY(0.2em);
+}

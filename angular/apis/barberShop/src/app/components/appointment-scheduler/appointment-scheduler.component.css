@@ -1,0 +1,216 @@
+.root,
+.container {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+}
+
+* {
+    font-family: system-ui, sans-serif;
+}
+
+.container,
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+}
+
+.right,
+.time-select,
+.main-content {
+    flex-grow: 2;
+}
+
+.header {
+    padding: 0.2em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 0.75em;
+    overflow: hidden;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.time-select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.time-slot {
+    margin: 0.5em;
+    width: 7em;
+    height: 4em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.time-slot,
+.container {
+
+    --blur: 1.75rem;
+    --box-blur: calc(0.5 * var(--blur));
+    --glow: var(--lightest);
+    --size: 12rem;
+  
+    align-items: center;
+    border-radius: 12px;
+    border: 3px solid currentColor;
+    box-shadow: 
+        /* --- "glass" tube --- */
+        /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+        /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+        /* --- glow --- */
+        /* inside */ inset 0 0 var(--box-blur) var(--glow),
+        /* outside */      0 0 var(--box-blur) var(--glow);
+    color: var(--glow, white);
+  
+    transition: background-color 0.2s;
+}
+
+.time-slot:hover {
+    background-color: #404040;
+}
+.time-slot.booked:hover,
+.time-slot.selected:hover {
+    transition: none;
+    background-color: transparent;
+}
+
+.time-slot.booked {
+    border-color: var(--darkest);
+    color: var(--darkest);
+    cursor: not-allowed;
+
+    box-shadow: 
+    /* --- "glass" tube --- */
+    /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+    /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.time-slot.selected {
+    
+    filter: brightness(1.5);
+    box-shadow: 
+    /* --- "glass" tube --- */
+    /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+    /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+    /* --- glow --- */
+    /* inside */ inset 0 0 calc(var(--box-blur) * 1.5) var(--glow),
+    /* outside */      0 0 calc(var(--box-blur) * 1.5) var(--glow);
+}
+
+.calendar {
+    background-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.day, th div {
+    width: 1.75em;
+    height: 1.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.day {
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.day:hover {
+    cursor: pointer;
+}
+
+.day:hover:not(.day.active) {
+    --box-blur: 0.3rem;
+    --glow: var(--light);
+  
+    box-shadow: 
+        /* --- glow --- */
+        /* inside */ inset 0 0 var(--box-blur) var(--glow),
+        /* outside */      0 0 var(--box-blur) var(--glow);
+}
+
+.day.active {
+    --blur: 1rem;
+    --box-blur: calc(0.3 * var(--blur));
+    --glow: var(--lightest);
+  
+    border: 2px solid currentColor;
+    box-shadow: 
+        /* --- "glass" tube --- */
+        /* inside */ inset 0 0 0 1px rgba(0, 0, 0, 0.15),
+        /* outside */      0 0 0 1px rgba(0, 0, 0, 0.15),
+        /* --- glow --- */
+        /* inside */ inset 0 0 var(--box-blur) var(--glow),
+        /* outside */      0 0 var(--box-blur) var(--glow);
+    color: var(--glow, white);
+}
+
+.day.other-month {
+    color: var(--darkest);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+
+@keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+}

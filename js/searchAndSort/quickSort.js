@@ -31,7 +31,7 @@ function quickSort(arr, start, pivot) {
 let list = makeRandomArray();
 
 var t0 = new Date().getTime();
-quickSort(list, 0, list.length - 1)
+quickSort(list, 0, list.length - 1);
 var t1 = new Date().getTime();
 
 console.log(list)

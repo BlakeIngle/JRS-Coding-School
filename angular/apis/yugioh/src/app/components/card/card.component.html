@@ -1,0 +1,29 @@
+<button type="button"
+        (click)="getRandom()">Random</button>
+<div *ngIf="card; else noCard">
+    <img [src]="card.card_images[0].image_url_small">
+    <h2>{{card.name}}</h2>
+    <p>{{card.id}}</p>
+    <p>{{card.type}}</p>
+    <p>{{card.desc}}</p>
+    <p>{{card.atk}}</p>
+    <p>{{card.def}}</p>
+    <p>{{card.level}}</p>
+    <p>{{card.race}}</p>
+    <p>{{card.attribute}}</p>
+    <p>Card Sets: </p>
+    <ul>
+        <li *ngFor="let set of card.card_sets">{{set.set_name}}</li>
+    </ul>
+    <p>Card Prices: </p>
+    <ul *ngFor="let price of card.card_prices">
+        <li>Cardmarket: ${{price.cardmarket_price}}</li>
+        <li>TCGPlayer: ${{price.tcgplayer_price}}</li>
+        <li>EBay: ${{price.ebay_price}}</li>
+        <li>Amazon: ${{price.amazon_price}}</li>
+        <li *ngIf="price.coolstuffinc_price">Cool Stuff Inc.: ${{price.coolstuffinc_price}}</li>
+    </ul>
+</div>
+<ng-template #noCard>
+    <p>Loading Card</p>
+</ng-template>

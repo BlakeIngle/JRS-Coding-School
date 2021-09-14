@@ -1,0 +1,39 @@
+<form #pepperForm="ngForm">
+
+    <label>Name:</label>
+    <input type="text"
+           required
+           name="name"
+           [(ngModel)]="newPepper.name">
+    <br>
+
+    <label>Color:</label>
+    <input type="text"
+           required
+           name="color"
+           [(ngModel)]="newPepper.color">
+    <br>
+
+    <label>Scoville Heat Units:</label>
+    <br>
+    <input style="width: 50px"
+           type="number"
+           required
+           name="shuMin"
+           [(ngModel)]="newPepper.shuMin"> -
+    <input style="width: 50px"
+           type="number"
+           required
+           name="shuMax"
+           [(ngModel)]="newPepper.shuMax">
+    <br>
+
+    <button type="submit"
+            [disabled]="!pepperForm.valid"
+            (click)="onSubmitPepper(pepperForm)">Submit New Pepper</button>
+
+    <button type="submit"
+            [disabled]="!pepperForm.valid"
+            (click)="onUpdatePepper(pepperForm)">Update Pepper</button>
+
+</form>

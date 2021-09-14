@@ -1,0 +1,24 @@
+<nav>
+    <div class="hamburger">
+        <!-- <fa-icon [icon]="faBars"
+                 size="lg">
+            </fa-icon> -->
+        <div class="dropdown">
+            <a (click)="routeTo('')">Home</a>
+            <a (click)="routeTo('movies')">Movies</a>
+            <a (click)="routeTo('animations')">Animation</a>
+        </div>
+    </div>
+
+    <a routerLink="">Home</a>
+    <a routerLink="movies">Movies</a>
+    <a routerLink="animations">Animation</a>
+    <a>Forms</a>
+    <a>SVGs</a>
+    <div class="rel-parent">
+        <!-- <fa-icon [icon]="faBell"
+                 size="lg">
+        </fa-icon> -->
+        <div class="notifications">9</div>
+    </div>
+</nav>

@@ -1,0 +1,35 @@
+img {
+    height: 300px;
+}
+
+.movie-card {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    width: 90%;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgb(20, 20, 20);
+    color:rgb(255, 252, 74);
+    margin: 1em 0.5em;
+    position: relative;
+}
+
+.movie-card div {
+    color: white;
+    position: absolute;
+    height: 300px;
+    top: 0.5em;
+    width: calc(100% - 1em);
+    text-align: center;
+    display: none;
+    /* background-color: rgba(197, 156, 209);
+    box-shadow: 0 0 10px rgba(197, 156, 209); */
+}
+
+.movie-card:hover div {
+    display: block;
+}
+
+.movie-card:hover img {
+    filter: blur(20px);
+}

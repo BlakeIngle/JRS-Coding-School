@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+nav {
+    background-color: rgb(71, 71, 71);
+    position: sticky;
+    top: 0;
+    color: rgb(236, 236, 236);
+    z-index: 2000;
+}
+
+nav > * {
+    color: rgb(236, 236, 236);
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    padding: 1em;
+    margin: 0;
+    transition: background-color 0.15s;
+}
+
+nav > *:hover,
+.dropdown a:hover {
+    background-color: rgb(25, 25, 25);
+    cursor: pointer;
+}
+
+nav button {
+    background-color: rgb(122, 255, 122);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.hamburger {
+    position: relative;
+}
+
+.dropdown  {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: rgb(71, 71, 71);;
+    left: 0;
+    top: 100%;
+    display: none;
+}
+
+.dropdown a {
+    padding: 0.5em;
+    display: block;
+    text-decoration: none;
+    color:rgb(236, 236, 236);
+}
+
+.hamburger:hover .dropdown {
+    display: block;
+}
+
+.fa-bell {
+    position: relative;
+}
+
+.notifications {
+    position: absolute;
+    font-size: 0.8em;
+    top:-15px;
+    right: -13px;
+    background-color: rgb(255, 77, 77);
+    width: 1em;
+    height: 1em;
+    padding: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

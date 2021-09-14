@@ -1,0 +1,13 @@
+.root {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    background-color: #EEE;
+    padding: 1em;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}

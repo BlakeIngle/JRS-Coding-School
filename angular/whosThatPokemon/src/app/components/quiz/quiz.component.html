@@ -1,0 +1,6 @@
+<question *ngFor="let question of questions"
+          [question]="question"
+          [reveal]="submitted"></question>
+
+<button type="button"
+        (click)="submitQuizClicked()">Submit Answers</button>

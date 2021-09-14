@@ -19,10 +19,10 @@ export class AnimalCardComponent implements OnInit {
   ) {
 
     this.animalSelectedSubscription = this.selectedAnimalService
-    .newAnimalSelected$.subscribe(animal => {
-      this.animal = animal
-    })
-   }
+      .newAnimalSelected$.subscribe(animal => {
+        this.animal = animal
+      })
+  }
 
   ngOnInit(): void {
   }

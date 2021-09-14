@@ -1,0 +1,19 @@
+<div class="root">
+    <h2>{{question.questionText}}</h2>
+    <div class="option"
+         *ngFor="let option of question.options"
+         (click)="selectOption(option)"
+         [ngClass]="{'correct': reveal && option == question.answer,
+                    'incorrect': reveal && option == question.userAnswer && option != question.answer}">
+        <input type="radio"
+               [disabled]="reveal"
+               [name]="question"
+               [(ngModel)]="question.userAnswer"
+               [value]="option"
+               [id]="option">
+        <label [for]="option">{{option}}</label>
+    </div>
+    <img class="silhouette"
+         [ngClass]="{'reveal': reveal}"
+         src="../../../assets/images/{{question.silhouette}}">
+</div>

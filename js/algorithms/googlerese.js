@@ -50,3 +50,14 @@ console.log(googleTranslate("y qee"))
 console.log(googleTranslate(i1))
 console.log(googleTranslate(i2))
 console.log(googleTranslate(i3))
+
+
+
+
+function translateLetter(c) {
+    switch (c) {
+        case "a": return "y";
+        case "b": return "h";
+        case "c": return "e";
+    }
+}

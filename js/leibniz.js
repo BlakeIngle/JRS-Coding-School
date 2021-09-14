@@ -1,6 +1,9 @@
 /**
  * 30) Leibniz's formula can compute pi. the formula is given below:
- * pi = 4 * (1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
+ * pi = 4 * (1/1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
+ * 
+ *  1/(i*2)
+ * 
  * The elipsis (the three dots) means this pattern continues forever.
  * Notice that the operators ( + and - ) alternate each time.
  * Write a function called calculatePi(), that takes an argument that 

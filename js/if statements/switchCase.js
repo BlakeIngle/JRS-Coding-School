@@ -65,3 +65,30 @@ switch (month) {
         numDays = 31;
         break;
 }
+
+
+
+// if (a === 1) {
+//     console.log("a is 1")
+// } else if (a == 2) {
+//     console.log("a is 2")
+// } else if (a == 3) {
+//     console.log("a is 3")
+// } else {
+//     console.log("a is not 1, 2, or 3")
+// }
+var a = 4;
+
+switch (a) {
+    case 1:
+        console.log("a is 1")
+        break;
+    case 2:
+        console.log("a is 2")
+        break;
+    case 3:
+        console.log("a is 3")
+        break;
+    default:
+        console.log("a is not 1, 2, or 3")
+}

@@ -28,13 +28,13 @@ export class AnimalFormComponent implements OnInit {
   ) {
 
     this.animalSelectedSubscription = this.selectedAnimalService
-    .newAnimalSelected$.subscribe(animal => {
-      this.animal = new Animal(animal);
-      this.showForm = false;
-      this.newAnimal = false;
-      this.originalName = animal.name;
-    })
-   }
+      .newAnimalSelected$.subscribe(animal => {
+        this.animal = new Animal(animal);
+        this.showForm = false;
+        this.newAnimal = false;
+        this.originalName = animal.name;
+      })
+  }
 
   ngOnInit(): void {
     for (let i in Animal.CLASSES) {
@@ -75,39 +75,39 @@ export class AnimalFormComponent implements OnInit {
         console.log("Successfully created " + this.animal.name, data)
         this.selectedAnimalService.refreshList$.next();
         this.reset();
-      }, 
-      error => {
-        console.error("ERROR creating " + this.animal.name, error)
-        alert("ERROR creating new animal.");
-      });
+      },
+        error => {
+          console.error("ERROR creating " + this.animal.name, error)
+          alert("ERROR creating new animal.");
+        });
   }
 
   onUpdateClicked() {
     // service call
     this.animalAPIService.updateAnimalById(this.animal._id, this.animal)
-    .subscribe(data => {
-      console.log("Successfully updated " + this.animal.name, data)
-      this.selectedAnimalService.refreshList$.next()
-      this.reset();
-    }, 
-    error => {
-      console.error("ERROR updating " + this.originalName, error)
-      alert("ERROR updating animal.");
-    });
-  }
-
-  onDeleteClicked() {
-    if(window.confirm("Are you sure you want to delete '" + this.originalName + "' ?")) {
-      this.animalAPIService.deleteAnimalById(this.animal._id)
       .subscribe(data => {
-
+        console.log("Successfully updated " + this.animal.name, data)
         this.selectedAnimalService.refreshList$.next()
         this.reset();
       },
-      error => {
-        alert("ERROR deleting animal: " + this.originalName)
-        console.error("ERROR deleting animal: ", error)
-      })
+        error => {
+          console.error("ERROR updating " + this.originalName, error)
+          alert("ERROR updating animal.");
+        });
+  }
+
+  onDeleteClicked() {
+    if (window.confirm("Are you sure you want to delete '" + this.originalName + "' ?")) {
+      this.animalAPIService.deleteAnimalById(this.animal._id)
+        .subscribe(data => {
+
+          this.selectedAnimalService.refreshList$.next()
+          this.reset();
+        },
+          error => {
+            alert("ERROR deleting animal: " + this.originalName)
+            console.error("ERROR deleting animal: ", error)
+          })
     }
   }
 }

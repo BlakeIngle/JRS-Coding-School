@@ -1,14 +1,14 @@
 // var name
 
-// function areaOfCircle(radius) {
-//      var name = "hello"
-//      //im going to return a number
-//      //do something
-//      var area = Math.PI * radius * radius // calculated area from the given parameter
-//      return area;
-// }
+function areaOfCircle(radius) {
+    var name = "hello"
+    //im going to return a number
+    //do something
+    var area = Math.PI * radius * radius // calculated area from the given parameter
+    return area;
+}
 
-
+console.log(areaOfCircle(2));
 
 
 
@@ -77,3 +77,29 @@ functionNameArrow =
     () => {
         // second way
     }
+
+
+let list1 = [1, 2, 3]
+let list2 = [4, 5, 6]
+let list3 = [7, 8, 9]
+
+function findSumOfArray(list, foo) {
+    var sum = 0;
+    for (let i = 0; i < list.length; i++) {
+        sum = sum + list[i]
+    }
+    console.log(sum)
+}
+
+
+function printRandom() {
+    console.log(Math.random());
+}
+
+printRandom();
+findSumOfArray(list1);
+findSumOfArray(list2);
+findSumOfArray(list3);
+findSumOfArray([]);
+findSumOfArray(234);
+findSumOfArray();

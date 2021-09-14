@@ -1,0 +1,59 @@
+
+h1 {
+    color: #ff4400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border:  solid green 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border: solid black 1px;
+}
+
+tr {
+    color: magenta;
+}
+tr:first-of-type {
+    background-color: lightgray;
+}
+
+li:first-child {
+    color: blue;
+}
+
+
+h1+p {
+    color: green;
+}
+
+#infinityWar {
+    color: red;
+    font-size: 2em;
+    text-align: right;
+    padding-left: 1em;
+}
+
+.big-blue {
+    color: blue;
+    font-size: 2em;
+}
+
+img:hover {
+    cursor: pointer;
+    border: dashed blue 10px;
+    transform: scale(1.2);
+}
+
+img:active {
+    border: dotted red 10px;
+}

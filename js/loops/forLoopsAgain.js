@@ -52,14 +52,14 @@ while (number < 20) {
 }
 console.log("The sum is: " + sum)
 console.log("The number is: " + number)
-/////////// break
+
 
 
 
 for (let i = 1; i < 4; i++) {
     for (let j = 1; j < 4; j++) {
 
-        if( i * j > 2) {
+        if (i * j > 2) {
             break;
         }
 

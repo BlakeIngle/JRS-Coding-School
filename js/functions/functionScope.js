@@ -1,10 +1,11 @@
 var a = 4;
 var b = 5;
 
-function add2(n) {
-    n = n + 2;
+function add2(x) {
+    x = x + 2;
     // return x;
-    return n;
+    return x;
 }
 
-console.log(add2(a));
+add2(a);
+console.log(a);
