@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --mainColor: 300;
+    --mainColor: 250;
     --white: #DDDDE8;
     --lightest: hsl(var(--mainColor), 100%, 65%);
     --light: #29648A;
