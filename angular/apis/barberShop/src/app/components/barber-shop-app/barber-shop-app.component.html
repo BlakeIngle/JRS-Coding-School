@@ -1,3 +1,6 @@
 <div class="root">
-    <appointment-scheduler></appointment-scheduler>
+    <appointment-scheduler [bookedAppointments]="bookedAppointments"
+                           (newDateSelected)="getDaysAppointments($event)"
+                           (dateTimeConfimed)="bookAppointment($event)">
+    </appointment-scheduler>
 </div>

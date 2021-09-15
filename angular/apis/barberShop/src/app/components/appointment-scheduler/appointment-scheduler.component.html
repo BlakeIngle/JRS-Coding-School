@@ -1,6 +1,6 @@
 <div class="root">
     <div class="container">
-        <div class="header">header</div>
+        <div class="header">Header</div>
 
         <div class="main-content">
 
@@ -17,16 +17,19 @@
                         </th>
                         <th>
                             <div>M</div>
+                        </th>
                         <th>
                             <div>Tu</div>
                         </th>
                         <th>
                             <div>W</div>
+                        </th>
                         <th>
                             <div>Th</div>
                         </th>
                         <th>
                             <div>F</div>
+                        </th>
                         <th>
                             <div>Sa</div>
                         </th>
@@ -34,7 +37,7 @@
                     <tr *ngFor="let week of month; index as i"
                         class="week">
                         <td *ngFor="let day of week"
-                            (click)="newDateSelected(day, i)">
+                            (click)="onNewDateSelected(day, i)">
                             <div class="day"
                                  [ngClass]="{'active': day.getDate() == selectedDate.getDate() && day.getMonth() == selectedDate.getMonth(), 
                                             'other-month': day.getMonth() != selectedDate.getMonth()}">

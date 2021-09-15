@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AppointmentsService } from 'src/app/services/appointments.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AppointmentsService } from 'src/app/services/appointments.service'; // barber shop
 
 @Component({
   selector: 'appointment-scheduler',
@@ -8,13 +8,17 @@ import { AppointmentsService } from 'src/app/services/appointments.service';
 })
 export class AppointmentSchedulerComponent implements OnInit {
 
+  @Input() bookedAppointments: any[];
+  @Output() newDateSelected = new EventEmitter<Date>();
+  @Output() dateTimeConfimed = new EventEmitter<Date>();
+
   selectedDate: Date;
   selectedTime;
-  bookedAppointments: any[];
   timeSlots: any[];
   month: Date[][];
 
-  constructor(private appointmentService: AppointmentsService) { }
+  constructor(private appointmentService: AppointmentsService //barber
+  ) { }
 
   ngOnInit(): void {
     this.selectedTime = {};
@@ -78,33 +82,18 @@ export class AppointmentSchedulerComponent implements OnInit {
         pm: true,
         available: true
       }
-    ];
+    ]; // barber shop*** other shops have different available times
 
     this.generateMonth();
-
-    this.getDaysAppointments(this.selectedDate);
   }
 
-  getDaysAppointments(date: Date) {
-    // call service
-    this.appointmentService.getAppointmentsByDate(date)
-      .subscribe(
-        data => {
-          this.convertSQLDateTimeToJSDate(data);
-          this.adjustTimeSlots();
-        }, error => {
-          if (error.status == 404) {
-            // no biggie, don't sweat it
-            this.bookedAppointments = [];
-            this.adjustTimeSlots();
-          } else {
-            console.error("ERROR retrieving appointments:", error)
-          }
-        }
-      );
+  ngOnChanges() {
+    if (this.timeSlots) {
+      this.adjustTimeSlots();
+    }
   }
 
-  newDateSelected(date, i) {
+  onNewDateSelected(date, i) {
 
     date = new Date(date);
     // i is the index of the week clicked
@@ -119,25 +108,7 @@ export class AppointmentSchedulerComponent implements OnInit {
     this.selectedDate = new Date(date);
 
     this.selectedTime = {};
-    this.getDaysAppointments(this.selectedDate);
-
-  }
-
-  convertSQLDateTimeToJSDate(data) {
-
-    this.bookedAppointments = data.map(appointment => {
-      let sqlTime = appointment.time;
-      let t = sqlTime.split(/[-T:]/);
-      let date = new Date(Number(t[0]), Number(t[1]), Number(t[2]), Number(t[3]), Number(t[4]));
-      date.setHours(date.getHours() - (date.getTimezoneOffset() / 60))
-
-      appointment.time = date;
-
-      return appointment;
-    });
-
-    console.log(this.bookedAppointments);
-
+    this.newDateSelected.emit(this.selectedDate);
   }
 
   adjustTimeSlots() {
@@ -225,7 +196,7 @@ export class AppointmentSchedulerComponent implements OnInit {
     } else {
       i = 4;
     }
-    this.newDateSelected(newDate, i);
+    this.onNewDateSelected(newDate, i);
   }
 
   onTimeSlotClicked(timeSlot) {
@@ -246,19 +217,7 @@ export class AppointmentSchedulerComponent implements OnInit {
     console.log(this.selectedDate);
 
     if (window.confirm("Confirm your appointment:" + this.selectedDate)) {
-      this.appointmentService.postNewAppointment(this.selectedDate)
-        .subscribe(
-          data => {
-            alert("Your appointment on " +
-              this.selectedDate.getFullYear() + "/" +
-              (this.selectedDate.getMonth() + 1) + "/" +
-              this.selectedDate.getDate() +
-              " at " + this.selectedTime.time +
-              " was scheduled successfully")
-          }, err => {
-            console.error("ERROR booking appointment: ", err)
-          }
-        );
+      this.dateTimeConfimed.emit(this.selectedDate);
     }
   }
 
