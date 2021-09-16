@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarberShopAppComponent } from './components/barber-shop-app/barber-shop-app.component';
 import { AppointmentSchedulerComponent } from './components/appointment-scheduler/appointment-scheduler.component';
+import { ServicesPageComponent } from './components/services-page/services-page.component';
+import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarberShopAppComponent,
-    AppointmentSchedulerComponent
+    AppointmentSchedulerComponent,
+    ServicesPageComponent,
+    AboutUsPageComponent
   ],
   imports: [
     BrowserModule,

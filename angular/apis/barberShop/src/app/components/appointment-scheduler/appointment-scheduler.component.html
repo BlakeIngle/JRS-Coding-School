@@ -1,14 +1,18 @@
 <div class="root">
     <div class="container">
-        <div class="header">Header</div>
+        <div class="header">{{header}}</div>
 
         <div class="main-content">
 
             <div class="calendar-container">
                 <div class="navigation">
-                    <button (click)="adjustMonthWithArrows(-1)">&lt;</button>
+                    <button (click)="adjustMonthWithArrows(-1)"
+                            class="neon-box dull"
+                            [ngClass]="{'booked': selectedDate.getFullYear() <= today.getFullYear() && selectedDate.getMonth() <= today.getMonth()}"
+                            [disabled]="selectedDate.getFullYear() <= today.getFullYear() && selectedDate.getMonth() <= today.getMonth()">&lt;</button>
                     <div>{{selectedDate | date: 'MMMM'}}</div>
-                    <button (click)="adjustMonthWithArrows(1)">&gt;</button>
+                    <button (click)="adjustMonthWithArrows(1)"
+                            class="neon-box dull">&gt;</button>
                 </div>
                 <table class="calendar">
                     <tr>
@@ -40,7 +44,8 @@
                             (click)="onNewDateSelected(day, i)">
                             <div class="day"
                                  [ngClass]="{'active': day.getDate() == selectedDate.getDate() && day.getMonth() == selectedDate.getMonth(), 
-                                            'other-month': day.getMonth() != selectedDate.getMonth()}">
+                                            'other-month': day.getMonth() != selectedDate.getMonth(),
+                                            'past': day.getTime() < today.getTime()}">
                                 {{day.getDate()}}
                             </div>
                         </td>
@@ -51,17 +56,20 @@
 
             <div class="right">
                 <div class="time-select">
-                    <!-- what actually goes here -->
                     <button type="button"
                             class="time-slot"
                             *ngFor="let timeSlot of timeSlots; index as i"
-                            [ngClass]="{'booked': !timeSlot.available, 'selected': selectedTime == timeSlot}"
-                            (click)="onTimeSlotClicked(timeSlot)">{{timeSlot.time}} {{timeSlot.pm ? "pm" : "am"}}</button>
+                            [ngClass]="{'booked': !timeSlot.available, 'selected': selectedTime && timeSlot.time.getTime() == selectedTime.getTime()}"
+                            (click)="onTimeSlotClicked(timeSlot)">
+                        {{timeSlot.time | date: 'h:mm a'}}
+                    </button>
                 </div>
-                <div class="footer">{{(selectedDate.getMonth() + 1) + "/" + selectedDate.getDate()}} - {{selectedTime.time ? selectedTime.time : "No\
-                    time selected."}}
+                <div class="footer">
+                    {{selectedTime | date: 'E d MMM - hh:mm a'}}
                     <button type="button"
-                            [disabled]="!selectedTime.time"
+                            class="neon-box dull"
+                            [ngClass]="{'booked': !selectedTime}"
+                            [disabled]="!selectedTime"
                             (click)="onConfirmClicked()">Confirm appointment</button>
                 </div>
             </div>

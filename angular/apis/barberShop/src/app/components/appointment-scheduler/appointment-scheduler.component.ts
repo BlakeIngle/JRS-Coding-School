@@ -9,91 +9,54 @@ import { AppointmentsService } from 'src/app/services/appointments.service'; // 
 export class AppointmentSchedulerComponent implements OnInit {
 
   @Input() bookedAppointments: any[];
+  /**
+   * number: 0-24 the opening time (ex: 8.5 -> 8:30am)
+   */
+  @Input() open: number; // 'hh:mm'
+  /**
+   * number: 0-24 the closing time (ex: 17.5 -> 6:30pm)
+   */
+  @Input() close: number;
+  /**
+   * number: minutes between time slots (ex: 15 -> 15 min)
+   */
+  @Input() timeSlotInterval: number;
+  /**
+   * string to display as the header of the component. Default is "Select A Time"
+   */
+  @Input() header: string;
+
   @Output() newDateSelected = new EventEmitter<Date>();
   @Output() dateTimeConfimed = new EventEmitter<Date>();
 
   selectedDate: Date;
-  selectedTime;
+  today: Date;
+  selectedTime: Date; // the actual date time object to work with
   timeSlots: any[];
   month: Date[][];
 
-  constructor(private appointmentService: AppointmentsService //barber
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.selectedTime = {};
+    this.selectedTime = null;
     this.selectedDate = new Date();
+    this.today = new Date();
 
-    this.timeSlots = [
-      {
-        time: "11:00",
-        pm: false,
-        available: true
-      }, {
-        time: "11:30",
-        pm: false,
-        available: true
-      }, {
-        time: "12:00",
-        pm: true,
-        available: true
-      }, {
-        time: "12:30",
-        pm: true,
-        available: true
-      }, {
-        time: "1:00",
-        pm: true,
-        available: true
-      }, {
-        time: "1:30",
-        pm: true,
-        available: true
-      }, {
-        time: "2:00",
-        pm: true,
-        available: true
-      }, {
-        time: "2:30",
-        pm: true,
-        available: true
-      }, {
-        time: "3:00",
-        pm: true,
-        available: true
-      }, {
-        time: "3:30",
-        pm: true,
-        available: true
-      }, {
-        time: "4:00",
-        pm: true,
-        available: true
-      }, {
-        time: "4:30",
-        pm: true,
-        available: true
-      }, {
-        time: "5:00",
-        pm: true,
-        available: true
-      }, {
-        time: "5:30",
-        pm: true,
-        available: true
-      }
-    ]; // barber shop*** other shops have different available times
-
+    this.generateTimeSlots();
     this.generateMonth();
   }
 
   ngOnChanges() {
     if (this.timeSlots) {
       this.adjustTimeSlots();
+      this.selectedTime = null;
     }
   }
 
   onNewDateSelected(date, i) {
+    if (date.getTime() < this.today.getTime()) {
+      date = this.today;
+    }
 
     date = new Date(date);
     // i is the index of the week clicked
@@ -107,27 +70,45 @@ export class AppointmentSchedulerComponent implements OnInit {
     }
     this.selectedDate = new Date(date);
 
-    this.selectedTime = {};
+    this.selectedTime = null;
     this.newDateSelected.emit(this.selectedDate);
+  }
+
+  generateTimeSlots() {
+    this.timeSlots = [];
+    let time = this.open;
+
+    while (time + (this.timeSlotInterval / 60) <= this.close) {
+      let date = new Date(this.selectedDate);
+      date.setHours(time);
+      // time = 14.25
+      date.setMinutes(time % 1 * 60);
+      date.setSeconds(0);
+      this.timeSlots.push(
+        {
+          time: date,
+          pm: time >= 12,
+          available: true
+        }
+      );
+      time += this.timeSlotInterval / 60;
+
+    }
   }
 
   adjustTimeSlots() {
 
     timeLoop: for (let i = 0; i < this.timeSlots.length; i++) {
       let timeSlot = this.timeSlots[i];
-      for (let appointment of this.bookedAppointments) {
-        var hours = appointment.time.getHours();
-        if (hours > 12) {
-          hours -= 12;
-        }
-        var min = appointment.time.getMinutes();
-        if (min < 10) {
-          // add leading 0 to 0-9
-          min = "0" + min;
-        }
-        let bookedTime = hours + ":" + min
 
-        if (bookedTime == timeSlot.time) {
+      timeSlot.time.setYear(this.selectedDate.getFullYear());
+      timeSlot.time.setMonth(this.selectedDate.getMonth());
+      timeSlot.time.setDate(this.selectedDate.getDate());
+
+      for (let appointment of this.bookedAppointments) {
+
+        if (appointment.time.getHours() == timeSlot.time.getHours()
+          && appointment.time.getMinutes() == timeSlot.time.getMinutes()) {
           // already booked
           timeSlot.available = false;
           var dur = appointment.duration.split(":")
@@ -141,9 +122,6 @@ export class AppointmentSchedulerComponent implements OnInit {
       }
       timeSlot.available = true;
     }
-
-    // look at all booked appointments
-    // make time slots 'booked' if an appointment is at that time
   }
 
   generateMonth() {
@@ -201,23 +179,13 @@ export class AppointmentSchedulerComponent implements OnInit {
 
   onTimeSlotClicked(timeSlot) {
     if (timeSlot.available) {
-      this.selectedTime = timeSlot;
+      this.selectedTime = timeSlot.time;
     }
   }
 
   onConfirmClicked() {
-    let t = this.selectedTime.time.split(":");
-    var h = this.selectedTime.pm && t[0] != 12 ? Number(t[0]) + 12 : t[0];
-
-    var offset = this.selectedDate.getTimezoneOffset() / 60;
-    this.selectedDate.setHours(h - offset);
-    this.selectedDate.setMinutes(t[1]);
-    this.selectedDate.setSeconds(0);
-    this.selectedDate.setMilliseconds(0);
-    console.log(this.selectedDate);
-
-    if (window.confirm("Confirm your appointment:" + this.selectedDate)) {
-      this.dateTimeConfimed.emit(this.selectedDate);
+    if (window.confirm("Confirm your appointment:" + this.selectedTime)) {
+      this.dateTimeConfimed.emit(this.selectedTime);
     }
   }
 

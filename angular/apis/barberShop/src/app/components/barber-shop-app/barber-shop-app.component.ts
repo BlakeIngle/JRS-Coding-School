@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentsService } from 'src/app/services/appointments.service';
+import { BarberShopService } from 'src/app/services/barber-shop.service';
 import { DateTimeService } from 'src/app/services/date-time.service';
 
 @Component({
@@ -10,17 +11,39 @@ import { DateTimeService } from 'src/app/services/date-time.service';
 export class BarberShopAppComponent implements OnInit {
 
   bookedAppointments: any[];
+  locations: any[];
+
+  showLocations: boolean;
+  showServices: boolean;
+  showAboutUs: boolean;
 
   constructor(private appointmentService: AppointmentsService,
-    private dateTimeService: DateTimeService) { }
+    private dateTimeService: DateTimeService,
+    private barberShopService: BarberShopService) { }
 
   ngOnInit(): void {
     this.bookedAppointments = [];
+    this.locations = [];
+
+    this.showLocations = false;
+    this.showServices = false;
+    this.showAboutUs = false;
+
     this.getDaysAppointments(new Date());
+    this.barberShopService.getAllLocations()
+      .subscribe(
+        data => {
+          this.locations = data as any[];
+          console.log(this.locations)
+        }, error => {
+          console.error("ERROR retrieving locations:", error)
+        }
+      );
   }
 
   getDaysAppointments(date: Date) {
     // call service
+    console.log(date);
     this.appointmentService.getAppointmentsByDate(date)
       .subscribe(
         data => {
@@ -28,7 +51,6 @@ export class BarberShopAppComponent implements OnInit {
             appointment.time = this.dateTimeService.convertSQLDateTimeToJSDate(appointment.time);
           });
           this.bookedAppointments = data as any[];
-          console.log(this.bookedAppointments)
         }, error => {
           if (error.status == 404) {
             // no biggie, don't sweat it
@@ -50,11 +72,15 @@ export class BarberShopAppComponent implements OnInit {
             date.getDate() +
             " at " + date.getHours() +
             ":" + date.getMinutes() +
-            " was scheduled successfully.")
+            " was scheduled successfully.");
+          this.getDaysAppointments(date);
         }, err => {
           console.error("ERROR booking appointment: ", err)
         }
       );
   }
 
+  onLocationsClicked() {
+    this.showLocations = true;
+  }
 }

@@ -15,8 +15,8 @@ export class DateTimeService {
   convertSQLDateTimeToJSDate(sqlTime: string): Date {
 
     let t = sqlTime.split(/[-T:]/);
-    let date = new Date(Number(t[0]), Number(t[1]), Number(t[2]), Number(t[3]), Number(t[4]));
-    date.setHours(date.getHours() - (date.getTimezoneOffset() / 60))
+    let date = new Date(Number(t[0]), Number(t[1]) - 1, Number(t[2]), Number(t[3]), Number(t[4]));
+    date.setHours(date.getHours() - (date.getTimezoneOffset() / 60 * 2))
 
     return date;
   }

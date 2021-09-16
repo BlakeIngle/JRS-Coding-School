@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 :root {
     --mainColor: 250;
@@ -15,4 +16,7 @@ html {
     margin: 0;
     padding: 0;
     background-color: var(--black);
+    color: white;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
 }

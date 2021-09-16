@@ -5,6 +5,8 @@
 
 .container {
     margin: 2em;
+
+    animation: rainbow linear 200s infinite reverse;
 }
 
 * {
@@ -40,6 +42,39 @@
     overflow: hidden;
     padding: 1em;
     box-sizing: border-box;
+}
+
+.neon-box {
+
+    --blur: 1.75rem;
+    --box-blur: calc(0.5 * var(--blur));
+    --glow: var(--lightest);
+    --size: 12rem;
+  
+    align-items: center;
+    border-radius: 6px;
+    border: 3px solid currentColor;
+    background-color: transparent;
+    box-shadow: 
+        /* --- "glass" tube --- */
+        /* inside */ inset 0 0 0 1px rgba(0, 0, 0, 0.15),
+        /* outside */      0 0 0 1px rgba(0, 0, 0, 0.15),
+        /* --- glow --- */
+        /* inside */ inset 0 0 var(--box-blur) var(--glow),
+        /* outside */      0 0 var(--box-blur) var(--glow);
+    color: var(--glow, white);
+  
+    transition: background-color 0.2s;
+}
+.dull {
+    --box-blur: calc(0.25 * var(--blur));
+}
+
+button:hover {
+    cursor: pointer;
+}
+.booked:hover {
+    cursor: not-allowed;
 }
 
 .time-select {
@@ -94,7 +129,7 @@
     background-color: transparent;
 }
 
-.time-slot.booked {
+.booked {
     border-color: var(--darkest);
     color: var(--darkest);
     cursor: not-allowed;
@@ -143,7 +178,7 @@ table {
     cursor: pointer;
 }
 
-.day:hover:not(.day.active) {
+.day:hover:not(.day.active, .past) {
     --box-blur: 0.3rem;
     --glow: var(--light);
   
@@ -173,6 +208,14 @@ table {
     color: var(--darkest);
 }
 
+.day.past {
+    color: var(--darkest);
+}
+
+.day.past:hover {
+    cursor: not-allowed;
+}
+
 .navigation {
     display: flex;
     flex-direction: row;
@@ -183,36 +226,7 @@ table {
 }
 
 
-@keyframes blink {
-    78% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    79%{
-       color: #333;
-    }
-    80% {
-      
-      text-shadow: none;
-    }
-    81% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    82% {
-      color: #333;
-      text-shadow: none;
-    }
-    83% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    92% {
-      color: #333;
-      text-shadow: none;
-    }
-    92.5% {
-      color: inherit;
-      text-shadow: inherit;
-    }
+@keyframes rainbow {
+    from { filter: hue-rotate(0);}
+    to {filter: hue-rotate(360deg);}
 }

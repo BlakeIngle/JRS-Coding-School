@@ -15,7 +15,6 @@ export class AppointmentsService {
   }
 
   postNewAppointment(date: Date, barber?, service?) {
-    console.log(date);
     return this.http.post(`${BASE_URL}/appointments`, { time: date, barber: 1, service: 1 });
   }
 }
