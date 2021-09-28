@@ -1,3 +1,29 @@
 .root {
-    background-color: green;
+    padding: 0;
+    margin: 0;
+}
+
+.question {
+    height: 90vh;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+button {
+    height: 1.5em;
+    min-width: 2em;
+    font-size: 3em;
+    border-radius: 10px;
+    background-color: rgb(255, 70, 70);
+    color: white;
+    border: none;
+}
+
+button:disabled {
+    color:rgb(218, 218, 218);
+    background-color: rgb(255, 145, 145);
 }

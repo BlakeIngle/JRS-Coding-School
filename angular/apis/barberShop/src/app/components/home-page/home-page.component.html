@@ -1,0 +1,12 @@
+<div class="root">
+
+    <div *ngFor="let link of links">
+        <a [routerLink]="link.value">{{link.label}}</a>
+        <div class="accordion"
+             *ngIf="router.url == '/'+link.value">
+            <router-outlet></router-outlet>
+        </div>
+        <hr>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+.root {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form {
+    padding: 2em 3em;
+    width: 200px;
+    border: solid black 1px;
+}

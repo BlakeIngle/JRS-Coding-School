@@ -15,42 +15,9 @@
     filter: invert();
 }
 
-hr {
-    width: 80vw;
-    border-color: #555;
-}
-
 .main {
-    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main div {
-    margin-bottom: 0.5em;
-}
-
-.main > div > div:first-of-type {
-    text-align: center;
-}
-
-.location:first-of-type {
-    margin-top: 0.5em;
-}
-
-.location {
-    font-size: 0.6em;
-}
-
-.accordion {
-    display: initial;
-    height: fit-content;
-    opacity: 1;
-}
-
-.hidden {
-    display: none;
-    height: 0;
-    opacity: 0;
+    justify-content: flex-start;
 }

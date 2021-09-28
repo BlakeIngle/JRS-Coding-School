@@ -14,7 +14,12 @@ export class AppointmentsService {
     return this.http.get(`${BASE_URL}/appointments/${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
   }
 
-  postNewAppointment(date: Date, barber?, service?) {
-    return this.http.post(`${BASE_URL}/appointments`, { time: date, barber: 1, service: 1 });
+  getBarbersAppointmentsByDate(id: number, date: Date) {
+    return this.http.get(`${BASE_URL}/barbers/${id}/appointments/${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
+  }
+
+  postNewAppointment(date: Date, barber: number, service: number) {
+    return this.http.post(`${BASE_URL}/appointments`,
+      { time: date, barber: barber, service: service });
   }
 }

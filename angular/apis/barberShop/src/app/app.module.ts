@@ -9,6 +9,10 @@ import { BarberShopAppComponent } from './components/barber-shop-app/barber-shop
 import { AppointmentSchedulerComponent } from './components/appointment-scheduler/appointment-scheduler.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
 import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
+import { LocationsPageComponent } from './components/locations-page/locations-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { LocationComponent } from './components/location/location.component';
+import { BarberPageComponent } from './components/barber-page/barber-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { AboutUsPageComponent } from './components/about-us-page/about-us-page.c
     BarberShopAppComponent,
     AppointmentSchedulerComponent,
     ServicesPageComponent,
-    AboutUsPageComponent
+    AboutUsPageComponent,
+    LocationsPageComponent,
+    HomePageComponent,
+    LocationComponent,
+    BarberPageComponent
   ],
   imports: [
     BrowserModule,

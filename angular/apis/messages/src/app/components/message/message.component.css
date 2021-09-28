@@ -1,0 +1,19 @@
+.root {
+    box-shadow: 0 1px 0 3px lightgray;
+    margin: 1em;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+b {
+    background-color: lightgray;
+    padding: 0.25em 0.5em;
+    display: inline-block;
+    width: 25%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main {
+    padding: 0.25em 1em;
+}

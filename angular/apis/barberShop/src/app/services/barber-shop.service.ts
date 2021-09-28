@@ -13,4 +13,16 @@ export class BarberShopService {
   getAllLocations() {
     return this.http.get(`${BASE_URL}/locations`)
   }
+
+  getBarbersByLocation(id: string) {
+    return this.http.get(`${BASE_URL}/locations/${id}/barbers`);
+  }
+
+  getBarberById(id) {
+    return this.http.get(`${BASE_URL}/barbers/${id}`);
+  }
+
+  getServices() {
+    return this.http.get(`${BASE_URL}/services`);
+  }
 }

@@ -21,6 +21,7 @@
 
 .main-content {
     display: flex;
+    flex-direction: row;
 }
 
 .right,
@@ -229,4 +230,16 @@ table {
 @keyframes rainbow {
     from { filter: hue-rotate(0);}
     to {filter: hue-rotate(360deg);}
+}
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    .main-content {
+        flex-direction: column;
+    }
+
+    .day, th div {
+        width: calc(vw/7);
+        height: calc(vw/7);
+    }
 }

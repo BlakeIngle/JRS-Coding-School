@@ -1,0 +1,18 @@
+<p>barber-page works!</p>
+
+<select [(ngModel)]="serviceSelected">
+        <option value="null"
+                disabled>-- Select a Service --</option>
+        <option *ngFor="let service of services"
+                [value]="service.id">{{service.description}}</option>
+</select>
+
+<appointment-scheduler *ngIf="true"
+                       [open]="11"
+                       [close]="18"
+                       [timeSlotInterval]="30"
+                       header="Schedule Your Cut With {{barber.firstName}}"
+                       [bookedAppointments]="bookedAppointments"
+                       (newDateSelected)="getDaysAppointments($event)"
+                       (dateTimeConfimed)="bookAppointment($event)">
+</appointment-scheduler>

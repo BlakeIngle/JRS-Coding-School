@@ -1,0 +1,38 @@
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.barber {
+    position: relative;
+    width: 48%;
+    height: fit-content;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    margin: 0;
+}
+
+.name {
+    text-align: center;
+    position: absolute;
+    bottom: 0.25em;
+    width: 100%;
+    text-shadow: 
+        0 0 5px black,
+        1px 0 black;
+        margin: 0;
+    font-size: 0.7em;
+    background-color: rgba(22, 22, 22, 0.705);
+    padding: 0.25em 0;
+}
+
+.barber {
+    cursor: pointer;
+}

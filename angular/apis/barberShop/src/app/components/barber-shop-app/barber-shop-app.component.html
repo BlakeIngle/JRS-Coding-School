@@ -1,49 +1,15 @@
 <div class="root">
 
     <div class="header">
-        <img src="../../../assets/images/shop_logo.png"
-             class="logo">
+        <button (click)="goBack()">&lt;</button>
+        <a routerLink="">
+            <img src="../../../assets/images/shop_logo.png"
+                 class="logo">
+        </a>
     </div>
 
     <div class="main">
-        <div>
-            <div (click)="onLocationsClicked()">Locations</div>
-            <div class="accordion"
-                 [ngClass]="{'hidden': !showLocations}">
-                <div *ngFor="let location of locations"
-                     class="location">{{location.address}}</div>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <a routerLink="services">Services</a>
-            <div class="accordion"
-                 *ngIf="showServices">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-        <hr>
-        <div>
-            <a routerLink="about">About Us</a>
-            <div class="accordion"
-                 *ngIf="showAboutUs">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-        <hr>
-        <div>Book Appointment</div>
+        <router-outlet></router-outlet>
     </div>
 
-
-
-
-    <appointment-scheduler *ngIf="false"
-                           [open]="11"
-                           [close]="18"
-                           [timeSlotInterval]="30"
-                           header="Schedule Your Cut"
-                           [bookedAppointments]="bookedAppointments"
-                           (newDateSelected)="getDaysAppointments($event)"
-                           (dateTimeConfimed)="bookAppointment($event)">
-    </appointment-scheduler>
 </div>

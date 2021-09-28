@@ -1,6 +1,19 @@
-<question *ngFor="let question of questions"
-          [question]="question"
-          [reveal]="submitted"></question>
+<div class="root">
+        <div class="question">
+                <question [question]="questions[activeQuestion-1]"
+                          [reveal]="submitted"></question>
+        </div>
 
-<button type="button"
-        (click)="submitQuizClicked()">Submit Answers</button>
+        <div class="buttons">
+                <button (click)="changeQuestion(-1)"
+                        [disabled]="activeQuestion <= 1">&lt;</button>
+                <button (click)="changeQuestion(1)"
+                        [disabled]="!questions[activeQuestion-1].userAnswer"
+                        *ngIf="activeQuestion < quizLength; else finish">&gt;</button>
+                <ng-template #finish>
+                        <button type="button"
+                                [disabled]="!questions[activeQuestion-1].userAnswer"
+                                (click)="submitQuizClicked()">Submit Answers</button>
+                </ng-template>
+        </div>
+</div>

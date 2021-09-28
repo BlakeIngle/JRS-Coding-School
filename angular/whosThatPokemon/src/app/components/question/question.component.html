@@ -1,4 +1,5 @@
-<div class="root">
+<div class="root"
+     *ngIf="false">
     <h2>{{question.questionText}}</h2>
     <div class="option"
          *ngFor="let option of question.options"
@@ -16,4 +17,25 @@
     <img class="silhouette"
          [ngClass]="{'reveal': reveal}"
          src="../../../assets/images/{{question.silhouette}}">
+</div>
+
+<div class="root mobile">
+    <h2>Who's That Pokemon?</h2>
+
+    <div class="img-container">
+        <img class="silhouette"
+             [ngClass]="{'reveal': reveal}"
+             src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/890.png">
+    </div>
+
+    <div class="options">
+        <div class="option"
+             *ngFor="let option of question.options"
+             (click)="selectOption(option)"
+             [ngClass]="{'selected': option == question.userAnswer,
+                        'correct': reveal && option == question.answer,
+                        'incorrect': reveal && option == question.userAnswer && option != question.answer}">
+            {{option}}
+        </div>
+    </div>
 </div>

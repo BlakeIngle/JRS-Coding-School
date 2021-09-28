@@ -1,0 +1,18 @@
+<nav>
+    <a routerLink="login">
+        <button *ngIf="!activeUser"
+                title="login">Login</button>
+    </a>
+    <div *ngIf="activeUser">
+        <span>{{activeUser.username}} <fa-icon [icon]="faUser"></fa-icon></span>
+        <button type="button"
+                (click)="logout()">Logout</button>
+    </div>
+</nav>
+
+<div class="message-list">
+    <message-list [messages]="messages"></message-list>
+</div>
+
+<message-form *ngIf="activeUser"
+              (newMessageSubmitted)="submitMessage($event)"></message-form>

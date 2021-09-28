@@ -1,0 +1,42 @@
+<div class="root">
+
+    <h1>Create An Account</h1>
+
+    <form #form="ngForm"
+          (ngSubmit)="onSubmit(form)">
+
+        <div class="input username">
+            <input type="text"
+                   name="username"
+                   [(ngModel)]="username"
+                   (ngModelChange)="usernameChanged($event)"
+                   placeholder="username"
+                   required>
+        </div>
+
+        <div class="input password">
+            <input type="password"
+                   name="password"
+                   [(ngModel)]="password"
+                   placeholder="password"
+                   required>
+        </div>
+
+        <div class="input password repeat">
+            <input type="password"
+                   name="confirmPassword"
+                   [(ngModel)]="confirmPassword"
+                   placeholder="confirm password"
+                   required>
+        </div>
+
+        <button type="submit"
+                [disabled]="form.invalid">Create Account</button>
+        <hr>
+
+        <a routerLink="../login">
+            <button type="button">Back to login</button>
+        </a>
+    </form>
+    <p class="error">{{errorMessage}}</p>
+</div>

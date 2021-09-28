@@ -1,0 +1,17 @@
+<div class="root">
+    <div class="form">
+        <form #itemForm="ngForm"
+              (ngSubmit)="onFormSubmitted(itemForm)">
+            <fa-icon [icon]="faFeather"></fa-icon>
+            <input type="text"
+                   name="message"
+                   placeholder="Say Something"
+                   [(ngModel)]="message"
+                   required>
+            <button type="submit"
+                    [disabled]="itemForm.invalid">
+                <fa-icon [icon]="faPaperPlane"></fa-icon>
+            </button>
+        </form>
+    </div>
+</div>

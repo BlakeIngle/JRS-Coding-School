@@ -1,0 +1,4 @@
+<div *ngFor="let location of locations"
+     class="location">
+    <a [routerLink]="location.id">{{location.address}}</a>
+</div>

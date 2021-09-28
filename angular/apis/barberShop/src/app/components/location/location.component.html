@@ -1,0 +1,11 @@
+<div class="flex-box">
+    <div *ngFor="let barber of barbers"
+         class="barber"
+         routerLink="../../barber/{{barber.id}}">
+        <div class="name">
+            {{barber.firstName}} {{barber.lastName}}
+        </div>
+
+        <img src="../../../assets/images/profiles/profile{{barber.id}}.jpg">
+    </div>
+</div>

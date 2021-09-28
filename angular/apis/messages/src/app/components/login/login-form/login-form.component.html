@@ -1,0 +1,33 @@
+<div class="root">
+
+    <h1>Log In</h1>
+
+    <form #form="ngForm"
+          (ngSubmit)="onSubmit(form)">
+
+        <div class="input username">
+            <input type="text"
+                   name="username"
+                   [(ngModel)]="username"
+                   placeholder="username"
+                   required>
+        </div>
+
+        <div class="input password">
+            <input type="password"
+                   name="password"
+                   [(ngModel)]="password"
+                   placeholder="password"
+                   required>
+        </div>
+
+        <button type="submit"
+                [disabled]="form.invalid">Log In</button>
+        <p class="error">{{errorMessage}}</p>
+        <hr>
+
+        <a routerLink="../signup">
+            <button type="button">Sign Up</button>
+        </a>
+    </form>
+</div>

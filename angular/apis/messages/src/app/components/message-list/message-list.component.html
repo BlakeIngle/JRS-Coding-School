@@ -1,0 +1,7 @@
+<div class="root">
+    <div class="scroll">
+        <message *ngFor="let message of messages"
+                 [body]="message.message"
+                 [user]="message.userId"></message>
+    </div>
+</div>
