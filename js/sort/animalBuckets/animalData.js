@@ -1,4 +1,4 @@
-exports.animals = [{ "firstName": "Sib", "favoriteAnimal": "Lion, asian", "age": 24, "favoriteColor": "Green" },
+exports.people = [{ "firstName": "Sib", "favoriteAnimal": "Lion, asian", "age": 24, "favoriteColor": "Green" },
 { "firstName": "Jemmie", "favoriteAnimal": "Stork, white-necked", "age": 19, "favoriteColor": "Blue" },
 { "firstName": "Foster", "favoriteAnimal": "Guerza", "age": 22, "favoriteColor": "Teal" },
 { "firstName": "Olenka", "favoriteAnimal": "Lizard, blue-tongued", "age": 25, "favoriteColor": "Pink" },
