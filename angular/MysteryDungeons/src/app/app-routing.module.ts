@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MinesweeperComponent } from './minesweeper/minesweeper.component';
+import { DungeonMainPageComponent } from './components/dungeon-main-page/dungeon-main-page.component';
 
 const routes: Routes = [
-  {path: "", component: MinesweeperComponent},
+  {path: "", component: DungeonMainPageComponent},
   {path: "**", redirectTo: ""}
 ];
 

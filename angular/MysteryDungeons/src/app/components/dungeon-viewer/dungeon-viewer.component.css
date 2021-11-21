@@ -1,0 +1,32 @@
+table, tr, td {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 5pt;
+}
+
+tr {
+    height: 5px;
+}
+
+td div {
+    width: 5px;
+    height: 5px;
+    border: solid black 1px;
+    text-align: center;
+}
+
+.wall {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.room {
+    background-color: hsl(20, 35%, 60%);
+}
+
+.hall {
+    background-color: hsl(0, 0%, 75%);
+}
