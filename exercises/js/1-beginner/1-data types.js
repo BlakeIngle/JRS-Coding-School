@@ -14,7 +14,9 @@
  * 
  */
 
-for(let value of arr) {
+var arr = makeArray(100);
+
+for (let value of arr) {
     // this for loop will iterate through every value in the array
 
     // write code that will output the 'value' variable
@@ -25,7 +27,7 @@ for(let value of arr) {
     // "294 is a number"
     // if value is the boolean true:
     // "true is a boolean"
-    
+
     /************************************/
     // CODE GOES HERE //
 
@@ -33,13 +35,11 @@ for(let value of arr) {
     /************************************/
 }
 
-var arr = makeArray(100);
-
 function makeArray(length) {
     var data = [];
-    for(let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         let r = Math.floor(Math.random() * 3);
-        switch(r) {
+        switch (r) {
             case 0: data.push(Math.floor(Math.random() * 1000));
                 continue;
             case 1: data.push(Math.floor(Math.random() * 1000) + "");
@@ -48,4 +48,6 @@ function makeArray(length) {
                 continue;
         }
     }
+
+    return data;
 }
