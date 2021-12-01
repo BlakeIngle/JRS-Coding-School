@@ -1,5 +1,4 @@
 const fs = require('fs')
-const readline = require("readline")
 
 fs.readFile('numbers.txt', function (err, data) {
     if (err) {

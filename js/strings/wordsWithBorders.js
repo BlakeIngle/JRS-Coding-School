@@ -6,6 +6,28 @@
 // * frame *
 // *********
 
+/*
+ ***************
+ * this        *
+ * is          *
+ * a          *
+ * more        *
+ * complicated *
+ * string      *
+ ***************
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 let words = ["Hello", "world", "in", "an", "frame"];
 
 function printWithFrame(words) {

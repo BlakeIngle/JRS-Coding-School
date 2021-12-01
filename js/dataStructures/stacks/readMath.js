@@ -123,3 +123,10 @@ rl.question("Type a math equation.\n", (equation) => {
 rl.on("close", () => {
     process.exit();
 })
+
+
+
+    (3 + 4) * 2
+
+// numbers:    14
+// operators:  

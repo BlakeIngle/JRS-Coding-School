@@ -1,0 +1,271 @@
+var orders = [
+    {
+        "orderId": "da83e5e2-df18-455e-8fd7-41ee2a2ad6f9",
+        "customer": "Wilmer Pennycook",
+        "date": "6/13/2021", // mm/dd/yy - mm/dd/yyyy - m/d/yyyy - m/d/yy
+        "total": "$34.75"
+    }, {
+        "orderId": "3ae5d11c-4984-445b-b993-924fe78625a2",
+        "customer": "Beulah Sterte",
+        "date": "7/21/2021",
+        "total": "$48.35"
+    }, {
+        "orderId": "5e0b8c9c-e6bc-4074-9fa2-1c9f6ca27202",
+        "customer": "Bev Baltzar",
+        "date": "8/17/2021",
+        "total": "$84.72"
+    }, {
+        "orderId": "7110c512-4bc6-49d7-b00d-cb85aaa021b6",
+        "customer": "Elladine Delgardillo",
+        "date": "5/31/2021",
+        "total": "$63.02"
+    }, {
+        "orderId": "0451cb9a-3efc-43a0-99f6-f51d5f880919",
+        "customer": "Pat Dilliston",
+        "date": "5/13/2021",
+        "total": "$97.55"
+    }, {
+        "orderId": "8e387cef-d3cb-4a5c-88d7-e2245a77b349",
+        "customer": "Alan Treacher",
+        "date": "1/8/2021",
+        "total": "$36.44"
+    }, {
+        "orderId": "d3b2460f-ab59-4679-8cb5-a083823eebdd",
+        "customer": "Jabez Gartside",
+        "date": "6/15/2021",
+        "total": "$35.52"
+    }, {
+        "orderId": "2561525c-7415-4ac7-8a64-c00adc583e55",
+        "customer": "Maiga Brister",
+        "date": "2/10/2021",
+        "total": "$80.01"
+    }, {
+        "orderId": "62d79e00-733f-48c8-b4d1-d478f2997988",
+        "customer": "Rustie Wickwar",
+        "date": "5/18/2021",
+        "total": "$15.58"
+    }, {
+        "orderId": "d92ed801-454f-4cc4-8ccb-b494810ee709",
+        "customer": "Ettore Clew",
+        "date": "3/16/2021",
+        "total": "$93.18"
+    }, {
+        "orderId": "5af540b5-5036-40bb-be81-9a663e1d74e5",
+        "customer": "Cristy Durtnal",
+        "date": "12/22/2020",
+        "total": "$18.86"
+    }, {
+        "orderId": "aba1f368-629f-4716-87fd-68de95b9f036",
+        "customer": "Kassandra Holberry",
+        "date": "7/30/2021",
+        "total": "$96.00"
+    }, {
+        "orderId": "e617bf92-e8d5-4028-8cf5-d046f997deae",
+        "customer": "Samara Spinnace",
+        "date": "12/11/2020",
+        "total": "$7.36"
+    }, {
+        "orderId": "b9cf02aa-b38a-4998-b88e-886a3549920c",
+        "customer": "Maximilianus Wadesworth",
+        "date": "4/29/2021",
+        "total": "$48.31"
+    }, {
+        "orderId": "e990dfe5-0555-414b-ae17-51144d2c90a0",
+        "customer": "Gilligan Hudspeth",
+        "date": "12/29/2020",
+        "total": "$96.38"
+    }, {
+        "orderId": "7fc1acf2-7774-4c51-a4b1-acea0681347b",
+        "customer": "Britney Surgenor",
+        "date": "6/6/2021",
+        "total": "$21.66"
+    }, {
+        "orderId": "3287612d-5668-476d-a4fc-4a7310da463c",
+        "customer": "Tedman Cuolahan",
+        "date": "7/9/2021",
+        "total": "$82.66"
+    }, {
+        "orderId": "349418b7-565a-4624-adbb-1405091edc7e",
+        "customer": "Raynell Dorber",
+        "date": "9/16/2021",
+        "total": "$78.57"
+    }, {
+        "orderId": "43e56c3b-da10-474f-b318-0d9c0d91559c",
+        "customer": "Florencia Baline",
+        "date": "9/24/2021",
+        "total": "$93.28"
+    }, {
+        "orderId": "d789266a-7cc5-44fc-898d-478c4d7f28d3",
+        "customer": "Kaye Domelaw",
+        "date": "6/24/2021",
+        "total": "$51.71"
+    }, {
+        "orderId": "aa690851-9ecb-4f70-9cd1-aa544607a328",
+        "customer": "Casar Rapper",
+        "date": "10/26/2021",
+        "total": "$95.09"
+    }, {
+        "orderId": "dba6f978-1d1e-4697-9bc4-c37461e9465e",
+        "customer": "Reinwald Leatt",
+        "date": "11/26/2020",
+        "total": "$39.82"
+    }, {
+        "orderId": "0e9dbc73-d84f-44bb-bd3d-2925ff000462",
+        "customer": "Noelyn Masedon",
+        "date": "9/30/2021",
+        "total": "$69.96"
+    }, {
+        "orderId": "6dfdcc6d-8b30-4584-9204-660c9621a194",
+        "customer": "Alameda Grant",
+        "date": "3/9/2021",
+        "total": "$39.01"
+    }, {
+        "orderId": "93cae9ca-83ac-4999-ba8f-f1085e184d02",
+        "customer": "Igor Dunphy",
+        "date": "12/14/2020",
+        "total": "$30.73"
+    }, {
+        "orderId": "1b4c3962-6229-489e-b992-ab71547f48f0",
+        "customer": "Karlee Molan",
+        "date": "7/15/2021",
+        "total": "$27.15"
+    }, {
+        "orderId": "9fdff327-56f2-4e6b-b2ee-4eb221c5e286",
+        "customer": "Carlita Maggill'Andreis",
+        "date": "4/2/2021",
+        "total": "$17.51"
+    }, {
+        "orderId": "3b1d84cc-99ed-477c-8af7-1d0f597bca51",
+        "customer": "Chase Blaxill",
+        "date": "8/6/2021",
+        "total": "$7.35"
+    }, {
+        "orderId": "497cc56a-8069-4f09-a0e5-aa35643dd3d9",
+        "customer": "Brad Desouza",
+        "date": "5/6/2021",
+        "total": "$5.51"
+    }, {
+        "orderId": "46c7c9b2-26aa-4243-8466-354c37e24607",
+        "customer": "Nariko Gabriel",
+        "date": "6/29/2021",
+        "total": "$98.49"
+    }, {
+        "orderId": "569e8960-4a99-4747-9d99-c7bdf13ddbc5",
+        "customer": "Taddeo Hastwell",
+        "date": "6/4/2021",
+        "total": "$60.35"
+    }, {
+        "orderId": "3e811c97-49d0-46e4-aee2-b8e6eb96b7a5",
+        "customer": "Caro Rampley",
+        "date": "4/26/2021",
+        "total": "$52.05"
+    }, {
+        "orderId": "d59a98cc-d2af-479f-9f3d-ea0d3c708169",
+        "customer": "Simone Brissenden",
+        "date": "12/13/2020",
+        "total": "$27.07"
+    }, {
+        "orderId": "aa6cb369-7a5d-4279-8f45-c20bdb394dc8",
+        "customer": "Patsy Mityushin",
+        "date": "8/14/2021",
+        "total": "$62.21"
+    }, {
+        "orderId": "00e1c48f-a164-4c3a-95f4-8dac9b009ff3",
+        "customer": "Dermot Mayes",
+        "date": "5/4/2021",
+        "total": "$12.36"
+    }, {
+        "orderId": "bf2b71ef-9eea-4aca-bff4-216f88676e64",
+        "customer": "Deana Dumberrill",
+        "date": "1/6/2021",
+        "total": "$91.59"
+    }, {
+        "orderId": "bc561c37-e5ba-45ed-a481-00907870375e",
+        "customer": "Randolph Habeshaw",
+        "date": "6/23/2021",
+        "total": "$38.01"
+    }, {
+        "orderId": "ce2a7a57-7bab-4a64-b904-46492ecf96b2",
+        "customer": "Rhodie Giddens",
+        "date": "3/5/2021",
+        "total": "$39.91"
+    }, {
+        "orderId": "61845c4e-6d2f-44e4-861f-64d176dae809",
+        "customer": "Tiphani Malloy",
+        "date": "3/1/2021",
+        "total": "$29.12"
+    }, {
+        "orderId": "b94787a6-418a-4253-9306-b60380bad35f",
+        "customer": "Marcello Konrad",
+        "date": "8/18/2021",
+        "total": "$27.01"
+    }, {
+        "orderId": "445f60fa-efe8-420a-b3e9-9ade761b3c61",
+        "customer": "Cass Dimsdale",
+        "date": "5/30/2021",
+        "total": "$26.77"
+    }, {
+        "orderId": "d6fbb350-e6f2-41d1-93b5-45a4aa5c9cf5",
+        "customer": "Shelley Davidowsky",
+        "date": "7/22/2021",
+        "total": "$34.03"
+    }, {
+        "orderId": "9c12a09b-b5ca-486f-84f8-8840aa4852f3",
+        "customer": "Ernesta Buckston",
+        "date": "5/31/2021",
+        "total": "$47.41"
+    }, {
+        "orderId": "aa6fe1ac-c6e9-4afa-bcfc-220bdbe54789",
+        "customer": "Florence Furzey",
+        "date": "3/24/2021",
+        "total": "$5.61"
+    }, {
+        "orderId": "66c6d0d3-9197-40a3-8570-eaa2b6d2ff73",
+        "customer": "Berte Hunnicutt",
+        "date": "8/27/2021",
+        "total": "$26.83"
+    }, {
+        "orderId": "38ad5f7a-0aab-4749-a59d-978a44569aae",
+        "customer": "Catriona MacConnulty",
+        "date": "3/22/2021",
+        "total": "$95.03"
+    }, {
+        "orderId": "13034a5d-01ed-4067-acea-05d61723d833",
+        "customer": "Tracy Pembery",
+        "date": "12/22/2020",
+        "total": "$87.97"
+    }, {
+        "orderId": "20eae927-8975-4dc2-8762-b13eb80f2c26",
+        "customer": "Jeannette Mabon",
+        "date": "6/17/2021",
+        "total": "$20.57"
+    }, {
+        "orderId": "7028023c-7589-4f3e-b57f-88c19a13da4a",
+        "customer": "Karlis Goodisson",
+        "date": "1/25/2021",
+        "total": "$23.74"
+    }, {
+        "orderId": "e388e895-2100-4a7c-82a9-148d1b36fe95",
+        "customer": "Odie Lafoy",
+        "date": "7/23/2021",
+        "total": "$16.29"
+    }
+];
+
+// print a list of names of everyone
+// who waited until the last minute 
+// to buy christmas presents
+// (made a purchase in december)
+
+var lateShoppers = [];
+for (let order of orders) {
+    // if the order was made in december
+    // "12/14/2020" - "8/6/2021"
+    // first2Char === "12"
+
+}
+
+orders.filter((order) => {
+    let first2Char = order.date.substr(0, 2);
+    return first2Char === "12"
+})

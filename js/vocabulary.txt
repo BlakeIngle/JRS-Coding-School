@@ -19,10 +19,10 @@ library - file or files that have functions defined that we can use in out files
 
 increment/decrement - add or subtract 1 with ++ or --
 
+function - reusable code with a name, parameters, and a return value
 scope - how much vision does the program have - can it see my variables?
-function - some code that can be called multiple times as a way to reuse code - accepts arguments
 local variable - varaible in scope - meaning the local code block has access to this variable 
-global bariable - a variable that "has no scope" - can be used in the whole "file"
+global variable - a variable that "has no scope" - can be used in the whole "file"
 
 (stack) overflow - when you run out of memory because you kept calling too many functions
         (you're revcursive function is infinite)
@@ -32,3 +32,6 @@ enumeration - a strict set of values in a list for future use
 
 primitive - a 'literal' value - ex. string, number, bool 
 non-primitive - a pointer or reference to another value - ex. array, obj
+
+truthy / falsey - interpreting a non boolean value as either 
+        true or false. Coercing a non boolean into a boolean.

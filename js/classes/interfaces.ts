@@ -1,5 +1,5 @@
 class Rect {
-    constructor(public width: number, public height: number){}
+    constructor(public width: number, public height: number) { }
 }
 
 class Sq extends Rect {
@@ -16,15 +16,15 @@ interface QuizResponse {
 }
 
 class QuizGrader implements QuizResponse {
-    
+
 
     constructor(correctAnswer, givenAnswer) {
-        
+
     }
 
     correctAnswer: any;
     givenAnswer: any;
-    
+
     checkAnswer() {
         throw new Error("Method not implemented.");
     }

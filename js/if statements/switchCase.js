@@ -66,6 +66,7 @@ switch (month) {
         break;
 }
 
+console.log(monthName + " has " + numDays + " days.")
 
 
 // if (a === 1) {

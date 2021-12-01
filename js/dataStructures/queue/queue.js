@@ -1,61 +1,78 @@
-class Node {
-    value;
-    next;
-
-    constructor(value) {
+var CustomNode = /** @class */ (function () {
+    function CustomNode(value) {
         this.value = value;
     }
-}
-
-class Queue {
-
-    head;
-    tail;
-    size;
-
-    constructor() {
-        this.size = 0;
+    return CustomNode;
+}());
+var Queue = /** @class */ (function () {
+    function Queue() {
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
     }
-
-    push(value) {
-        let newNode = new Node(value)
-
+    Queue.prototype.push = function (newCustomNode) {
         if (this.isEmpty()) {
-            this.head = newNode
-            this.tail = newNode
-            this.size++;
-        } else {
-            this.tail.next = newNode
-            this.tail = this.tail.next;
-            this.size++;
+            this.head = newCustomNode;
         }
-    }
-
-    pop() {
+        else {
+            this.tail.next = newCustomNode;
+        }
+        this.tail = newCustomNode;
+        this.length++;
+    };
+    Queue.prototype.peek = function () {
+        return (this.isEmpty() ? null : this.head);
+    };
+    Queue.prototype.pop = function () {
         if (this.isEmpty()) {
             return null;
-        } else {
-            let node = this.head
-            this.head = this.head.next
-            this.size--;
-            return node.value;
         }
-    }
-
-    isEmpty() {
-        return this.size == 0;
-    }
-
+        else {
+            var payload = this.head;
+            this.head = this.head.next;
+            this.length--;
+            if (this.isEmpty()) {
+                this.head = null; // redundant
+                this.tail = null;
+            }
+            return payload;
+        }
+    };
+    Queue.prototype.isEmpty = function () {
+        return this.length == 0;
+    };
+    Queue.prototype.log = function () {
+        console.log(this);
+    };
+    return Queue;
+}());
+console.log("initialize queue");
+var q = new Queue();
+q.log();
+var n1 = new CustomNode(1);
+console.log("push 1");
+q.push(n1);
+q.log();
+console.log("peeking", q.peek());
+console.log("popping 1:", q.pop());
+var n2 = new CustomNode(2);
+var n3 = new CustomNode(3);
+var n4 = new CustomNode(4);
+console.log("pushing 2");
+q.push(n2);
+q.log();
+console.log("pushing 3");
+q.push(n3);
+q.log();
+console.log("popping 2");
+q.pop();
+q.log();
+console.log("pushing 4");
+q.push(n4);
+q.log();
+console.log("popping all");
+while (!q.isEmpty()) {
+    console.log(q.pop());
 }
-
-
-let line = new Queue()
-
-line.push('bob')
-line.push('susan')
-
-console.log(line.pop())
-line.push('marcus')
-
-console.log(line.pop())
-console.log(line.pop())
+q.log();
+console.log("finished");

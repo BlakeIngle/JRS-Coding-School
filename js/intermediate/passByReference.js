@@ -26,9 +26,20 @@ let c = {
 
 function changeC(c) {
     c = {
-        value: 5
+        newValue: 4
     }
 }
 
 changeC(c)
 console.log("c", c)
+
+
+
+
+
+var d = { value: 7 }
+var e = d;
+
+e.value = 8;
+
+console.log(d);

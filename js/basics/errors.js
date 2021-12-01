@@ -1,6 +1,6 @@
 a = 4;
 
-b = c; //c is not defined
+b = c; //c is not declared
 
 console.log(d) // d is referenced before being declared
 d = 4;

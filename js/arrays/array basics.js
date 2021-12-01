@@ -49,7 +49,7 @@
 var a = 1
 var b = 2
 var c = 3;
-"literal stirng"
+"literal string"
 // var list = 1, 2, 3
 var list;
 list = []
@@ -59,24 +59,32 @@ list.push(c, 4, a)
 list.push(b, 6, 5)
 
 // remove a value
-console.log(list.pop());
+// console.log(list.pop());
 
 // locate a specific piece of data
-console.log(list[1]);
+// console.log(list[1]);
 
 // sort (numerical or maybe alphabetically)
-console.log();
+// console.log();
 
 // change a value
 list[0] = 9;
 
 // find average (of numbers)
 
-console.log(list)
-console.log(list.length)
+// console.log(list)
+// console.log(list.length)
 
 
 
 
 var s = "hi"
 "hi"
+
+
+var arr1 = [1, 2, 3]
+var arr2 = [1, 2, 3]
+var arr3 = arr2;
+
+console.log(arr1 == arr2)
+console.log(arr2 == arr3)

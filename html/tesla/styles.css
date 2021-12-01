@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background: url('./assets/roadster-social.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+}
+
+h1 {
+    padding-left: 3rem;
+    margin: 1rem 0;
+
+    background: linear-gradient(rgb(231, 2, 2), rgb(245, 186, 186)) ;
+    background: url('./assets/roadster-social.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    text-transform: uppercase;
+}

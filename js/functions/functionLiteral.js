@@ -2,7 +2,7 @@
 true;
 5;
 [];
-var obj = {};
+// var obj = {};
 
 
 
@@ -16,7 +16,7 @@ var obj = {};
 
 
 
-funcName = (param1, param2) => {
+var funcName = (param1, param2) => {
     console.log(param1, param2)
 }
 
@@ -43,8 +43,5 @@ myArr.forEach((value, i) => {
 parentFunction();
 
 function parentFunction(callbackfn) {
-    ////
-    /// 
-    ///
     callbackfn();
 }

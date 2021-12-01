@@ -1,0 +1,37 @@
+write a loop that will output every integer 
+from 0-10
+
+write a loop that will output every integer
+from 13-42
+
+write a loop that will output every integer
+in decending order from 30-10 (i++ vs i--)
+
+write a loop that will output every even 
+integer from 0-20
+
+write a loop that will output every integer
+from 0-30 that is divisible by 3 
+
+write a loop that will count how many times
+the number 7 is in an array. 
+Output the result.
+
+write a loop that will calculate the sum of 
+the values in an array. Output the sum.
+
+write a loop that will output the first 
+5 numbers of the fibonachi sequence
+(fibonachi sequence is a sequence of numbers
+starting with 0 and 1 where each subsequent 
+number is the sum of the previous two numbers)
+
+-Create a string that is an english sentence.
+    (Do not inclue any punctuation.)
+
+    (convert that string into an array by doing this:
+    myString.split(" "); // " " has 1 space character)
+
+    capitalize the first letter in each word. 
+    Output the sentence on one line.
+
