@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* css variable */
+    --black: #222;
+    --white: #f0f0f0;
+    --dark-purple: #5c3ca7;
+
+    --profile-pic-size: 100px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 2rem;
+
+    background: linear-gradient(to bottom right, #F00B51, #73005C);
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 14pt;
+}
+
+h1 {
+    color: var(--white);
+    background-color: var(--black);
+
+    padding: 1rem;
+    margin: 0;
+
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+h1:hover span {
+    display: none;
+}
+h1:hover::before {
+    content: "Welcome!"
+}
+
+* {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 2em;
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
+h1, 
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body>div {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    min-height: 200px;
+}
+
+div > * {
+    max-width: 800px;
+}
+
+.about-me, 
+.favorites {
+    background-color: #ff8b47;
+    color: var(--black);
+}
+
+.about-me {
+    background: linear-gradient(to bottom right,#FFC976, #FF5778);
+}
+
+.favorite-quotes {
+    background: linear-gradient(to bottom right, #cf589088, #64578F88);
+}
+
+.favorites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    background: repeating-linear-gradient(-45deg, #D20AF8, #D20AF8 50px, #5c3ca7 50px,  #5c3ca7 100px);
+}
+
+ol > li {
+    color: var(--white);
+}
+
+.profile {
+    border: solid #ff4747 5px;
+    border-radius: 50%;
+    border-top-left-radius: 4px;
+    filter: saturate(50%);
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+.profile:hover {
+    border-radius: 4px;
+    filter: none;
+}

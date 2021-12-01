@@ -1,0 +1,7 @@
+.scrollable {
+    max-height: 150px;
+
+    /* box-shadow: inset 0 0 20px black; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,71 @@
+.carousel {
+    padding: 1.5rem;
+}
+
+.carousel .main {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: #eee;
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    position: absolute;
+}
+.carousel button:hover {
+    background-color: #111;
+    color: #ccc;
+}
+.carousel button:active {
+    background-color: #333;
+    color: #eee;
+}
+
+.carousel .next {
+    right: -1.5rem;
+    top: calc(50% - 1.5rem);
+}
+.carousel .prev {
+    left: -1.5rem;
+    top: calc(50% - 1.5rem);
+}
+
+.carousel .progress {
+    display: flex;
+    gap: 0.5rem;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.carousel .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+
+    background-color: #999;
+    box-shadow: inset 0 0 5px #777,
+                0 0 15px #777;
+}
+
+.carousel .circle.active {
+    background-color: #777;
+    box-shadow: inset 0 0 5px #eee,
+                0 0 15px #eee;
+}

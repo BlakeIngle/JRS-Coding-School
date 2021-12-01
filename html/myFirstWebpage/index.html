@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+
+        <title>My Webpage</title>
+
+        <link rel="stylesheet"
+              href="./styles.css">
+        <link rel="stylesheet"
+              href="./scrollable.css">
+        <link rel="stylesheet"
+              href="./table.css">
+        <link rel="stylesheet"
+              href="./grid.css">
+        <link rel="stylesheet"
+              href="./carousel.css">
+
+        <script src="./carousel.js"></script>
+
+    </head>
+
+    <body>
+        <h1><span>Blake's Webpage</span></h1>
+
+        <div class="about-me">
+            <h2>About me</h2>
+            <p>I am a 25 year old web developer from Dayton, Ohio. I don't want to type any more.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dolore quos cum in eaque voluptas nesciunt eligendi, corrupti esse
+                nostrum, iusto harum illo sapiente, magni alias officiis sed asperiores. Enim.</p>
+        </div>
+
+        <div class="favorite-quotes">
+            <h2>Favorite Quotes</h2>
+            <ul>
+                <li>"Cocky Little Freaks!" - Train Conductor, Star Fox 64 (1996)</li>
+                <li>"I'm going to show you how to kill a god." - Lady Eboshi, Princess Mononoke 1997</li>
+                <li>"That's blood baby" - hooker, Grand Theft Mario, Robot Chicken</li>
+                <li>"Destroy us all. Destroy us all. Destroy us all." - Billy, Bill & Mandy</li>
+            </ul>
+        </div>
+
+        <div class="favorites">
+            <div>
+                <h2>Favorite Food</h2>
+                <ol>
+                    <li>Hamburgers</li>
+                    <li>Weinerschitzel</li>
+                    <li>Fetuccini Alfredo</li>
+                </ol>
+            </div>
+
+            <div>
+                <h2>Favorite Movies</h2>
+                <ul class="scrollable">
+                    <a href="https://www.imdb.com/title/tt0119698/">
+                        <li>Princess Mononoke</li>
+                    </a>
+                    <li>Blade Runner 2049</li>
+                    <li>The Boondock Saints</li>
+                    <li>The Matrix</li>
+                    <li>Titanic</li>
+                    <li>Inception</li>
+                    <li>Harry Potter</li>
+                    <li>Thor</li>
+                    <li>Shrek 2</li>
+                    <li>Shawshank Redemption</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Nested Lists</h2>
+                <ol>
+                    <li>one</li>
+                    <ul>
+                        <li>a</li>
+                        <li>b</li>
+                    </ul>
+                    <li>two</li>
+                </ol>
+            </div>
+        </div>
+
+        <img src="./images/profile1.jpg"
+             width="100"
+             class="profile" />
+
+        <img src="https://m.media-amazon.com/images/M/MV5BNzY5MDIzNTEwNl5BMl5BanBnXkFtZTgwMzEzOTIwMjE@._V1_UY100_CR27,0,100,100_AL_.jpg"
+             width="100"
+             class="profile" />
+
+        <audio controls
+               autoplay>
+            <source src="./moonlight_sonata.mp3"
+                    type="audio/mpeg">
+        </audio>
+
+        <a href="./secondPage.html">Second page</a>
+
+
+        <table>
+            <tr>
+                <th>Movie Title</th>
+                <th>Release Year</th>
+                <th>Director</th>
+            </tr>
+
+            <tr>
+                <td>Princess Mononoke</td>
+                <td>1997</td>
+                <td>Hayao Miyazaki</td>
+            </tr>
+            <tr>
+                <td>Blade Runner 2049</td>
+                <td>2017</td>
+                <td>Dennis Villeneuve</td>
+            </tr>
+            <tr>
+                <td>The Boondock Saints</td>
+                <td>1999</td>
+                <td>Troy Duffy</td>
+            </tr>
+            <tr>
+                <td>Django: Unchained</td>
+                <td>2012</td>
+                <td>Quentin Tarantino</td>
+            </tr>
+        </table>
+
+        <div class="grid">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+
+            <button>Button 4</button>
+            <button>Button 5</button>
+            <button>Button 6</button>
+
+            <button>Button 7</button>
+            <button>Button 8</button>
+            <button>Button 9</button>
+        </div>
+
+        <div class="carousel">
+            <div class="main">
+                <img src="./images/angelsEgg/angels-egg-1.jpg">
+
+                <button class="prev"
+                        onclick="prevImage()">&lt;</button>
+                <button class="next"
+                        onclick="nextImage()">&gt;</button>
+            </div>
+
+            <div class="progress">
+                <div class="circle active"
+                     onclick="showImage(0)"></div>
+                <div class="circle"
+                     onclick="showImage(1)"></div>
+                <div class="circle"
+                     onclick="showImage(2)"></div>
+            </div>
+        </div>
+
+    </body>
+
+
+</html>

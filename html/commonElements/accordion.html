@@ -1,0 +1,84 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .accordion-root {
+        margin: 2rem;
+    }
+
+    .tab {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 5px 5px 1rem rgb(95, 95, 95);
+    }
+
+    .header {
+        background-color: rgb(230, 230, 230);
+        padding: 1rem;
+    }
+
+    .content {
+        padding: 0 1rem;
+        box-shadow: inset 0 0 1rem rgb(134, 134, 134);
+
+        overflow: hidden;
+        height: 0;
+
+        transition: all 0.7s;
+    }
+
+    /* .tab:hover>.content, */
+    .show-content>.content {
+        padding: 1rem;
+        height: 10rem;
+    }
+</style>
+
+<body>
+    <div class="accordion-root">
+        <div class="tab">
+            <div class="header">Header 1</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil et, exercitationem facilis libero molestiae
+                beatae laboriosam enim repellendus officia vero, ipsa delectus praesentium veniam aliquid eum repellat error nam nulla pariatur minus
+                esse velit omnis harum! Molestiae nobis atque sit hic, distinctio eaque necessitatibus quidem minima harum. Reprehenderit, soluta!
+            </div>
+        </div>
+        <div class="tab">
+            <div class="header">Header 2</div>
+            <div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi maxime expedita necessitatibus similique architecto
+                dolor velit magnam porro inventore explicabo quidem dicta eveniet id veritatis, officia sequi neque totam reiciendis. Illum earum quod
+                dolore culpa exercitationem incidunt tenetur consectetur veritatis eos, enim nobis vitae autem illo velit repudiandae consequatur
+                itaque?</div>
+        </div>
+        <div class="tab">
+            <div class="header">Header 3</div>
+            <div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id fugit exercitationem aliquid ducimus unde
+                numquam
+                aspernatur nisi recusandae eaque voluptatum neque mollitia architecto non dolorem consequatur consequuntur fuga, iure odio aut error
+                incidunt! Nobis obcaecati quaerat velit, reprehenderit non assumenda ut aut architecto itaque, eos quae ad consequatur commodi. Nisi.
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+    const tabs = document.getElementsByClassName("tab");
+
+    for (let tab of tabs) {
+        tab.onclick = () => {
+            for (let _tab of tabs) {
+                if (tab == _tab) {
+                    tab.classList.toggle("show-content")
+                } else {
+                    _tab.classList.remove("show-content")
+                }
+            }
+        };
+    }
+
+</script>
