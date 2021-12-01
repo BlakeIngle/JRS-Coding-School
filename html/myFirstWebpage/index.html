@@ -20,12 +20,34 @@
               href="./grid.css">
         <link rel="stylesheet"
               href="./carousel.css">
+        <link rel="stylesheet"
+              href="./modal.css">
 
         <script src="./carousel.js"></script>
 
+        <script>
+            function hideModal() {
+                document.getElementsByClassName("modal")[0]
+                    .classList.remove("show")
+            }
+
+            function showModal(header) {
+                const modal = document.getElementsByClassName("modal")[0]
+                modal.getElementsByClassName("header")[0]
+                    .getElementsByTagName("span")[0].innerHTML = header;
+                modal.classList.add("show")
+            }
+
+            window.onclick = (event) => {
+                if ((event.target) == document.getElementsByClassName("modal")[0]) {
+                    hideModal();
+                }
+            }
+        </script>
     </head>
 
     <body>
+
         <h1><span>Blake's Webpage</span></h1>
 
         <div class="about-me">
@@ -102,7 +124,6 @@
 
         <a href="./secondPage.html">Second page</a>
 
-
         <table>
             <tr>
                 <th>Movie Title</th>
@@ -121,12 +142,13 @@
                 <td>Dennis Villeneuve</td>
             </tr>
             <tr>
-                <td>The Boondock Saints</td>
+                <td onclick="showModal('The Boondock Saints')">The Boondock Saints</td>
                 <td>1999</td>
                 <td>Troy Duffy</td>
             </tr>
             <tr>
-                <td>Django: Unchained</td>
+                <td onclick="showModal('Django Unchained')"
+                    style="cursor: pointer;">Django: Unchained</td>
                 <td>2012</td>
                 <td>Quentin Tarantino</td>
             </tr>
@@ -151,9 +173,9 @@
                 <img src="./images/angelsEgg/angels-egg-1.jpg">
 
                 <button class="prev"
-                        onclick="prevImage()">&lt;</button>
+                        onclick="prevImage()">&#10094;</button>
                 <button class="next"
-                        onclick="nextImage()">&gt;</button>
+                        onclick="nextImage()">&#10095;</button>
             </div>
 
             <div class="progress">
@@ -168,5 +190,22 @@
 
     </body>
 
+    <div class="modal">
+        <div class="modal-content">
+            <div class="header">
+                <span></span>
+                <span class="x-btn"
+                      onclick="hideModal()">&times;</span>
+            </div>
+            <div class="main"></div>
+            <div class="footer">
+                <span></span>
+                <div>
+                    <button onclick="hideModal()">Close</button>
+                    <button onclick="hideModal()">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </html>

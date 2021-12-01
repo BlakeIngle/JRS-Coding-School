@@ -1,5 +1,7 @@
 .carousel {
     padding: 1.5rem;
+    display: grid;
+    place-items: center;
 }
 
 .carousel .main {
