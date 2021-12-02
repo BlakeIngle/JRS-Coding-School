@@ -1,0 +1,24 @@
+nav {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #282A35;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    background-color: #282A35;
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0;
+}
+
+nav a:hover {
+    background-color: #16171a;
+}

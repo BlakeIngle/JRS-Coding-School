@@ -31,10 +31,11 @@
                     .classList.remove("show")
             }
 
-            function showModal(header) {
-                const modal = document.getElementsByClassName("modal")[0]
-                modal.getElementsByClassName("header")[0]
-                    .getElementsByTagName("span")[0].innerHTML = header;
+            function showModal(header, content) {
+                const modal = document.getElementsByClassName("modal")[0];
+                const spans = modal.getElementsByTagName("span");
+                spans[0].innerHTML = header;
+                spans[2].innerHTML = content;
                 modal.classList.add("show")
             }
 
@@ -110,11 +111,14 @@
 
         <img src="./images/profile1.jpg"
              width="100"
-             class="profile" />
+             class="profile"
+             alt="zuck"
+             title="Mark Zuckerberg" />
 
         <img src="https://m.media-amazon.com/images/M/MV5BNzY5MDIzNTEwNl5BMl5BanBnXkFtZTgwMzEzOTIwMjE@._V1_UY100_CR27,0,100,100_AL_.jpg"
              width="100"
-             class="profile" />
+             class="profile"
+             alt="jurassic park t-rex" />
 
         <audio controls
                autoplay>
@@ -124,35 +128,54 @@
 
         <a href="./secondPage.html">Second page</a>
 
-        <table>
+        <table id="movieDataTable">
             <tr>
                 <th>Movie Title</th>
                 <th>Release Year</th>
                 <th>Director</th>
             </tr>
-
-            <tr>
-                <td>Princess Mononoke</td>
-                <td>1997</td>
-                <td>Hayao Miyazaki</td>
-            </tr>
-            <tr>
-                <td>Blade Runner 2049</td>
-                <td>2017</td>
-                <td>Dennis Villeneuve</td>
-            </tr>
-            <tr>
-                <td onclick="showModal('The Boondock Saints')">The Boondock Saints</td>
-                <td>1999</td>
-                <td>Troy Duffy</td>
-            </tr>
-            <tr>
-                <td onclick="showModal('Django Unchained')"
-                    style="cursor: pointer;">Django: Unchained</td>
-                <td>2012</td>
-                <td>Quentin Tarantino</td>
-            </tr>
         </table>
+
+        <script>
+            function tableRow(movie) {
+                return `
+                    <tr>
+                        <td onclick="showModal('${movie.title}')"
+                            style="cursor: pointer;">${movie.title}</td>
+                        <td>${movie.releaseYear}</td>
+                        <td>${movie.director}</td>
+                    </tr>
+                `;
+            }
+
+            const table = document.getElementById("movieDataTable");
+            const headerRow = table.getElementsByTagName("tr")[0];
+
+            const movies = [
+                {
+                    title: "Django: Unchained",
+                    director: "Quentin Tarantino",
+                    releaseYear: 2012
+                }, {
+                    title: "The Boondock Saints",
+                    director: "Troy Duffy",
+                    releaseYear: 1999
+                }, {
+                    title: "Blade Runner 2049",
+                    director: "Dennis Villeneuve",
+                    releaseYear: 2017
+                }, {
+                    title: "Princess Mononoke",
+                    director: "Hayao Miyazaki",
+                    releaseYear: 1997
+                }
+            ];
+
+            for (let movie of movies) {
+                headerRow.insertAdjacentHTML("afterend", tableRow(movie));
+            }
+
+        </script>
 
         <div class="grid">
             <button>Button 1</button>
@@ -173,9 +196,11 @@
                 <img src="./images/angelsEgg/angels-egg-1.jpg">
 
                 <button class="prev"
-                        onclick="prevImage()">&#10094;</button>
+                        onclick="prevImage()"
+                        title="Previous Image">&#10094;</button>
                 <button class="next"
-                        onclick="nextImage()">&#10095;</button>
+                        onclick="nextImage()"
+                        title="Next Image">&#10095;</button>
             </div>
 
             <div class="progress">
@@ -199,7 +224,9 @@
                 <span class="x-btn"
                       onclick="hideModal()">&times;</span>
             </div>
-            <div class="main"></div>
+            <div class="main">
+                <span></span>
+            </div>
             <div class="footer">
                 <span></span>
                 <div>

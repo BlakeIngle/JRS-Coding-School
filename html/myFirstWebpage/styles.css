@@ -12,18 +12,28 @@
 html,
 body {
     margin: 0;
-    padding: 2rem;
+    padding: 0;
 
-    background: linear-gradient(to bottom right, #F00B51, #73005C);
 
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 14pt;
 }
 
+html {
+    background: linear-gradient(to bottom right, #F00B51, #73005C);
+}
+
+body {
+    padding: 3rem;
+    max-width: 2000px;
+    margin: auto;
+}
+
 h1 {
     color: var(--white);
     background-color: var(--black);
+    background: linear-gradient(135deg, #2c2c2c, #2c2c2c 50%, #333 50%,  #333 100px);
 
     padding: 1rem;
     margin: 0;
@@ -31,12 +41,6 @@ h1 {
     font-size: 3em;
     letter-spacing: 2px;
     text-align: center;
-}
-h1:hover span {
-    display: none;
-}
-h1:hover::before {
-    content: "Welcome!"
 }
 
 * {
@@ -79,7 +83,7 @@ div > * {
 }
 
 .favorite-quotes {
-    background: linear-gradient(to bottom right, #cf589088, #64578F88);
+    background: linear-gradient(to bottom right, #c22d5f, #8a3771);
 }
 
 .favorites {
@@ -108,4 +112,10 @@ ol > li {
 .profile:hover {
     border-radius: 4px;
     filter: none;
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        padding: 0;
+    }
 }
