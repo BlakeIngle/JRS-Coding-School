@@ -1,0 +1,39 @@
+
+:root {
+    --white: #f1f1f1;
+    --black: #222;
+    --gray: #888;
+
+    --red: #ff4242;
+    --orange: #ff9742;
+
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --accent-color: var(--gray);
+}
+
+.dark-theme {
+    --background-color: var(--black);
+    --text-color: var(--white);
+    --accent-color: var(--red);
+}
+
+.red-theme {
+    --background-color: var(--orange);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 1rem;
+}
+
+h1, p{
+    background-color: var(--accent-color);
+    padding: 1rem;
+}

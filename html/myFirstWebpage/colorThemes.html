@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet"
+              href="./colorThemes.css">
+        <link rel="stylesheet"
+              href="./nav.css">
+
+        <script>
+            function lightTheme() {
+                document.getElementsByTagName("body")[0].classList.remove("dark-theme")
+            }
+            function darkTheme() {
+                document.getElementsByTagName("body")[0].classList.add("dark-theme")
+            }
+            function redTheme() {
+                document.getElementsByTagName("body")[0].classList.toggle("red-theme")
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <!-- <nav>
+            <span>
+                <a href="../myFirstWebpage/index.html">
+                    Home
+                </a>
+                <a href="https://www.w3schools.com/html/">
+                    W3
+                </a>
+                <a href="https://css-tricks.com/">
+                    CSS Tricks
+                </a>
+                <a href="./dropdownMenu.html">
+                    Dropdown Menu
+                </a>
+            </span>
+
+            <span>
+                <a href="#">
+                    Log In
+                </a>
+            </span>
+        </nav> -->
+
+        <button onclick="lightTheme()">Light Theme</button>
+        <button onclick="darkTheme()">Dark Theme</button>
+        <button onclick="redTheme()">Red Theme</button>
+
+        <h1>Lorem, ipsum</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis odio quis aliquam consequuntur error repellat debitis, provident
+            magnam officia. Officiis aut modi consequuntur veniam odio eos molestias perspiciatis dolore culpa.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro ipsa nemo, quod qui numquam odio, placeat eligendi quisquam similique, esse
+            natus debitis totam veniam unde optio quaerat minima dolores veritatis.</p>
+
+    </body>
+
+</html>
