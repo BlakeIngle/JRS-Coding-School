@@ -1,0 +1,97 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding-top: 3rem;
+
+
+    --dark-purple: #320d3e;
+    --purple: #d902ee;
+    --light-purple: #f162ff;
+
+    --sepia: #ffd79d;
+    --white: #f1f1f1;
+
+}
+
+.login {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    padding-bottom: 0;
+
+    background-color: var(--dark-purple);
+    color: var(--sepia);
+}
+
+.login .big-logo {
+    margin-bottom: 1rem;
+}
+
+.login .field {
+    background-color: var(--sepia);
+    color: var(--dark-purple);
+
+    width: calc(100%);
+    transform: translateX(-1.5rem);
+    margin-bottom: 0.5rem;
+    height: 2rem;
+}
+.login .field::after {
+    content: '';
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom right, var(--sepia), var(--sepia) 50%, transparent 50%, transparent);
+
+    position: absolute;
+    top: 0;
+    right: -2rem;
+}
+
+.login button {
+    border: none;
+    padding: 1rem;
+
+    font-size: inherit;
+
+    width: 100%;
+}
+.login button[type=submit] {
+    color: var(--dark-purple);
+    background-color: var(--light-purple);
+    width: calc(100% + 1rem );
+    transform: translateX(-1rem);
+}
+.login button[type=button] {
+    background-color: var(--dark-purple);
+    color: var(--sepia);
+    padding: 0.5rem;
+}
+
+.login input[type=text],
+.login input[type=password] {
+    border: none;
+    background-color: var(--sepia);
+    color: var(--dark-purple);
+    outline: none;
+    font-size: inherit;
+    border-bottom: transparent solid 2px;
+
+    transition: border-bottom 0.2s;
+}
+
+.login input[type=text]:focus,
+.login input[type=password]:focus {
+    border-bottom: solid var(--purple) 2px;
+}
+
+.login label {
+    width: 2rem;
+    height: 2rem;
+}
+
+.login label i {
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}

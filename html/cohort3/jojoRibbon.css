@@ -1,0 +1,96 @@
+:root {
+    --jojo-red: #C73F11;
+    --jojo-purple: #9d1c94;
+    --jojo-yellow: #FFE34D;
+    --jojo-green: #6BBC56;
+
+    --color1: #f1f1f1; /* should get overwritten  */
+    --color2: #222; /* should get overwritten  */
+
+    --size: 1rem; /* should get overwritten  */
+}
+
+.jojo-ribbon.pr {
+    --color1: var(--jojo-purple);
+    --color2: var(--jojo-red);
+}
+.jojo-ribbon.rp {
+    --color1: var(--jojo-red);
+    --color2: var(--jojo-purple);
+}
+.jojo-ribbon.py {
+    --color1: var(--jojo-purple);
+    --color2: var(--jojo-yellow);
+}
+.jojo-ribbon.yp {
+    --color1: var(--jojo-yellow);
+    --color2: var(--jojo-purple);
+}
+.jojo-ribbon.ry {
+    --color1: var(--jojo-red);
+    --color2: var(--jojo-yellow);
+}
+.jojo-ribbon.yr {
+    --color1: var(--jojo-yellow);
+    --color2: var(--jojo-red);
+}
+.jojo-ribbon.gr {
+    --color1: var(--jojo-green);
+    --color2: var(--jojo-red);
+}
+.jojo-ribbon.rg {
+    --color1: var(--jojo-red);
+    --color2: var(--jojo-green);
+}
+.jojo-ribbon.gy {
+    --color1: var(--jojo-green);
+    --color2: var(--jojo-yellow);
+}
+.jojo-ribbon.yg {
+    --color1: var(--jojo-yellow);
+    --color2: var(--jojo-green);
+}
+.jojo-ribbon.gp {
+    --color1: var(--jojo-green);
+    --color2: var(--jojo-purple);
+}
+.jojo-ribbon.pg {
+    --color1: var(--jojo-purple);
+    --color2: var(--jojo-green);
+}
+
+.jojo-ribbon.xs {
+    --size: 0.25em;
+}
+
+.jojo-ribbon.s {
+    --size: 0.55em;
+}
+
+.jojo-ribbon.l {
+    --size: 1.5em;
+}
+
+.jojo-ribbon.xl {
+    --size: 2em;
+}
+
+.jojo-ribbon.xxl {
+    --size: 3em;
+}
+
+.top-ribbon {
+    background-position-x: var(--size);
+}
+
+.jojo-ribbon {
+    padding: 0;
+    margin: 0;
+    
+    --sqrt3: 1.73205080757;
+    background-image: 
+                linear-gradient(-60deg, var(--color1),var(--color1) calc(100% / 3), transparent calc(100% / 3), transparent),
+                linear-gradient(60deg, var(--color1), var(--color1) calc(100% / 3), var(--color2) calc(100% / 3), var(--color2));
+    height: calc(var(--size) * var(--sqrt3));
+    background-size: calc(var(--size) * 2) ;
+}

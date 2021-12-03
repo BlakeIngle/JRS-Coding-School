@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto+Mono:wght@700&display=swap');
+
+:root {
+    --red: #C73F11;
+    --purple: #9d1c94;
+    --yellow:#FFE34D;
+
+    --black: #222;
+    --white: #f1f1f1;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--jojo-green);
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16pt;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--jojo-yellow);
+
+    line-height: 0.75em;
+
+    text-shadow: 
+    1px 1px var(--black),
+    1.5px 1.5px var(--black),
+    2px 2px var(--black),
+    2.5px 2.5px var(--black),
+    3px 3px var(--black),
+    3.5px 3.5px var(--black),
+    4px 4px var(--black),
+    4.5px 4.5px var(--black),
+    5px 5px var(--black),
+    5.5px 5.5px var(--black),
+    6px 6px var(--black),
+    6.5px 6.5px var(--black),
+    7px 7px var(--black),
+    7.5px 7.5px var(--black),
+    8px 8px var(--black),
+    8.5px 8.5px var(--black),
+    9px 9px var(--black),
+    9.5px 9.5px var(--black),
+    10px 10px var(--black),
+    10.5px 10.5px var(--black),
+    11px 11px var(--black),
+    11.5px 11.5px var(--black),
+    12px 12px var(--black),
+    12.5px 12.5px var(--black);
+}
