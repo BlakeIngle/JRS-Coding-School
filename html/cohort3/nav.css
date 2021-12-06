@@ -22,6 +22,10 @@ nav .content {
     transition: all 0.2s linear;
 }
 
+nav .content a {
+    cursor: pointer;
+}
+
 nav:hover .content {
     color: var(--black);
     height: 2rem;
