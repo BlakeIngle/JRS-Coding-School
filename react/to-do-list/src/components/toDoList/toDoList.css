@@ -1,0 +1,32 @@
+
+
+
+
+
+.list-item {
+    background-color: rgb(206, 206, 206);
+    margin: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    text-transform: uppercase;
+    font-size: 16pt;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item input[type=checkbox] {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.list-item input[type=text] {
+    flex-grow: 2;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: -0.5rem;
+    text-transform: uppercase;
+}

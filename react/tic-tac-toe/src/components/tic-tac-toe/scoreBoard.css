@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.score-board-root .score-board {
+    background: linear-gradient(#222,  #444);
+    padding: 1rem;
+    color: #f1f1f1;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24pt;
+}

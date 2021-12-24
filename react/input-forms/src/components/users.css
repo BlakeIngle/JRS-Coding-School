@@ -1,0 +1,16 @@
+form {
+    background-color: #eee;
+    padding: 4rem;
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+label.required::after {
+    content: '*';
+    color: red;
+}

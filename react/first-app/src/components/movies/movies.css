@@ -1,0 +1,18 @@
+.movies.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.movie-poster {
+    background-color: #2223;
+    width: 15rem;
+}
+
+.movie-poster h3 {
+    margin: 0;
+}
+
+.movie-poster.selected {
+    background-color: #b3b3b388;
+}

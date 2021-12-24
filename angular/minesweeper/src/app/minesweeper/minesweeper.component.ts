@@ -43,7 +43,7 @@ export class MinesweeperComponent implements OnInit {
   }
 
   cellClicked(i: number, j: number) {
-    
+
     if (this.grid[i][j].isBomb) {
       this.lose();
     } else {
@@ -81,32 +81,32 @@ export class MinesweeperComponent implements OnInit {
     this.cellsRevealed++;
 
     if (this.grid[row][col].flag) {
-        // unflag - flag was on cell with no bomb
-        this.grid[row][col].flag = false;
-        this.flagsRemaining++;
-  
+      // unflag - flag was on cell with no bomb
+      this.grid[row][col].flag = false;
+      this.flagsRemaining++;
+
     }
     if (this.grid[row][col].neighborBombs == 0) {
-        //reveal all neighbors
-        for (let i = row - 1; i <= row + 1; i++) {
-          for (let j = col - 1; j <= col + 1; j++) {
-            if (i < 0 || j < 0) {
-              continue;
-            } else if (i >= this.grid.length || j >= this.grid[0].length) {
-              continue;
-            } else {
-              // [i][j] is not outside the border
-              if (!this.grid[i][j].isRevealed) { // && !this.grid[i][j].flag
-              
+      //reveal all neighbors
+      for (let i = row - 1; i <= row + 1; i++) {
+        for (let j = col - 1; j <= col + 1; j++) {
+          if (i < 0 || j < 0) {
+            continue;
+          } else if (i >= this.grid.length || j >= this.grid[0].length) {
+            continue;
+          } else {
+            // [i][j] is not outside the border
+            if (!this.grid[i][j].isRevealed) { // && !this.grid[i][j].flag
 
-                  this.revealCell(i, j);
-                
-              }
+
+              this.revealCell(i, j);
+
             }
           }
         }
+      }
     }
-    
+
   }
 
 

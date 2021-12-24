@@ -1,0 +1,14 @@
+.favorites-box {
+    background: linear-gradient(to bottom right, #ff5765, #ffb876);
+    max-width: 600px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    margin: 0 auto 2rem;
+    color: #111;
+}
+
+.favorites-box h2 {
+    margin: 0;
+}
