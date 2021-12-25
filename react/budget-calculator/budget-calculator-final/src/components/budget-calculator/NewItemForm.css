@@ -1,0 +1,41 @@
+.new-item-form input {
+    background-color: var(--light-gray);
+    border-color: transparent;
+}
+
+.new-item-form .amount {
+    width: 100px;
+}
+
+.new-item-form button {
+    background-color: var(--purple);
+    border: none;
+    width: 80px;
+    color: white;
+}
+.new-item-form button:hover {
+    cursor: pointer;
+}
+
+.new-item-form button:disabled {
+    filter: brightness(1.2);
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.new-item-form .field-body {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-item-form .description {
+    flex-grow: 2;
+}
+
+.new-item-form input, button {
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin: 0.25em;
+    padding: 0.5em;
+}

@@ -1,0 +1,103 @@
+.budget-item-root {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1em;
+    position: relative;
+    font-family: 'Lato';
+}
+
+.budget-item-root .x-icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    
+    position: absolute;
+    right: -0.5em;
+    top: -0.5em;
+
+    background-color: var(--dark);
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--red);
+
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+    opacity: 0;
+    transform: scale(0);
+}
+
+.budget-item-root:hover .x-icon-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.budget-item-root:hover .x-icon-button:hover {
+    transform: scale(1.2);
+}
+
+.budget-item-root .budget-item {
+    display: flex;
+    width: 100%;
+    background-color: var(--light-gray);
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: filter 0.2s ease-out;
+}
+
+.budget-item-root .budget-item:hover {
+    filter: brightness(0.95);
+}
+
+.budget-item-root .description {
+    flex-grow: 1;
+    font-size: 18px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.budget-item-root .amount {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.budget-item-root .amount.income {
+    background-color: var(--light-green);
+}
+
+.budget-item-root .amount.expense {
+    background-color: var(--light-red);
+}
+
+.budget-item-root p {
+    margin: 0;
+}
+
+.dialog-background .dialog {
+    width: fit-content;
+    height: fit-content;
+    padding: 2em;
+    border-radius: 8px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.dialog-background {
+    background-color: #22222273;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+}

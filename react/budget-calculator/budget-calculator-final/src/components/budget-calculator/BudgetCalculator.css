@@ -1,0 +1,53 @@
+.budget-calculator-root .top-bar {
+    padding: 0.5rem;
+    display: flex;
+    background: linear-gradient(75deg, rgb(214, 180, 247), rgb(173, 203, 231));
+
+    justify-content: center;
+    align-items: center;
+}
+
+.budget-calculator-root h1 {
+    font-size: 18px;
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+.budget-calculator-root .total-budget-section {
+    display: flex;
+    font-size: 40pt;
+    padding: 1em;
+    background-color: var(--dark);
+    justify-content: center;
+    align-items: center;
+}
+
+.budget-calculator-root h2 {
+    font-family: "Lato";
+    font-weight: 300;
+    color: white;
+    padding: 0;
+    margin: 0;
+    filter: brightness(1.2);
+}
+
+.budget-calculator-root h2.green {
+    color: var(--green);
+}
+
+.budget-calculator-root h2.red {
+    color: var(--red);
+}
+
+.budget-calculator-root .add-item-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.budget-calculator-root .add-item-container {
+    width: 680px;
+}
