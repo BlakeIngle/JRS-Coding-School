@@ -6,10 +6,7 @@ import './BudgetCalculator.css'
 export default function BudgetCalculator() {
 
 
-    var [budgetItems, setBudgetItems] = useState([
-        { id: 1, description: "test item 1", amount: 100 },
-        { id: 2, description: "test item 2", amount: -100 }
-    ]);
+    var [budgetItems, setBudgetItems] = useState([]);
     const [total, setTotal] = useState(0);
 
     function addNewItem(newItem) {
