@@ -18,7 +18,6 @@ export default function NewItemForm({ item, onSubmit, onCancel }) {
         }
     }, []);
 
-
     function onUpdate(e) {
         const name = e.target.name;
         const value = e.target.value;
@@ -37,7 +36,9 @@ export default function NewItemForm({ item, onSubmit, onCancel }) {
             description: '',
             amount: ''
         });
-        onCancel(); // close modal
+        if (editing) {
+            onCancel(); // close modal
+        }
     }
 
     const cancelButton = <button type="button"
