@@ -15,7 +15,7 @@ function fibonacciNTimes(n) {
     }
 }
 
-function randomBetween(a, b) {
+exports.randomBetween = (a, b) => {
 
     let random = Math.floor(Math.random() * (Math.max(a, b) + 1 - Math.min(a, b))) + Math.min(a, b)
 
