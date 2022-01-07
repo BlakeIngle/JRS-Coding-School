@@ -12,11 +12,12 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 ////////////////////
-app.get('/api/supers', (req, res) => {
-    res.send({ HEROES });
-});
+require('./app/routes/heroes.routes')(app);
+
 // get all heroes
 app.get('/api/heroes', (req, res) => {
     var heroes = HEROES.filter(
@@ -74,7 +75,7 @@ app.get('/api/heroes/search', (req, res) => {
         return true;
     });
 
-    res.send({ message: heroes });
+    res.send({ heroes });
 });
 // get a hero by id
 app.get('/api/heroes/:id', (req, res) => {
@@ -98,11 +99,29 @@ app.delete('/api/heroes/:id', (req, res) => {
 app.put('/api/heroes/:id', (req, res) => {
     const { id } = req.params;
     const updatedHero = req.body;
+    console.log(id)
     // update the hero in the array
     for (let i = 0; i < HEROES.length; i++) {
-        if (HEROES[i].id === id) {
+        if (HEROES[i].id == id) {
             HEROES[i] = updatedHero;
             res.send({ message: "Hero updated successfully" });
+            return;
+        }
+    }
+
+    // still have to send the response
+    res.status(404).send({ message: "Hero not updated" });
+
+});
+app.put('/api/heroes/:id/image', (req, res) => {
+    const { id } = req.params;
+    const { url } = req.body;
+
+    // update the hero in the array
+    for (let i = 0; i < HEROES.length; i++) {
+        if (HEROES[i].id == id) {
+            HEROES[i].image = url;
+            res.send({ hero: HEROES[i] });
             return;
         }
     }

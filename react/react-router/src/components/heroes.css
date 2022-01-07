@@ -1,0 +1,16 @@
+.heroes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.heroes-list > * {
+    background-color: lightgray;
+    height: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.heroes-list > *:hover {
+    background-color: gray;
+}

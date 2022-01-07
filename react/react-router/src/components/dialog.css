@@ -1,0 +1,17 @@
+.dialog.background {
+    background-color: #0009;
+
+    position: fixed;
+    inset: 0;
+}
+
+.dialog .box {
+    background-color: #f2f2f2;
+    min-width: 400px;
+    min-height: 250px;
+    max-width: 100%;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 0.5rem;
+}
