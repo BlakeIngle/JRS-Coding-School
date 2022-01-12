@@ -60,10 +60,7 @@
 
 .book-card .star.fav {
     color:var(--yellow);
-    top: 0;
-    right: 0;
-    z-index: 2;
-    bottom: unset;
+    transform: rotate(calc(360deg / 5 * 2));
 }
 
 .book-card:hover .star {
@@ -76,6 +73,9 @@
 
 .book-card .star:hover {
     transform: scale(1.2);
+}
+.book-card .star.fav:hover {
+    transform: scale(1.2) rotate(calc(360deg / 5 * 2));
 }
 
 .book-card:hover .background {
@@ -93,8 +93,4 @@
     top: 0rem;
     right: 0rem;
     background-color: var(--dark-blue);
-}
-.book-card:hover .star.fav {
-    top: 1rem;
-    right: 1rem;
 }

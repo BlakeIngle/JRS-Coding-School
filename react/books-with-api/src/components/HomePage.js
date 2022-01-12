@@ -40,7 +40,9 @@ export default function HomePage() {
                 </Link> */}
             </nav>
 
-            {books.map(book => <BookCard key={book.id} {...book} />)}
+            <div className="books-container">
+                {books.map(book => <BookCard key={book.id} {...book} />)}
+            </div>
         </div>
     )
 }

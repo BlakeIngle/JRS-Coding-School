@@ -1,3 +1,10 @@
+.books-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 800px;
+    margin: auto;
+}
+
 .login-button {
     position: absolute;
     right: 0;
@@ -16,4 +23,11 @@
 
 .login-button:hover {
     background-color: rgb(81, 156, 206);
+}
+
+@media screen and (max-width: 800px) {
+    .books-container {
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
 }
