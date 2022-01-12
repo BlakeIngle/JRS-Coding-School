@@ -21,6 +21,9 @@ export default function HeroDialog({ hero, closeModal, onComplete }) {
                 <h3>Add New Hero</h3>
                 <HeroForm onComplete={onComplete} hero={hero} />
             </div>
+
+
+
         </div >
     )
 }

@@ -1,0 +1,19 @@
+.login-button {
+    position: absolute;
+    right: 0;
+    background-color: rgb(120, 201, 255);
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    width: 5em;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: rgb(81, 156, 206);
+}

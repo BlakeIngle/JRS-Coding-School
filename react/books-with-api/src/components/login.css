@@ -1,0 +1,65 @@
+.login {
+    background-color: white;
+    height: 100%;
+    font-size: 20pt;
+    /* font-family: inherit; */
+}
+
+.login form {
+    position: relative;
+}
+
+.login label {
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
+.login input {
+    font: inherit;
+    margin-bottom: 0.5em;
+}
+
+.login button {
+    font: inherit;
+    font-weight: 900;
+    border: none;
+    width: 8rem;
+    padding: 0.25rem;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.login button:hover {
+    filter: brightness(90%);
+}
+
+.login button[type=submit] {
+    background-color: rgb(73, 226, 53);
+}
+
+.login button[type=button] {
+    background-color: rgb(93, 136, 255);
+}
+
+hr {
+    width: 70vw;
+}
+
+.login .email-taken {
+    outline-color: red;
+}
+
+.login .email {
+    position: relative;
+}
+
+.login .error-message {
+    color: red;
+    font-size: 12pt;
+    position: absolute;
+    right: 1em;
+    bottom: 100%;
+}

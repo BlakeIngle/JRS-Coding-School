@@ -1,0 +1,100 @@
+.book-card {
+    --light-blue: hsl(212, 48%, 72%);
+    --dark-blue: hsl(212, 48%, 51%);
+    --yellow: hsl(56, 85%, 56%);
+    
+    width: 350px;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    height: 320px;
+    padding: 1rem 1rem 3rem 3rem;
+    border-radius: 10px;
+}
+
+.book-card .background {
+    position: absolute;
+    left: 1rem;
+    bottom: 2rem;
+    top: 2rem;
+    right: 2rem;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+
+    transition: all 0.2s;
+}
+
+.book-card img {
+    width: 200px;
+}
+
+.book-card .main-info {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 350px;
+    height: 300px;
+    padding: 0.5rem;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.book-card .more-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--dark-blue);
+    
+    transition: all 0.2s;
+}
+
+.book-card .star {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    color: var(--dark-blue);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.book-card .star.fav {
+    color:var(--yellow);
+    top: 0;
+    right: 0;
+    z-index: 2;
+    bottom: unset;
+}
+
+.book-card:hover .star {
+    color: var(--light-blue);
+}
+
+.book-card:hover .star.fav {
+    color: var(--yellow);
+}
+
+.book-card .star:hover {
+    transform: scale(1.2);
+}
+
+.book-card:hover .background {
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+}
+
+.book-card:hover .more-info {
+    color: initial;
+}
+
+.book-card:hover .main-info {
+    top: 0rem;
+    right: 0rem;
+    background-color: var(--dark-blue);
+}
+.book-card:hover .star.fav {
+    top: 1rem;
+    right: 1rem;
+}
