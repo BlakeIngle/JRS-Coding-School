@@ -8,7 +8,7 @@ import { Context } from '../App'
 
 export default function HomePage() {
 
-    var { http } = useContext(Context);
+    var { http, state } = useContext(Context);
     const [books, setBooks] = useState([]);
 
     function getAllBooks() {
@@ -33,15 +33,17 @@ export default function HomePage() {
                 <Link to="login">
                     <button type="button" className="login-button">Login</button>
                 </Link>
-                {/* <Link to="user/foo">
-                    <button type="button">
-                    <FontAwesomeIcon icon={faUserCircle} />
+                <Link to="user/foo">
+                    <button type="button" className="login-button">
+                        <FontAwesomeIcon icon={faUserCircle} />
                     </button>
-                </Link> */}
+                </Link>
             </nav>
 
             <div className="books-container">
-                {books.map(book => <BookCard key={book.id} {...book} />)}
+                {books.map(book => <BookCard key={book.id}
+                    isFav={state.user?.favoriteBook?.id == book.id}
+                    {...book} />)}
             </div>
         </div>
     )

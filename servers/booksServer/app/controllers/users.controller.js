@@ -163,12 +163,26 @@ exports.updateUserById = (req, res) => {
     const { id } = req.params;
     const { name } = req.body;
 
-    var query = `UPDATE users 
-                    SET 
-                        name = ?
-                    WHERE id = ? ;`
+    const pairs = Object.entries(req.body);
 
-    const placeholders = [name, id];
+    var setsString = '';
+    var isStarted = false;
+    const placeholders = [];
+
+    for (let i = 0; i < pairs.length; i++) {
+        let [key, value] = pairs[i];
+        if (key === 'id') {
+            continue;
+        }
+        setsString += `${isStarted ? ',' : ''} ?? = ? `
+        isStarted = true;
+        placeholders.push(key, value);
+    }
+
+    var query = `UPDATE users 
+        SET ${setsString}
+        WHERE id = ? ;`;
+    placeholders.push(id);
 
     db.query(query, placeholders, (err, results) => {
         if (err) {

@@ -19,8 +19,11 @@ function App() {
   });
 
   useEffect(() => {
-    console.log("user updated");
-  }, [state.user])
+    var activeUser = localStorageService.getActiveUser();
+    if (activeUser) {
+      setState({ ...state, user: activeUser });
+    }
+  }, []);
 
   return (
     <Context.Provider value={{

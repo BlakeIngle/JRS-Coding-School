@@ -35,7 +35,7 @@ exports.getBookById = (req, res) => {
                 res.status(404)
                     .send({ message: "No book found." });
             } else {
-                res.send({ book: results });
+                res.send({ book: results[0] });
             }
         }
     });

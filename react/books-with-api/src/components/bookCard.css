@@ -59,7 +59,7 @@
 }
 
 .book-card .star.fav {
-    color:var(--yellow);
+    color:var(--dark-blue);
     transform: rotate(calc(360deg / 5 * 2));
 }
 
