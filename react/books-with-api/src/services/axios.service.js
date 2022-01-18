@@ -32,3 +32,7 @@ const updateUser = (user) => {
 exports.setFavoriteBook = (bookId, userId) => {
     return updateUser({ id: userId, favoriteBook: bookId });
 }
+
+exports.getAllListsBookIsInByBookId = (bookId) => {
+    return axios.get(`${URL}/books/${bookId}/lists`);
+}

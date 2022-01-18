@@ -85,6 +85,65 @@ exports.getBooksByTitle = (req, res) => {
     });
 }
 
+exports.getBooksByListId = (req, res) => {
+
+    const { listId } = req.params;
+
+    const query = `SELECT books.id, books.title, books.author, books.cover,
+                        books.year, books.publisher, reading_list.name as 'listName'
+                    FROM books 
+                        INNER JOIN reading_list_items
+                            ON books.id = reading_list_items.bookId
+                        INNER JOIN reading_list
+                            ON reading_list_items.listId = reading_list.id
+                    WHERE reading_list.id = ?;`;
+
+    const placeholders = [listId];
+
+    db.query(query, placeholders, (err, results) => {
+        if (err) {
+            res.status(500)
+                .send({ error: err, message: "Error retrieving books." })
+        } else {
+            if (results.length == 0) {
+                res.status(404)
+                    .send({ message: "No books found." });
+            } else {
+                res.send({ books: results });
+            }
+        }
+    });
+}
+
+exports.getAllListsBookIsInByBookId = (req, res) => {
+
+    const { bookId } = req.params;
+
+    const query = `SELECT reading_list.id, reading_list.name
+                    FROM reading_list
+                    INNER JOIN reading_list_items
+                        ON reading_list.id = reading_list_items.listId
+                    INNER JOIN books
+                        ON reading_list_items.bookId = books.id
+                    WHERE  books.id = ?;`;
+
+    const placeholders = [bookId];
+
+    db.query(query, placeholders, (err, results) => {
+        if (err) {
+            res.status(500)
+                .send({ error: err, message: "Error retrieving lists." })
+        } else {
+            if (results.length == 0) {
+                res.status(404)
+                    .send({ message: "Book was not found in any lists." });
+            } else {
+                res.send({ lists: results });
+            }
+        }
+    });
+}
+
 exports.getBooksByQuery = (req, res) => {
 
     console.log("recieved request")

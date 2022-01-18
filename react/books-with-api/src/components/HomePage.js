@@ -30,14 +30,17 @@ export default function HomePage() {
         <div>
             <h1>Books Books Books</h1>
             <nav>
-                <Link to="login">
-                    <button type="button" className="login-button">Login</button>
-                </Link>
-                <Link to="user/foo">
-                    <button type="button" className="login-button">
-                        <FontAwesomeIcon icon={faUserCircle} />
-                    </button>
-                </Link>
+                {state.user ?
+                    <Link to={`/user/${state.user.id}`}>
+                        <button type="button" className="login-button">
+                            <FontAwesomeIcon icon={faUserCircle} />
+                        </button>
+                    </Link>
+                    :
+                    <Link to="login">
+                        <button type="button" className="login-button">Login</button>
+                    </Link>
+                }
             </nav>
 
             <div className="books-container">

@@ -12,6 +12,7 @@ export default function SignUpPage() {
         http.createNewUser(user)
             .then(res => {
                 // do something
+                console.log(res)
                 const user = res.data.user;
                 console.log(user);
                 localStorageService.saveUser(user);

@@ -6,6 +6,8 @@ import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
 import UserPage from './components/UserPage';
 import { createContext, useEffect, useState } from 'react';
+import BookPage from './components/BookPage';
+import ListPage from './components/ListPage';
 
 const axiosService = require('./services/axios.service');
 const localStorageService = require('./services/localStorage.service');
@@ -39,6 +41,8 @@ function App() {
             <Route path="/login" element={<LoginPage />}></Route>
             <Route path="/signup" element={<SignUpPage />}></Route>
             <Route path="/user/:userId" element={<UserPage />}></Route>
+            <Route path="/book/:bookId" element={<BookPage />}></Route>
+            <Route path="/list/:listId" element={<ListPage />}></Route >
             <Route path="*" element={<div>404 - page does not exist</div>}></Route>
           </Routes>
         </BrowserRouter>

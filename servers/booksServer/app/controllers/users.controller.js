@@ -113,10 +113,21 @@ exports.addNewUser = async (req, res) => {
             res.status(500)
                 .send({ error: err, message: "Error adding new user." })
         } else {
-            console.log('user created, getting row');
+            createReadingListForNewUser(name ? name : email);
             getUserByEmail(email, res);
         }
     });
+}
+
+const createReadingListForNewUser = (name) => {
+
+    query = `INSERT INTO reading_list (userId, name)
+                    VALUES (LAST_INSERT_ID(), ?);`;
+
+    var placeholders = [name + "'s Reading List"];
+
+    db.query(query, placeholders);
+
 }
 
 exports.login = (req, res) => {

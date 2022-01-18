@@ -5,8 +5,11 @@ module.exports = (app) => {
 
     app.get('/api/books/search', books.getBooksByQuery);
     app.get('/api/books/:id', books.getBookById);
+    app.get('/api/books/:bookId/lists', books.getAllListsBookIsInByBookId);
     app.get('/api/books/author/:author', books.getBooksByAuthor);
     app.get('/api/books/title/:title', books.getBooksByTitle);
+    app.get('/api/books/list/:listId', books.getBooksByListId);
+
 
     app.post('/api/books', books.addNewBook);
 

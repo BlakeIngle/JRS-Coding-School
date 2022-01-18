@@ -1,7 +1,8 @@
 import { faStar as star } from '@fortawesome/free-regular-svg-icons'
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Context } from '../App'
 import './bookCard.css'
 
@@ -21,6 +22,7 @@ export default function BookCard({ id, title, author, publisher, year, cover, is
     }
 
     function handleFavoriteClicked() {
+
         // do logic here
         http.setFavoriteBook((isFav ? null : id), state.user.id)
             .then(res => {
@@ -48,16 +50,18 @@ export default function BookCard({ id, title, author, publisher, year, cover, is
                     <div>{author}</div>
                     {publisher && <div>&copy;{publisher}{year && <span> - {year}</span>}</div>}
                 </div>
-                <FontAwesomeIcon
+                {state.user && <FontAwesomeIcon
                     className={`star ${isFav && 'fav'}`}
                     icon={isFav ? solidStar : star}
                     size="2x"
-                    onClick={handleFavoriteClicked} />
+                    onClick={handleFavoriteClicked} />}
             </div>
             <div className="main-info">
                 <img src={cover} alt={title + " cover image"} />
                 <br />
-                <span>{title}</span>
+                <Link to={`/book/${id}`}>
+                    <span>{title}</span>
+                </Link>
             </div>
 
         </div>

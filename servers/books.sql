@@ -23,6 +23,29 @@ CREATE TABLE `books`.`users` (
         REFERENCES `books`(`id`)
 );
 
+CREATE TABLE `books`.`reading_list` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `userId` INT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`),
+	FOREIGN KEY (userId) REFERENCES users(id),
+
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `userId_UNIQUE` (`userId` ASC) VISIBLE
+);
+
+CREATE TABLE `books`.`reading_list_items` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `listId` INT NOT NULL,
+  `bookId` BIGINT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`listId`) references `reading_list`(`id`),
+  FOREIGN KEY (`bookId`) references `books`(`id`),
+    UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE
+);
+
+
+
 INSERT INTO `books`.`books` (`id`, `title`, `author`, `cover`) 
     VALUES ('9780394800165', 'Green Eggs And Ham', 'Dr. Seuss', 'https://en.wikipedia.org/wiki/Green_Eggs_and_Ham#/media/File:Green_Eggs_and_Ham.jpg');
 
@@ -34,3 +57,5 @@ insert into books (id, title, author)
 
 SELECT id, title, author, cover
     FROM books;
+
+
