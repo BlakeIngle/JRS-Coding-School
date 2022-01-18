@@ -4,16 +4,18 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1em;
     margin-top: 15em;
 }
 
 .ball {
-    --ballSize: calc(80vh / 6);
+    --ballSize: 20px;
     height: var(--ballSize);
     width: var(--ballSize);
     background-color: var(--dark);
     border-radius: 50%;
+
     animation-name: bounce;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
@@ -26,7 +28,7 @@
         transform: translateY(0);
     }
     15% {
-        transform: translateY(2em);
+        transform: translateY(calc(var(--ballSize) * -1));
     }
     25% {
         transform: translateY(0);
