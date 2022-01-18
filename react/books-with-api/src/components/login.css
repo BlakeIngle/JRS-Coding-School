@@ -63,3 +63,45 @@ hr {
     right: 1em;
     bottom: 100%;
 }
+
+.login .shake {
+    outline-color: black;
+    outline-width: 1px;
+    outline-style: solid;
+
+    animation-name: shake;
+    animation-duration: var(--animationTime);
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        outline-color: black;
+    }
+    20% {
+        transform: translate(-3rem, 0) rotate(-3deg);
+        outline-color: red;
+    }
+    35% {
+        transform: translate(3rem, 0) rotate(3deg);
+        outline-color: red;
+    }
+    50% {
+        transform: translate(-3rem, 0) rotate(-3deg);
+        outline-color: red;
+    }
+    65% {
+        transform: translate(3rem, 0) rotate(3deg);
+        outline-color: red;
+    }
+    80% {
+        transform: translate(-3rem, 0) rotate(-3deg);
+        outline-color: red;
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+        outline-color: black;
+    }
+}
