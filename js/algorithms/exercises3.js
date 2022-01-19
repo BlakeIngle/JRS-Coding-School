@@ -26,7 +26,7 @@
  * For example, suppose that Bleatrix picks N = 1692. 
  * 
  * She would count as follows:
- * N = 1692. Now she has seen the digits 1, 2, 6, and 9.
+ * N = 1692.  Now she has seen the digits 1, 2, 6, and 9.
  * 2N = 3384. Now she has seen the digits 1, 2, 3, 4, 6, 8, and 9.
  * 3N = 5076. Now she has seen all ten digits, and falls asleep.
  * 
@@ -45,7 +45,8 @@
  * digits sorted in non-decreasing order. Some examples of this 
  * are 8, 123, 555, and 224488. She decided to call these numbers 
  * tidy. 
- * Numbers that do not have this property, like 20, 321, 495 and 999990, 
+ * Numbers that do not have this property, like 20, 321, 495 and 999990
+ *                                              19, 299, 489,    899999
  * are not tidy.
  * She just finished counting all positive integers in ascending order 
  * from 1 to N. What was the last tidy number she counted?

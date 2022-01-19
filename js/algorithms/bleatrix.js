@@ -1,23 +1,18 @@
 function bleatrix(n) {
-    let digitsSeen = []
-    for (let i = 0; i <= 9; i++) {
-        digitsSeen.push(false)
-    }
-    for (let i = 1; i <= 100; i++) {
+    let digitsSeen = new Array(10).fill(false);
+    topLoop: for (let i = 1; i <= 10; i++) {
         let num = Number(n * i).toString()
         for (let char of num) {
             digitsSeen[char] = true;
         }
-        let allSeen = true;
+
         for (let seen of digitsSeen) {
             if (!seen) {
-                allSeen = false;
-                break;
+                continue topLoop;
             }
         }
-        if (allSeen) {
-            return n * i;
-        }
+        // all seen
+        return i * n;
     }
     return "INSOMNIA"
 }
