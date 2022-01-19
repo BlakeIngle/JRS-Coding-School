@@ -6,16 +6,18 @@ export default function NewItemForm({ addToList }) {
 
     function addNewItem(e) {
         e.preventDefault();
-        addToList({
-            text: text,
-            isDone: false,
-            id: new Date().getTime().toString()
-        });
-        setText('');
+        if (text) {
+            addToList({
+                text: text,
+                isDone: false,
+                id: new Date().getTime().toString()
+            });
+            setText('');
+        }
     }
 
     return (
-        <div>
+        <div className="">
             <form onSubmit={addNewItem}>
                 <input type="text"
                     placeholder="To Do"

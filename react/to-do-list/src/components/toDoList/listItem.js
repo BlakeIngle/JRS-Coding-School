@@ -57,7 +57,9 @@ export default function ListItem({ id, text, isDone, removeFromList, editItem })
                                 isDone: e.target.checked
                             });
                         }} />
-                    <span onClick={deleteItem} >&times;</span>
+                    <button onClick={deleteItem} >
+                        &times;
+                    </button>
                 </span>
             </div>
         )

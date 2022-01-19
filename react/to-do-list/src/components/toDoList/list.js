@@ -13,7 +13,7 @@ export default function List({ list, removeFromList, editItem }) {
     );
 
     return (
-        <div>
+        <div className="list-column">
             {listItems}
         </div>
     )

@@ -1,7 +1,16 @@
+.to-do-list h1 {
+    margin-top: 0;
+    padding: 1em;
+    background-color: #313d4a;
+    color:rgb(206, 206, 206);
+}
 
-
-
-
+.list-column {
+    margin: auto;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 .list-item {
     background-color: rgb(206, 206, 206);
@@ -29,4 +38,20 @@
     padding: 0;
     margin: -0.5rem;
     text-transform: uppercase;
+}
+
+.to-do-list button {
+    cursor: pointer;
+    border: none;
+    background-color: #b3b7c1;
+    font-size: inherit;
+    padding: 0.75rem;
+    line-height: 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.to-do-list button[type="submit"] {
+    background-color: #7ccb6d;
 }
