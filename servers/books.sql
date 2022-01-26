@@ -44,7 +44,21 @@ CREATE TABLE `books`.`reading_list_items` (
     UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE
 );
 
+CREATE TABLE 'friend' (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  user1Id INT NOT NULL,
+  user2Id INT NOT NULL,
+  PRIMARY KEY (id)
+);
 
+INSERT INTO friend (user1Id, user2Id)
+  VALUES (1, 2);
+
+SELECT users.id, users.name 
+  FROM users
+  INNER JOIN friend 
+    ON users.id = friend.user2Id
+  WHERE friend.user1Id = ?;
 
 INSERT INTO `books`.`books` (`id`, `title`, `author`, `cover`) 
     VALUES ('9780394800165', 'Green Eggs And Ham', 'Dr. Seuss', 'https://en.wikipedia.org/wiki/Green_Eggs_and_Ham#/media/File:Green_Eggs_and_Ham.jpg');
