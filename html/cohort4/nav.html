@@ -1,0 +1,142 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        padding: 5px;
+        margin: 5px;
+
+        border-radius: 8px;
+        font-family: 'Roboto', sans-serif;
+
+        background-color: black;
+        color: white;
+
+        display: flex;
+        justify-content: space-between;
+
+        transition: 0.3s;
+    }
+
+    #burger {
+        user-select: none;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: unset;
+        margin-left: 0.25rem;
+    }
+
+    a,
+    span {
+        padding: 0.25rem 0.5rem;
+        display: inline-block;
+        line-height: 1rem;
+
+        border-radius: 3px;
+
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    a:hover,
+    span:hover {
+        background-color: white;
+        color: black;
+    }
+
+    nav>div {
+        display: flex;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: red;
+        height: 0%;
+        width: 100%;
+        transition: 0.2s;
+    }
+
+    a:hover>.slide {
+        height: 100%;
+    }
+
+
+    @media screen and (max-width: 600px) {
+
+        nav {
+            margin: 0;
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        nav,
+        nav>div {
+            flex-direction: column;
+        }
+
+        nav.hidden>div *:not(span) {
+            /* display: none; */
+            width: 0;
+            opacity: 0;
+        }
+    }
+</style>
+
+<nav class="hidden">
+
+    <div>
+        <span id="burger">&#9776;</span>
+
+        <a href="./index.html">
+            HOME
+        </a>
+        <a>
+            MOVIES
+        </a>
+        <a>
+            ANIMATIONS
+        </a>
+    </div>
+
+    <div>
+        <a>
+            Log In
+        </a>
+    </div>
+
+</nav>
+
+<script>
+    // find the burger icon
+    // and the nav bar
+    // make some magic happen
+    // so that when i click
+    // the burger icon,
+    // the 'hidden' class
+    // toggles on the nav bar
+
+    let burger = document.getElementById('burger');
+    let nav = document.getElementsByTagName('nav')[0];
+
+    burger.onclick = () => {
+        console.log(nav)
+        nav.classList.toggle('hidden');
+    };
+
+</script>
