@@ -1,0 +1,134 @@
+body {
+    background: linear-gradient(to top right, #e6a120, #744711);
+    height: 100vh;
+    padding-top: 3em;
+}
+
+:root {
+    /* css variables */
+    --brown: #786450;
+    --lighter-brown: #f5e8df;
+    --light-brown: #efcfc2;
+    --black: #111;
+    --white: #f6f6f6;
+}
+
+.root {
+    width: 500px;
+    height: 500px;
+    background-color: var(--white);
+    font-size: 12pt;
+    border-radius: 1.5em;
+    margin: auto;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.left {
+    padding-top: 2rem;
+    text-align: center;
+    padding-right: 200px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.round {
+    padding: 1px;
+    border-radius: 50%;
+    transition: all 2s ease;
+}
+
+.round:not(img) {
+    border: solid var(--brown) 2px;
+    border-left-color: var(--white);
+    position: absolute;
+    inset: 1px;
+}
+
+.round:last-child {
+    inset: -3px;
+    transform: rotate(180deg);
+}
+
+.profile-pic:hover .round:nth-child(2) {
+    transform: rotate(360deg);
+}
+
+.profile-pic:hover .round:last-child {
+    transform: rotate(-180deg);
+}
+
+button {
+    background-color: var(--white);
+    display: block;
+    
+    color: var(--brown);
+    border: solid var(--brown) 2px;
+
+    font-size: 18pt;
+    /* more vars */
+    --height: 2em;
+    height: var(--height);
+    /* calc with vars */
+    border-radius: calc(var(--height) / 2);
+    width: 10em;
+
+    font-family: inherit;
+
+    margin: auto;
+
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+button+button {
+    margin-top: 0.5em;
+}
+
+.right {
+    box-sizing: border-box;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.right > div > div:first-child {
+    font-size: 2rem;
+}
+.right > div {
+    color: var(--brown);
+    font-size: 1rem;
+    
+    background-color: var(--lighter-brown);
+    flex-grow: 1;
+
+    display: grid;
+    place-items: center;
+    gap: 0;
+
+    transition: all 0.3s;
+}
+
+.right > div:hover {
+    background-color: var(--light-brown);
+}
