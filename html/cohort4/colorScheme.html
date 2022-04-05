@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <script>
+        function changeColorScheme(schemeName) {
+            document.getElementsByTagName('body')[0].className = schemeName;
+        }
+    </script>
+
+    <body>
+        <nav>
+            <div>
+                <button onclick="changeColorScheme('')">Default</button>
+                <button onclick="changeColorScheme('donuts')">Donuts</button>
+                <button onclick="changeColorScheme('navy')">Navy</button>
+                <button onclick="changeColorScheme('blueberry')">Blueberry</button>
+                <button onclick="changeColorScheme('pharma')">Pharma</button>
+            </div>
+            <div>
+                <button class="log-in">Log In</button>
+            </div>
+        </nav>
+
+        <main>
+            <div>
+
+                <h1>Lorem, ipsum.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo incidunt voluptatum laboriosam, quas provident quo?</p>
+            </div>
+
+            <button class="go-now">Go Now</button>
+        </main>
+
+        <footer>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eum quod odit impedit animi dolor laboriosam nihil, quam nam explicabo
+                voluptas voluptates suscipit itaque natus.</p>
+        </footer>
+    </body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+    :root {
+        --primary-color: #f2f2f2;
+        --secondary-color: #0a0a0a;
+        --tertiary-color: #ff3e3e;
+    }
+
+    body.donuts {
+        /* donuts */
+        --primary-color: #a38b5c;
+        --secondary-color: #2d220c;
+        --tertiary-color: #ffffff;
+    }
+
+    body.blueberry {
+        /* blueberry */
+        --primary-color: #1a609e;
+        --secondary-color: #270359;
+        --tertiary-color: #ffae00;
+    }
+
+    body.navy {
+        /* navy */
+        --primary-color: #e5e5e5;
+        --secondary-color: #14213d;
+        --tertiary-color: #fca311;
+    }
+
+    body.pharma {
+        /* pharma */
+        --primary-color: #aaa19f;
+        --secondary-color: #976b12;
+        --tertiary-color: #fff;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    button {
+        border: none;
+        font: inherit;
+        border-radius: 5px;
+        height: fit-content;
+        white-space: nowrap;
+        padding: 0.5em 1em;
+    }
+
+    .log-in {
+        border: solid 2px var(--tertiary-color);
+        color: var(--tertiary-color);
+        background-color: transparent;
+    }
+
+    .go-now {
+        background-color: var(--tertiary-color);
+        color: var(--primary-color);
+
+        font-weight: 900;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 5rem;
+
+        font-size: 1.5rem;
+
+        flex-grow: 1;
+
+    }
+
+    main>div:first-child {
+        max-width: 400px;
+    }
+
+    footer {
+        padding: 3rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+</style>
