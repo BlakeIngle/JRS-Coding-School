@@ -20,10 +20,14 @@
         <nav>
             <div>
                 <button onclick="changeColorScheme('')">Default</button>
-                <button onclick="changeColorScheme('donuts')">Donuts</button>
-                <button onclick="changeColorScheme('navy')">Navy</button>
-                <button onclick="changeColorScheme('blueberry')">Blueberry</button>
-                <button onclick="changeColorScheme('pharma')">Pharma</button>
+                <button class="donuts"
+                        onclick="changeColorScheme('donuts')">Donuts</button>
+                <button class="navy"
+                        onclick="changeColorScheme('navy')">Navy</button>
+                <button class="blueberry"
+                        onclick="changeColorScheme('blueberry')">Blueberry</button>
+                <button class="pharma"
+                        onclick="changeColorScheme('pharma')">Pharma</button>
             </div>
             <div>
                 <button class="log-in">Log In</button>
@@ -58,28 +62,28 @@
         --tertiary-color: #ff3e3e;
     }
 
-    body.donuts {
+    .donuts {
         /* donuts */
         --primary-color: #a38b5c;
         --secondary-color: #2d220c;
         --tertiary-color: #ffffff;
     }
 
-    body.blueberry {
+    .blueberry {
         /* blueberry */
         --primary-color: #1a609e;
         --secondary-color: #270359;
         --tertiary-color: #ffae00;
     }
 
-    body.navy {
+    .navy {
         /* navy */
         --primary-color: #e5e5e5;
         --secondary-color: #14213d;
         --tertiary-color: #fca311;
     }
 
-    body.pharma {
+    .pharma {
         /* pharma */
         --primary-color: #aaa19f;
         --secondary-color: #976b12;
@@ -115,6 +119,9 @@
         height: fit-content;
         white-space: nowrap;
         padding: 0.5em 1em;
+
+        background-color: var(--secondary-color);
+        color: var(--tertiary-color);
     }
 
     .log-in {
