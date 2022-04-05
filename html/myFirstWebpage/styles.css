@@ -22,12 +22,34 @@ body {
 
 html {
     background: linear-gradient(to bottom right, #F00B51, #73005C);
+    scroll-behavior: smooth;
 }
 
 body {
     padding: 3rem;
     max-width: 2000px;
     margin: auto;
+}
+
+.back-to-top {
+    margin: 0;
+    padding: 0;
+    min-height: unset;
+
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    z-index: 2;
 }
 
 h1 {
@@ -118,4 +140,8 @@ ol > li {
     body {
         padding: 0;
     }
+}
+
+button {
+    border: none;
 }
