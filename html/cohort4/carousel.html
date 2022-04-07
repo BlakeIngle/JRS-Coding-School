@@ -1,0 +1,168 @@
+<!-- CSS -->
+<style>
+    html {
+        background: linear-gradient(to bottom right, #F00B51, #73005C);
+    }
+
+    .carousel-root {
+        margin: auto;
+        max-width: 100%;
+
+        padding: 2.5rem;
+    }
+
+    .carousel-root .main {
+        position: relative;
+    }
+
+    .carousel-root img {
+        width: 100%;
+    }
+
+    .carousel-root button {
+        border: none;
+        font-size: 4rem;
+
+        width: 5rem;
+        height: 5rem;
+
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 2.5rem);
+
+        display: grid;
+        place-items: center;
+
+        background-color: #222;
+        color: white;
+
+        cursor: pointer;
+    }
+
+    .carousel-root button:hover {
+        background-color: black;
+    }
+
+    .carousel-root button:first-of-type {
+        left: -2.5rem;
+    }
+
+    .carousel-root button:last-of-type {
+        right: -2.5rem;
+    }
+
+    .carousel-root .progress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .carousel-root .progress>div {
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .carousel-root .progress>div:hover>div {
+        background-color: white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-root .progress>div>div {
+        width: 3rem;
+        height: 0.5rem;
+
+        background-color: #888;
+        border-radius: 0.25rem;
+    }
+
+    .carousel-root .progress>div.active>div {
+        background-color: white;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.7),
+            inset 0 0 5px rgb(0, 0, 0, 0.7);
+    }
+</style>
+
+<!-- JS -->
+<script>
+    // ../myFirstWebpage/images/angelsEgg/angels-egg-1.jpg
+    let imgNames = [
+        'angels-egg-1.jpg', // 0
+        'angels-egg-2.jpg', // 1
+        'angels-egg-3.jpg'  // 2
+    ];
+
+    let activeSlideNumber = 0;
+
+    let myT = setTimeout(nextSlide, 5000);
+
+    function updateSlideshow(n) {
+
+        if (n < 0 || n >= imgNames.length) {
+            return;
+        }
+
+        activeSlideNumber = n;
+
+        let img = document.getElementsByTagName('img')[0];
+
+        img.src = `../myFirstWebpage/images/angelsEgg/${imgNames[activeSlideNumber]}`;
+        updateProgress();
+
+        clearTimeout(myT);
+        myT = setTimeout(nextSlide, 5000);
+    }
+
+    function nextSlide() {
+        updateSlideshow((activeSlideNumber + 1) % imgNames.length);
+    }
+
+    function prevSlide() {
+        updateSlideshow((activeSlideNumber + (imgNames.length - 1)) % imgNames.length);
+    }
+
+    function updateProgress() {
+        let pBars = document.getElementsByClassName('progress-bar');
+
+        // turn off all the lights
+        for (let pBar of pBars) {
+            pBar.classList.remove('active');
+        }
+
+        // turn on one light
+        pBars[activeSlideNumber].classList.add('active');
+    }
+
+</script>
+
+<!-- HTML -->
+<div class="carousel-root">
+    <div class="main">
+
+        <img src="../myFirstWebpage/images/angelsEgg/angels-egg-1.jpg">
+
+        <button onclick="prevSlide()"
+                title="Previous Slide">
+            &#10094;
+        </button>
+        <button onclick="nextSlide()">
+            &#10095;
+        </button>
+
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar active"
+             onclick="updateSlideshow(0)">
+            <div></div>
+        </div>
+        <div class="progress-bar"
+             onclick="updateSlideshow(1)">
+            <div></div>
+        </div>
+        <div class="progress-bar"
+             onclick="updateSlideshow(2)">
+            <div></div>
+        </div>
+    </div>
+</div>
