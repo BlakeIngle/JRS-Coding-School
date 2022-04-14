@@ -1,0 +1,31 @@
+.login-form {
+    background-color: lightgray;
+
+    width: fit-content;
+    margin: auto;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.login-form h3 {
+    margin: 0 0 1rem;
+}
+
+.login-form label {
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+.login-form > div {
+    margin-bottom: 0.4rem;
+}
+
+.login-form button {
+    border: none;
+    font: inherit;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+}
