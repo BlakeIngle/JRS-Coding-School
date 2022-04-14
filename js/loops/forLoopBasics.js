@@ -1,8 +1,33 @@
+// //                  ** -> do something 10 times
+// for (var i = 0; i < 10; i++) {
+//     // some code 
+//     console.log(i);
+// }
 
-
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
+    // some code 
     console.log(i);
-}
+} // done
+
+console.log("loop is done")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 for (let i = 0; i < 10; i++) {

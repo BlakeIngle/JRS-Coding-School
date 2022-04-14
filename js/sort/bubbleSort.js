@@ -21,11 +21,9 @@ function bubbleSort(arr) {
 let list = makeRandomArray()
 
 var t0 = new Date().getTime();
-
 bubbleSort(list)
 var t1 = new Date().getTime();
 
-
 console.log(list)
 
-console.log("Bubble sort took " + (t1 - t0) + " milliseconds.")
+console.log("Bubble sort sorted", list.length, 'values in', (t1 - t0), " milliseconds.")

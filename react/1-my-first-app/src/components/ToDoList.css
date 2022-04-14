@@ -1,0 +1,12 @@
+.to-do-list {
+    width: fit-content;
+    margin: auto;
+}
+
+.to-do-list .to-do-item {
+    text-align: right;
+}
+
+.to-do-list .strike {
+    text-decoration: underline;
+}

@@ -24,7 +24,7 @@ for (let i = 0; i <= 20; i++) {
 
 console.log("-----------")
 
-for (let i = 0; i <= 20; i++) {
+for (let i = 0; i <= 30; i++) {
     if (i % 3 == 0) {
         // is divisible by 3
         console.log(i)
@@ -64,7 +64,7 @@ var sum = 0;
 
 console.log("Fibonachi sequence")
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
 
     if (i < 2) {
         console.log(i)
@@ -111,3 +111,13 @@ myString = myArr.join(' ');
 console.log(myString)
 
 
+
+
+function randomArray(n) {
+    let myArr = [];
+    for (let i = 0; i < n; i++) {
+        myArr.push(Math.ceil(Math.random() * 100))
+    }
+}
+
+var arr1 = randomArray(50) // 50 elements

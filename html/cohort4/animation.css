@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+.box {
+    width: 10em;
+    height: 10em;
+    background-color: #ff3e61;
+    margin: auto;
+    margin-top: 15em;
+}
+
+.box {
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+.slow {
+    animation-duration: 2s;
+}
+
+@keyframes bounce {
+    0% {
+        filter: hue-rotate(0);
+        transform: translateY(0) rotate(0);
+        border-radius: 0;
+    }
+    50% {
+        border-radius: 50%;
+        transform: translateY(-1em) rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        border-radius: 50%;
+        transform: translateY(-2em) rotate(90deg);
+    }
+}

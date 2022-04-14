@@ -1,37 +1,65 @@
 variable - something in code that is a value - that you can reference - it is changable
-identifier - the word for a variable - the technical term
-operator - + - * / % =    == >= < != === ^
+identifier - the 'name' of a variable - the technical term
+
+operator - + - * / % = == >= < != === ^ ? : 
+operand - the pieces of the operation that are not the operator
+
+logical comparisons - == === < > && ||
+                    - special operators that perform logical operations
+                    - == , === comparisons (equivalency) === is strict
+                    - <  less than
+                    - &&  ||  -   AND  OR
+                    ***   ! (not) will flip a boolean
 
 decleration - state that a variable exists
-initialization - assign a value to the variable
+initialization - assign a value to the variable (the very first time)
 assignment - giving a variable a new value
 
 keyword - reserved word defined by the programming language and its libraries
+literal - a literal value directly in your code ex: 5, "5", "Hello world!", [], true
 datatype - type of data, number, string, boolean, ...
-literal - a literal value not in a variable ex: 5, "5", "Hello world!", [], true
 
 type casting - turn a value from one data type to another data type
 
-compile - put code into assembly language - checking for errors - seeing if syntax is correct
+compile - put code into assembly language and then machine language
+        - checking for errors - seeing if syntax is correct
 execute - running the program
 
-library - file or files that have functions defined that we can use in out files
+syntax - the grammar of the language specified by the developers 
+        of the language. How the computer interprets all of the characters.
+comment - notes in your code that are not executed (nor compiled)
+        - // in line comment
+        - /* 
+           * block        starts with /*
+           * style 
+           * comment      ends with */
+           */
+
+library - a file or files that have functions defined that we can use in our programs
 
 increment/decrement - add or subtract 1 with ++ or --
+concatenation - combining two or more strings (string 'addition')
 
-function - reusable code with a name, parameters, and a return value
+function - reusable, predefined instructions that can be executed
+                multiple times
+         - functions require a name, parameters, and a return value
+
 scope - how much vision does the program have - can it see my variables?
-local variable - varaible in scope - meaning the local code block has access to this variable 
-global variable - a variable that "has no scope" - can be used in the whole "file"
 
+global variable - a variable on the top level scope "kinda has no scope" - can be used in the whole "file"
+local variable - varaible in scope - meaning the local code block has access to this variable 
+
+(the) call stack - basically a to do list for the computer 
+                - created when a function is called
 (stack) overflow - when you run out of memory because you kept calling too many functions
-        (you're revcursive function is infinite)
+        (you're recursive function is infinite)
 out of bounds - an index that does not exist in an array
 
-enumeration - a strict set of values in a list for future use
+enumeration / enums - a constant set of values in a predefined list
 
 primitive - a 'literal' value - ex. string, number, bool 
-non-primitive - a pointer or reference to another value - ex. array, obj
+non-primitive - a complex data stucture made up of primitive data
+              - a pointer or reference to another value - ex. array, obj
 
 truthy / falsey - interpreting a non boolean value as either 
         true or false. Coercing a non boolean into a boolean.

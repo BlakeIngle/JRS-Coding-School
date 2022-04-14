@@ -1,18 +1,13 @@
 let myList = [1, 2, 3, 4, 5];
 
-
-
-
-
-
-
-
-
-
-
-for (let n of myList) {
-    console.log(n)
+for (let value of myList) {
+    console.log('value: ', value)
 }
+
+
+return;
+
+
 
 
 
@@ -45,7 +40,7 @@ let myFunc2 = (v) => {
 myFunc1(1)
 myFunc2(2)
 
-var myList = [2, 4, 6, 5, 9, 1, 5, 6, 6, 7, 2]
+myList = [2, 4, 6, 5, 9, 1, 5, 6, 6, 7, 2]
 
 
 // rewrite the sum of an array function again

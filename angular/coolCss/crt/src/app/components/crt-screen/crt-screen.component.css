@@ -31,6 +31,7 @@
     position: absolute;
     font-size: 50px;
     filter: blur(0.05em);
+    mix-blend-mode: color-dodge;
 }
 
 .rgb-text.w {
@@ -40,16 +41,16 @@
 }
 
 .rgb-text.r {
-    color: red;
+    color: #f00;
     margin-left: -0.07em;
 }
 
 .rgb-text.g {
-    color: green;
+    color: #0f0;
     margin: 0.1em 0 0 0.04em;
 }
 
 .rgb-text.b {
-    color: blue;
+    color: #00f;
     margin-left: 0.07em;
 }

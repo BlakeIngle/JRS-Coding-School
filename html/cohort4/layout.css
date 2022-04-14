@@ -1,0 +1,53 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: solid red 2px;
+    margin: 2px;
+}
+
+.top {
+    height: 100px;
+}
+
+.left,
+.main {
+    display: inline-block;
+    height: calc(100vh - 116px);
+}
+
+.left {
+    width: 20vw;
+}
+
+.main {
+    width: calc(80vw - 20px);
+}
+
+
+.main2 {
+    height: 300px;
+    max-width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+
+
+.left2.show {
+    margin: 0;
+    background-color: lightgray;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    width: 200px;
+    display: block;
+}
+.left2 {
+    display: none;
+}

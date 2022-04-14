@@ -1,11 +1,16 @@
 var a = 4;
 var b = 5;
 
-function add2(x) {
-    x = x + 2;
-    // return x;
-    return x;
+function doSomething() {
+    console.log(a);
 }
 
-add2(a);
-console.log(a);
+function add2() {
+    var x = 0;
+    // ....
+    console.log(x)
+}
+
+// ..., console, a, b, doSomething, add2
+
+console.log(x)

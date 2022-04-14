@@ -38,4 +38,4 @@ var t1 = new Date().getTime();
 
 console.log(list)
 
-console.log("Selection sort took " + (t1 - t0) + " milliseconds.")
+console.log("Selection sort sorted", list.length, 'values in', (t1 - t0), " milliseconds.")

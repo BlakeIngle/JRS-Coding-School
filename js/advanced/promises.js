@@ -58,10 +58,5 @@ async function parallel() {
 }
 
 
-parallel();
+concurrentStart();
 
-async function printSomething() {
-    console.log("Hi")
-}
-
-printSomething();

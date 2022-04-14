@@ -1,0 +1,58 @@
+JS Quiz Week 1
+
+Answer the following questions by writing the correct JS code.
+
+1. Define a variable called ‘a’ that has a value of the number ‘4’.
+
+
+
+
+2. Fill in the blanks so that the program will execute the console.log statement if and only if the given variable ‘isRaining’ is true
+
+
+	___   (  _______  )  __
+		console.log(“It is raining now”);
+	__
+
+
+3. What is one way to coerce (type cast) the string myStr into the number type
+         
+        var myStr = ‘5’;
+
+
+
+	myStr = _______________
+
+
+4. My variable n is 4. Please make it equal to 5 
+	
+	var n = 4;
+
+
+	__________
+
+5. What is one way to access the property ‘car’ on an object ‘car’
+
+
+
+	_________________
+	
+Write your answer to the following questions in the space provided.
+
+6. What are the three primitive  data types we use most in JavaScript?
+
+
+
+7. What is a keyword?
+
+
+
+
+8. List 5 different keywords in JavaScript
+
+
+
+
+
+
+

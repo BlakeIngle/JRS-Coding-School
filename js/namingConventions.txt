@@ -1,0 +1,24 @@
+Naming Conventions:
+
+Naming Types:
+
+camelCase - first letter is lowercase. First letter of each subsequent word
+            is capitalized. No spaces. No underscores.
+CapitalCase - First letter of every word is capitalized. No spaces. No underscores.
+ALL_CAPS - All letters are capitalized. Words are separated by underscores.
+dash-case - all letters lowercase. Words separated by hyphen
+
+Things that get names:
+
+JS:
+(variables) var - camelCase  or  _camelCase
+function - camelCase
+(constant) const - ALL_CAPS  ex: Math.PI
+class - CapitalCase
+
+HTML:
+class - dash-case
+id - camelCase
+
+React:
+FunctionComponent - CapitalCase

@@ -1,8 +1,5 @@
 JavaScript Exercises
 
-
-
-
 1) Write a function that displays the result of 5+6+7+8+9+10.
 
 2) Write a function that returns the perimeter of a 
@@ -78,6 +75,10 @@ avg = sum / num of things
 1 and 12, and returns the name of the corresponding month. 
 (Hint: Look up how to get a random number in JavaScript.)
 
+
+
+
+
 14) Write a function that takes three numbers as arguments, and 
 returns the same 3 numbers in ascending order (as an array)
 (more specifically, non-decreasing order if multiple numbers are the same.)
@@ -96,6 +97,8 @@ the reverse of that string.
 if a given string argument is a palindrome, where the string is the same when reversed. 
 Examples of palindromes are "racecar" and "3003".
 Ex: isPalindrome("racecar") returns true. isPalindrome("racecars") returns false.
+
+
 
 
 
@@ -131,7 +134,8 @@ Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
 
 
 
-22) Write a function that returns the largest integer n where 
+22) Write a function that returns the largest 
+integer n where 
 n*n is still less than 12,000. 
 (Hint 1, use a while loop). 
 (Hint 2, you don't need an argument).
@@ -179,7 +183,8 @@ this case.
 
 
 
-31) Write a funciton that takes two numbers as arguments and returns a random integer ranging 
+31) Write a funciton that takes two numbers as arguments and 
+returns a random integer ranging 
 from the first number to the second number.
 
 
@@ -192,6 +197,6 @@ from the first number to the second number.
 
 
 
-32) Write a funciton that takes a number n as input and prints the first n 
-numbers in the Fibonacci sequence.
+32) Write a funciton that takes a number n as input and prints 
+the first n numbers in the Fibonacci sequence.
 ex: input 8 -> log: 0, 1, 1, 2, 3, 5, 8, 13

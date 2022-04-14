@@ -1,90 +1,62 @@
-// // an array is a collection of data
+// an array is an ordered collection of data
 
-// otherArr = [1, 2, 3];
-// arr = [];
+// every array has a property called 'length'
+// the length is how many pieces of data are in the array
 
-// for (var i = 0; i < 10; i++) {
-//     //push a new value to the array
-//     arr.push(i);
-// }
-
-// console.log(arr)
-
-// //print every value in the array on a new line
-
-// for (let i = 0; i < arr.length; i++) {
-//     //do something for as many values are in the array
-//     //or do something with every value of the array
-//     console.log(arr[i])
-// }
+// every value in the array has a position / an index
 
 
 
+// number[]
+var myArr = [5, 8, 2, 4, 1, 9, 10, 7, 3, 6];
 
-// arr[0] = 100;
+console.log(myArr)
+console.log(myArr.length)
 
-// console.log(arr)
+console.log(myArr[0]) // first value in an array
+var i = 0;
+console.log(myArr[i]);
 
+console.log(myArr[myArr.length - 1]) // last value in an array
 
-// //declare
-// arr = [];
-// //push
-// arr.push(1, 2, 3);
-// //reference
-// arr[0]
-// //new assignment
-// arr[0] = 100
+// first index - 0
+// last index - (myArr.length - 1)
 
-// console.log(arr)
+var secondArr = ['😀', '🥴', '🙄']
 
-// let twoDArr = [
-//     [],
-//     [],
-//     []
-// ]
+// bad things 😢
+secondArr[7] // index out of bounds
+secondArr[-1] // index out of bounds
+secondArr['abc'] // index out of bounds
 
+secondArr[7] = 'whoops'
+secondArr[-1] = 'whoops'
+secondArr['abc'] = 'whoops' // DO NOT DO THIS!!!
+console.log(secondArr);
 
-// string, number, boolean, 'null'
+var a = 3;
+a = 4; // assign a new value to a var
 
-var a = 1
-var b = 2
-var c = 3;
-"literal string"
-// var list = 1, 2, 3
-var list;
-list = []
+myArr = ['a', 'b', 'c']
+// myArr[0] = 8; // assign a new value to index 0
+// i = 0;
+// myArr[i] = a // assignments with variables
 
-// add a value
-list.push(c, 4, a)
-list.push(b, 6, 5)
+///////////////
+myArr.push('d', 'e', 'f', 'g', 'h'); // push a new value onto the end of the array
+console.log(myArr)
 
-// remove a value
-// console.log(list.pop());
-
-// locate a specific piece of data
-// console.log(list[1]);
-
-// sort (numerical or maybe alphabetically)
-// console.log();
-
-// change a value
-list[0] = 9;
-
-// find average (of numbers)
-
-// console.log(list)
-// console.log(list.length)
+myArr.pop(); // pop the last value off of the array
+console.log(myArr)
 
 
 
 
-var s = "hi"
-"hi"
 
+// var arr1 = [1, 2, 3]
+// var arr2 = [1, 2, 3]
+// var arr3 = arr2;
 
-var arr1 = [1, 2, 3]
-var arr2 = [1, 2, 3]
-var arr3 = arr2;
+// console.log(arr1 == arr2)
+// console.log(arr2 == arr3)
 
-console.log(arr1 == arr2)
-console.log(arr2 == arr3)

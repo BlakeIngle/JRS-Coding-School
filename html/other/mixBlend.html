@@ -1,0 +1,36 @@
+<style>
+    .container {
+        isolation: isolate;
+        /* affects blending */
+        position: relative;
+    }
+
+    .circle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        mix-blend-mode: screen;
+    }
+
+    .red {
+        background: red;
+    }
+
+    .green {
+        background: green;
+        left: 50px;
+    }
+
+    .blue {
+        background: blue;
+        left: 25px;
+        top: 50px;
+    }
+</style>
+
+<div class="container">
+    <div class="circle red"></div>
+    <div class="circle green"></div>
+    <div class="circle blue"></div>
+</div>

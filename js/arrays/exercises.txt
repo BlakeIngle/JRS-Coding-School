@@ -1,0 +1,14 @@
+1) write a function that takes 3 arguments; 
+an array 'arr', an index 'a', and an index 'b'
+
+the function will swap the values in 
+the array at indeces a and b
+
+function swap(arr, a, b) {}
+-----------------------------------------
+
+2) write a function that takes an arr 'arr' as an argument
+and returns a new array that contains all the same values from 
+the orignal array in non-descending order
+
+function sort(arr) {}

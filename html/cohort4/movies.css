@@ -1,0 +1,74 @@
+
+.movies-parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+}
+
+/* .movies-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+} */
+
+p {
+    text-align: center;
+}
+
+.movie {
+    width: 200px;
+    border: solid rgb(23, 23, 23) 10px;
+}
+
+/* default styles */
+.movie {
+    background-color: #222;
+    color: #f1f1f1;
+}
+
+/* on hover styles */
+.movie:hover {
+    border-color: #555;
+    background-color: #555;
+}
+
+/* on click */
+.movie:active {
+    filter: blur(10px);
+}
+
+.movie.selected {
+    outline: solid red 10px;
+}
+
+
+
+
+other elements on hover
+.movie:hover .movie:not(.movie:hover) {
+        outline: red solid 10px;
+}
+
+
+/* .movies-parent:hover>.movie:not(.movie:hover) {
+    filter: blur(10px);
+} */
+
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    background-color: blue;
+}
+
+a:visited {
+    color: red;
+}

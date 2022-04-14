@@ -1,0 +1,25 @@
+.score-board-root {
+    border: solid black 2px;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 1rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.score-board-root h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.score-board-root > div {
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 10em;
+    margin: auto;
+    margin-bottom: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em 1em;
+}

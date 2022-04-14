@@ -209,3 +209,92 @@ export {
     smallestInArray,
     reverseString
 }
+
+
+function randomMonth() {
+    var monthNum = Math.ceil(Math.random() * 12);
+    var monthName;
+
+    // finds the month name
+    switch (monthNum) {
+        case 1:
+            return "January";
+        case 2:
+            return "February";
+        case 3:
+            return "March";
+        case 4:
+            return "April";
+        case 5:
+            monthName = "May";
+            break;
+        case 6:
+            monthName = "June";
+            break;
+        case 7:
+            monthName = "July";
+            break;
+        case 8:
+            monthName = "August";
+            break;
+        case 9:
+            monthName = "September";
+            break;
+        case 10:
+            monthName = "October";
+            break;
+        case 11:
+            monthName = "November";
+            break;
+        case 12:
+            monthName = "December";
+            break;
+        default:
+            monthName = "Error"
+            break;
+    }
+    return monthName;
+}
+
+/**
+ * 
+ * @param {*} a 
+ * @param {*} b 
+ * @returns 
+ */
+function isCoerced(a, b) {
+    if ((a == b) && (a !== b)) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+
+
+
+function pow(n, x) {
+    var a = 1;
+    for (let i = 0; i < x; i++) {
+        a *= n;
+    }
+    return a;
+}
+
+
+
+function makeRandomArray() {
+    let arr = [];
+    for (let i = 0; i < 10000; i++) {
+        arr.push(Math.floor(Math.random() * 100));
+    }
+    return arr;
+}
+
+
+let list = makeRandomArray();
+// sort the list array and log the array
+list.sort();
+console.log(list);
+

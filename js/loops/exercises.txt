@@ -5,13 +5,13 @@ write a loop that will output every integer
 from 13-42
 
 write a loop that will output every integer
-in decending order from 30-10 (i++ vs i--)
+in decending order from 30-10 (hint: i++ vs i--)
 
 write a loop that will output every even 
-integer from 0-20
+integer from 0-20 (hint: dont need %)
 
 write a loop that will output every integer
-from 0-30 that is divisible by 3 
+from 0-30 that is divisible by 3 (hint: dont need %)
 
 write a loop that will count how many times
 the number 7 is in an array. 

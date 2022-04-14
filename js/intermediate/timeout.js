@@ -7,3 +7,4 @@ var to = setTimeout(() => {
     console.log("time between t0 and t1", t1 - t0)
 }, 1000);
 
+console.log("START");

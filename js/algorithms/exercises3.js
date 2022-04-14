@@ -46,7 +46,6 @@
  * are 8, 123, 555, and 224488. She decided to call these numbers 
  * tidy. 
  * Numbers that do not have this property, like 20, 321, 495 and 999990
- *                                              19, 299, 489,    899999
  * are not tidy.
  * She just finished counting all positive integers in ascending order 
  * from 1 to N. What was the last tidy number she counted?
@@ -68,6 +67,17 @@
  * neither A nor B contains any digit that is a 4, and A + B = N. 
  * 
  * Please help us find any pair of values A and B that satisfy these conditions.
+ * 
+ * Your function should return the answer in the form of an array containing a and b
+ * (return [a, b])
+ * 
+ * test inputs:
+ * 4 -> 2 + 2
+ * 4000 -> 2000 + 2000
+ * 1234 -> 1232 + 2
+ * 80416 = 80216 + 200      80416 - 80216 = b
+ * 2048
+ * 444,444,444,444 - 444 Billion ... 
  */
 
 // Cookie Clicker
@@ -162,3 +172,12 @@ function nFactorial(n) {
     if (n == 1) { return n }
     return n * nFactorial(n - 1)
 }
+
+
+// n
+// a = n-b
+// b = n-a
+
+// turn the number into an array
+// iterate though the indeces
+//  if

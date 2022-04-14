@@ -1,4 +1,8 @@
 <style>
+    .root {
+        margin: 2em;
+    }
+
     .dropdown-root {
         background-color: lightgray;
         /* margin: 3rem; */
@@ -22,9 +26,11 @@
 
     .hidden-menu {
         display: none;
+
         position: absolute;
         left: 0;
         top: 100%;
+
         width: fit-content;
         white-space: nowrap;
     }
@@ -40,7 +46,7 @@
     }
 </style>
 
-<div class="dropdown-root">
+<div class="dropdown-root root">
     <div class="hoverable">Menu</div>
     <div class="hidden-menu">
         <div class="option">Option 1</div>

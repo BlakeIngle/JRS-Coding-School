@@ -1,6 +1,6 @@
 function makeRandomArray() {
     let arr = [];
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 10000; i++) {
         arr.push(Math.floor(Math.random() * 100));
     }
     return arr;

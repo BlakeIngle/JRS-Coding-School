@@ -1,0 +1,28 @@
+.game-board {
+    background-color: black;
+
+    display: grid;
+    place-items: center;
+    gap: 2px;
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin: auto;
+}
+
+.game-board div {
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    place-items: center;
+    height: 5rem;
+    width: 5rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.game-board div:hover {
+    background-color: lightgray;
+}

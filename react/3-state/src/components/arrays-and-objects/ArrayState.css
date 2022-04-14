@@ -1,0 +1,20 @@
+.array-root {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: solid rgb(132, 21, 151) 2px;
+}
+
+.array-root button {
+    margin-bottom: 1rem;
+}
+
+.array-root .country {
+    padding: 0.25rem;
+    border: solid black 1px;
+    margin: 0.25rem;
+    cursor: pointer;
+}
+
+.array-root .country.selected {
+    background-color: rgb(89, 255, 48)
+}

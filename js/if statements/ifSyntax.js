@@ -36,3 +36,28 @@ if (a == 9) {
 } else {
     console.log("a is not 9")
 }
+
+
+a = 4;
+var b = 5;
+
+var name = "Blake"
+var isRaining = false;
+
+// write a bit of code that will 
+// print a message
+// that says wether a is less than, 
+// equal to, or greater than b
+
+if (a < b) {
+    console.log('a is less than b');
+}
+if (a == b) {
+    console.log('a and b are equal')
+}
+if (a > b) {
+    console.log('a is greater than b')
+}
+
+// a is NOT greater than b
+// a is less than or equal to b

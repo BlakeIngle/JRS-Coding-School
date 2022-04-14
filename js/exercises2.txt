@@ -1,13 +1,17 @@
-1) Write a function that displays the result of 5+6+7+8+9+10.
+1) Write a function that displays the result of 
+5+6+7+8+9+10.
 
 2) Write a function that returns the perimeter of a
 rectangle with a width of 5 and a height of 8.
 
-3) Write a function that converts 83deg fahrenheit to celcius.
+3) Write a function that converts 83deg fahrenheit 
+to celcius.
 
-4) Write a function that converts 30deg celcius to fahrenheit.
+4) Write a function that converts 30deg celcius to 
+fahrenheit.
 
-5) Write a function that calculates the total bill including a 25% tip on a bill of $15.84
+5) Write a function that calculates the total bill 
+including a 25% tip on a bill of $15.84
 
 6) Write a function that converts 45278962345 seconds to years
 rounded to 1 decimal.
@@ -28,26 +32,11 @@ into the array
 
 
 
-13) Write a function that returns the perimeter of a
-rectangle with a widht and height sent as parameters.
-
-14) Write a function that converts a number in fahrenheit 
-(given as a parameter) to celcius.
-
-15) Write a function that converts a number in celcius
-(given as a parameter) to fahrenheit.
-
-16) Write a function that calculates the total bill including 
-a 25% tip on a bill (sent as a parameter)
-
-17) Write a function that converts a number in seconds
-(given as a parameter) to years rounded to 1 decimal.
-
-
-
 
 18) Write a function that takes a number an an argument and returns the sum of each individual digit. 
-So an input of 998 would return 26 (because 9 + 9 + 8) is 26.
+So an input of 998 would return 26 (because 9 + 9 + 8) is 26. 
+(Hint 1: convert to a string)
+(Hint 2: use google)
 
 19) Write a function that randomly generates an integer between 1 and 12, and returns the name 
 of the corresponding month. (Hint: Look up how to get a random number in JavaScript.)
@@ -62,9 +51,9 @@ isEven() function you wrote previously.
 Examples of multiples of 3 are 0,3,6,9 ...
 
 23) Write a function that takes two arguments. Check if the first argument is 
-the multiple of the second argument. 
+a multiple of the second argument. 
 Return the appropriate boolean.
-Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
+Ex. checkMultiple(20, 5) returns true. checkMultiple(21,5) returns false.
 
 24) Write a function that takes an array of numbers as an argument and 
 returns the sum of all numbers in the array
@@ -76,7 +65,7 @@ returns the smallest number in the array.
 
 
 26) Write a function that takes three numbers as arguments, and returns the same 3 numbers 
-in ascending order (more specifically, non-decreasing order if multiple numbers are the same).
+in ascending order in an array (more specifically, non-decreasing order if multiple numbers are the same).
 
 27) Write a function that returns true when two inputs are equivalent when using coercion, but not equivalent 
 without coercion.
@@ -117,9 +106,3 @@ or false if the object will hit the ground after a given time (in seconds)
 
 35) Write a function that will take an array of 'animal' objects as an argument 
 and return the 'name' of the animal with the heaviest 'weight.'
-
-36) Bob and Tom are racing. Bob is faster than Tom, so he will start
-farther away from the finish line. If Bob runs at a constant 18 mph
-and Tom runs at a constant 15 mph. 
-Write a function that will return true or false if Bob will win the race
-when Bob has to run 0.3 miles and Tom only has to run 0.25 miles.

@@ -1,0 +1,92 @@
+body {
+    background-color: #e9dce7;
+}
+
+body h3 {
+    background-color: lightpink;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: teal;
+}
+
+h2, h3 {
+    color: rgb(255, 70, 70);
+    background-color: darkgreen;
+
+    border: solid rgb(255, 70, 70) 3px;
+
+    margin: 10px;
+}
+
+img {
+    border: solid black 3px;
+    margin: 10px;
+}
+
+
+
+table, td, th {
+    border: solid black 1px;
+}
+
+.cat {
+    background-color: rgb(61, 64, 72);
+}
+
+.dog {
+    background-color: rgb(155, 118, 63);
+}
+
+#blackJack {
+    background-color: black;
+    color: white;
+    display: inline-block;
+}
+
+
+h1 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+
+.blue,
+.red,
+.green {
+    width: 100px;
+    height: 100px;
+}
+
+.positions {
+    position: relative;
+    background-color: black;
+    padding: 5px;
+
+    display: grid;
+    place-items: center;
+}
+
+.blue {
+    background-color: #0000ff;
+    position: absolute;
+    top: -50px;
+    right: 100px;
+}
+.red {
+    background-color: #ff0000;
+    position: absolute;
+    top: 100%;
+}
+.green {
+    background-color: #00ff00;
+}
+
+
+

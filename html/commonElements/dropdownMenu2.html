@@ -1,0 +1,76 @@
+<style>
+    .dropdown-root {
+        color: white;
+    }
+
+    .dropdown-root .hoverable {
+        background-color: black;
+        padding: 0.5rem;
+        width: fit-content;
+    }
+
+    .dropdown-root .dropdown-container {
+        position: relative;
+        width: fit-content;
+    }
+
+    .dropdown-root .hidden-menu {
+        width: fit-content;
+        display: none;
+
+        position: absolute;
+        left: 0;
+    }
+
+    .dropdown-root .to-right {
+        /* display abs... */
+        left: 100%;
+        top: 0;
+    }
+
+    .dropdown-root .option {
+        background-color: #444;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .dropdown-root .option:hover {
+        background-color: black;
+    }
+
+    .dropdown-root .dropdown-container:hover>.hidden-menu {
+        display: block;
+    }
+</style>
+
+<div class="dropdown-root">
+
+    <div class="dropdown-container">
+        <div class="hoverable">MENU</div>
+        <div class="hidden-menu">
+            <div class="option">Home</div>
+            <div class="option">Subscription</div>
+            <div class="option dropdown-container hoverable">
+                Library
+                <div class="hidden-menu to-right">
+                    <div class="option">Home</div>
+                    <div class="option">Subscription</div>
+                    <div class="option">Library</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vero quaerat temporibus ipsa possimus ducimus praesentium libero, repudiandae
+    atque corporis unde doloribus aperiam, sed quis assumenda? Consequatur neque impedit incidunt placeat dignissimos aliquid cupiditate possimus quod
+    sed tempora perferendis iure quis mollitia consequuntur corrupti aspernatur eum aut hic, odio ut nihil magni animi ab sit. Ea nihil libero
+    quibusdam blanditiis incidunt, vel sit fuga deleniti voluptatibus doloremque nam et odit? Ratione laborum vitae quos iusto nam, aliquid eveniet
+    dolor quis tempora hic suscipit? Commodi nihil itaque placeat aut maiores nostrum minima beatae impedit quam! Quae provident nemo odio quisquam a
+    laboriosam error! Deleniti animi rerum, eius quia vitae doloremque eos tempora reprehenderit atque aperiam sequi distinctio nam consectetur,
+    beatae consequatur vero laboriosam consequuntur corporis fuga, voluptatem ducimus magni mollitia molestias. Molestias possimus ducimus
+    perspiciatis, ex vel veniam assumenda excepturi sequi maxime error aperiam sapiente exercitationem rerum? Est sequi laborum aperiam voluptatibus
+    non similique quidem, illum quam iusto itaque nisi tempora odit omnis sapiente laudantium voluptates, molestiae, pariatur odio vero aliquid
+    excepturi possimus eius assumenda ipsum. Voluptatibus qui expedita corrupti, quisquam molestias eaque. Ad beatae enim nihil incidunt! Delectus
+    enim error quis odio, reprehenderit soluta exercitationem, pariatur tempore eaque ad et.</p>

@@ -80,7 +80,7 @@ button {
     height: var(--height);
     /* calc with vars */
     border-radius: calc(var(--height) / 2);
-    width: 10em;
+    width: 8em;
 
     font-family: inherit;
 

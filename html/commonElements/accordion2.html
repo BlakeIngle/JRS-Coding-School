@@ -1,0 +1,101 @@
+<style>
+    .accordion-root {
+        --color1: rgb(255, 239, 93);
+        --color2: rgb(0, 0, 0);
+
+        width: 400px;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .accordion-root h2 {
+        padding: 0.25rem 1rem;
+        background-color: var(--color1);
+        color: var(--color2);
+        margin: 0;
+    }
+
+    .accordion-root .content {
+        margin: 0;
+        background-color: var(--color2);
+        color: var(--color1);
+        padding: 0 1rem 0 0.5rem;
+        border-left: var(--color2) solid 0.5rem;
+
+        height: 0;
+        overflow: auto;
+        transition: 0.3s;
+    }
+
+    .accordion-root .show-content .content {
+        height: 100px;
+        padding: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .accordion-root .content:hover {
+        border-left: var(--color1) solid 0.5rem;
+    }
+</style>
+
+<div class="accordion-root">
+
+    <div class="tab">
+        <h2>Tab 1</h2>
+        <p class="content">Tousled man bun deep v kogi 3 wolf moon, marfa synth DIY jean shorts stumptown tattooed blue bottle sriracha. Subway tile
+            kombucha flannel, umami master cleanse chillwave meh 8-bit retro disrupt vice. +1 bushwick keffiyeh meditation, banjo organic messenger
+            bag skateboard vice drinking vinegar forage adaptogen vape tumeric. Twee artisan butcher occupy next level glossier flannel paleo photo
+            booth distillery intelligentsia.
+        </p>
+    </div>
+
+    <div class="tab">
+        <h2>Tab 2</h2>
+        <p class="content">Tacos VHS meh tumblr jianbing put a bird on it. Knausgaard photo booth flannel banjo. Tote bag austin kogi blue bottle pork
+            belly ugh. Truffaut ennui pickled humblebrag biodiesel, iPhone af farm-to-table crucifix bespoke microdosing. Blue bottle mlkshk twee
+            farm-to-table pok pok hell of disrupt quinoa kombucha viral cornhole distillery cliche. Skateboard everyday carry gentrify semiotics.</p>
+    </div>
+
+    <div class="tab">
+        <h2>Tab 3</h2>
+        <p class="content">Banh mi semiotics tbh, banjo twee disrupt distillery neutra bespoke kickstarter chicharrones mumblecore. Edison bulb occupy
+            hella, schlitz seitan artisan tilde tumblr hexagon affogato biodiesel drinking vinegar polaroid cornhole. Cray pitchfork aesthetic
+            snackwave. Disrupt church-key heirloom lyft, you probably haven't heard of them austin scenester fixie skateboard.</p>
+    </div>
+
+    <div class="tab">
+        <h2>Tab 4</h2>
+        <p class="content">Man bun blue bottle tacos vaporware bitters pok pok shaman yr, sriracha trust fund heirloom vinyl narwhal. Kombucha paleo
+            banh mi palo santo iPhone venmo keffiyeh +1 messenger bag asymmetrical affogato bicycle rights food truck shaman vape. Kogi tofu copper
+            mug, williamsburg raw denim poke you probably haven't heard of them yuccie polaroid single-origin coffee man braid cliche PBR&B chia
+            migas. Wolf master cleanse mlkshk ugh williamsburg, fixie man bun banjo succulents deep v man braid. Tacos poke vexillologist man bun.
+            Chillwave trust fund four dollar toast microdosing air plant iceland hot chicken post-ironic gastropub.</p>
+    </div>
+
+    <div class="tab">
+        <h2>Tab 5</h2>
+        <p class="content">Brooklyn meggings ramps lumbersexual offal pour-over put a bird on it cray seitan. Selvage +1 cloud bread letterpress,
+            dreamcatcher schlitz cliche semiotics irony bitters stumptown. Kickstarter hot chicken flexitarian dreamcatcher williamsburg leggings
+            ennui, adaptogen affogato cardigan keytar post-ironic letterpress. Cliche vice tacos vape before they sold out venmo drinking vinegar etsy
+            biodiesel hoodie fashion axe poutine.</p>
+    </div>
+
+</div>
+
+<script>
+
+    let tabs = document.getElementsByClassName('tab');
+
+    for (let tab of tabs) {
+        tab.onclick = () => {
+            tab.classList.toggle('show-content');
+
+            for (let otherTab of tabs) {
+                if (tab !== otherTab) {
+                    otherTab.classList.remove('show-content')
+                }
+            }
+
+        }
+    }
+</script>
