@@ -6,7 +6,7 @@ export default function InputFocus() {
 
     useEffect(() => {
         // usernameRef.current.focus();
-    });
+    }, []);
 
     return (
         <form>
