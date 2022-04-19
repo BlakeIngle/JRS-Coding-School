@@ -1,12 +1,14 @@
 import React from 'react'
 import './Tweet.css'
 
-export default function Tweet() {
+export default function Tweet({ tweet }) {
     return (
-        <div>
+        <div className="tweet-root">
             <img src="" alt="profile img" />
-            <h3>Username</h3>
-            <p>tweet body</p>
+            <div className="body">
+                <h3>Username</h3>
+                <p>tweet body</p>
+            </div>
         </div>
     )
 }

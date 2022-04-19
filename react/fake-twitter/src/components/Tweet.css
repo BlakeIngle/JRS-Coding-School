@@ -1,0 +1,23 @@
+.tweet-root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.25rem;
+}
+
+.tweet-root img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px black;
+}
+
+.tweet-root .body {
+    flex-grow: 1;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 2em;
+}
