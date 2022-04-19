@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './NewTweetForm.css'
+import mark from '../assets/images/mark.jpg'
 
 export default function NewTweetForm({ setTweets, tweets }) {
 
@@ -13,7 +14,7 @@ export default function NewTweetForm({ setTweets, tweets }) {
         setTweets([...tweets, {
             id: new Date().getTime().toString(),
             profile: {
-                image: 'mark.jpg',
+                image: mark,
                 username: 'blake'
             },
             body: tweetBody
