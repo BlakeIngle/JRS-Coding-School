@@ -1,0 +1,25 @@
+.color-form-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  width: fit-content;
+  margin: auto;
+}
+
+.color-form-root input,
+.color-form-root button {
+  width: 14em;
+  height: 2.5em;
+  overflow: hidden;
+  border-radius: 2em;
+  border: none;
+
+  color: white;
+  font-weight: bold;
+  background-color: rgb(235, 40, 82);
+}
+
+input::-webkit-color-swatch {
+  display: none;
+}

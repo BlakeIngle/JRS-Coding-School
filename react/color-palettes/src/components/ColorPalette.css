@@ -1,0 +1,31 @@
+.color-palette-root {
+  position: relative;
+}
+
+.color-palette-root .card-container {
+  display: flex;
+  gap: 1rem;
+
+  width: fit-content;
+  margin: auto;
+}
+
+.color-palette-root .icon-container {
+  position: absolute;
+  right: 3rem;
+  top: 4rem;
+
+  padding: 1rem;
+  border-radius: 50%;
+
+  transition: all 0.2s;
+
+  cursor: pointer;
+
+  color: rgb(255, 0, 175);
+}
+
+.color-palette-root .icon-container:hover {
+  background-color: rgb(255, 0, 175, 0.7);
+  color: white;
+}

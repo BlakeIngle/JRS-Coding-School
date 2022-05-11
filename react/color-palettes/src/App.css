@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+.hero-root {
+  color: white;
+  padding-top: 1em;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #38105f,
+    #402977,
+    #48408f,
+    #4f56a7,
+    #566dbe
+  );
+}
+
+.hero-root h1 {
+  margin-top: 0;
+}
