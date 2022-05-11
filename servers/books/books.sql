@@ -5,8 +5,7 @@ CREATE TABLE `books`.`books` (
   `title` VARCHAR(255) NOT NULL,
   `author` VARCHAR(255) NOT NULL,
   `coverImage` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE
+  PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `books`.`users` (
@@ -17,6 +16,18 @@ CREATE TABLE `books`.`users` (
 
   PRIMARY KEY (`id`),
   FOREIGN KEY (`favoriteBook`)
+        REFERENCES `books`(`id`)
+);
+
+CREATE TABLE `books`.`list_items` (
+  `id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+  `userId` INT NOT NULL,
+  `bookId` INT NOT NULL,
+
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`userId`)
+        REFERENCES `users`(`id`),
+  FOREIGN KEY (`bookId`)
         REFERENCES `books`(`id`)
 );
 
@@ -41,18 +52,10 @@ CREATE TABLE `books`.`reading_list_items` (
     UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE
 );
 
-INSERT INTO friend (user1Id, user2Id)
-  VALUES (1, 2);
-
-SELECT users.id, users.name 
-  FROM users
-  INNER JOIN friend 
-    ON users.id = friend.user2Id
-  WHERE friend.user1Id = ?;
 
 INSERT INTO `books`.`books` (`title`, `author`, `coverImage`) 
 VALUES 
-    ('Green Eggs And Ham', 'Dr. Seuss', 'https://en.wikipedia.org/wiki/Green_Eggs_and_Ham#/media/File:Green_Eggs_and_Ham.jpg'),
+    ('Green Eggs And Ham', 'Dr. Seuss', 'https://images-na.ssl-images-amazon.com/images/I/712nTmzFFRL.jpg'),
     ('Harry Potter and the Goblet of Fire', 'J.K. Rowling', 'https://m.media-amazon.com/images/I/71ykU-RQ0nL._AC_SL1000_.jpg'),
     ('Reap the Savage Wind', 'Ellen Tanner Marsh', 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566718532l/6845379._SY475_.jpg'),
     ('The Hunger Games', 'Suzanne Collins', 'https://images-na.ssl-images-amazon.com/images/I/61JfGcL2ljL.jpg'),
@@ -63,4 +66,17 @@ VALUES
 SELECT id, title, author, cover
     FROM books;
 
+SELECT users.id, username, 
+	author, title, coverImage, 
+    books.id as bookId
+  FROM books.users
+  LEFT JOIN books.books
+    ON books.users.favoriteBook = books.books.id
+  WHERE users.id = 12;
 
+SELECT bookId as id, author,
+	title, coverImage
+  FROM list_items
+  INNER JOIN books
+    ON list_items.bookId = books.id
+  WHERE userId = 11;
