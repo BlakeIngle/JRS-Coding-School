@@ -30,10 +30,10 @@ export default function ToDoList() {
     return (
         <div className="to-do-list">
             <h1>To Do : </h1>
+            <NewItemForm addToList={addToList} />
             <List list={list}
                 removeFromList={removeFromList}
                 editItem={editItem} />
-            <NewItemForm addToList={addToList} />
         </div>
     )
 }
