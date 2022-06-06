@@ -41,8 +41,6 @@ function App() {
             <Route path="/login" element={<LoginPage />}></Route>
             <Route path="/signup" element={<SignUpPage />}></Route>
             <Route path="/user/:userId" element={<UserPage />}></Route>
-            <Route path="/book/:bookId" element={<BookPage />}></Route>
-            <Route path="/list/:listId" element={<ListPage />}></Route >
             <Route path="*" element={<div>404 - page does not exist</div>}></Route>
           </Routes>
         </BrowserRouter>

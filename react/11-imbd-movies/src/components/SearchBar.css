@@ -1,0 +1,24 @@
+.search-bar-root {
+  position: relative;
+  width: fit-content;
+  font-size: 14pt;
+  color: rgb(255, 255, 255);
+  margin: auto;
+  filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.8));
+}
+
+.search-bar-root .glass {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.5rem;
+}
+
+.search-bar-root input {
+  outline: none;
+  font: inherit;
+  padding: 0.25rem 2em 0.25rem 1em;
+  border-radius: 1em;
+  border: solid black 2px;
+  background-color: #222;
+  color: inherit;
+}

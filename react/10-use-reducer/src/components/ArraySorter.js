@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { createContext, useReducer, useState } from 'react'
 import ArrayDisplay from './ArrayDisplay'
 import './ArraySorter.css'
+import { reducer } from '../assets/reducer'
+
+export const StateContext = createContext(null);
 
 export default function ArraySorter() {
 
@@ -9,21 +12,18 @@ export default function ArraySorter() {
     const [i2, setI2] = useState(null)
     const [temp, setTemp] = useState(null)
 
-    function resetArray() {
-        let newArr = []
-        for (let v of myArr) {
-            newArr.push(v)
-        }
-        for (let i = 0; i < 10; i++) {
-            let randI = Math.floor(Math.random() * 10)
+    let initialState = {
+        myArr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        i1: null,
+        i2: null,
+        temp: null,
+        newStateValue: 'whatever'
+    }
 
-            let temp = newArr[i]
-            newArr[i] = newArr[randI]
-            newArr[randI] = temp;
-        }
-        setMyArr(newArr)
-        setI1(null)
-        setI2(null)
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    function resetArray() {
+        dispatch({ type: 'reset' });
     }
 
     function onSwapClicked() {
@@ -60,20 +60,22 @@ export default function ArraySorter() {
     }
 
     return (
-        <div className="array-sorter">
-            <h1>ArraySorter:</h1>
-            <button onClick={resetArray}>Reset</button>
-            <ArrayDisplay selectCell={(i1 == null && setI1) || (i2 == null && setI2) || (() => { })}
-                i1={i1}
-                i2={i2}
-                myArr={myArr} />
-            <p>temp:</p>
-            <div className="cell" style={{ margin: 'auto' }}>{temp}</div>
-            <button
-                disabled={i1 == null || i2 == null}
-                onClick={onSwapClicked}>Swap</button>
-            <br />
-            <button>Sort Array</button>
-        </div>
+        <StateContext.Provider value={{ state, dispatch }}>
+            <div className="array-sorter">
+                <h1>ArraySorter:</h1>
+                <button onClick={resetArray}>Reset</button>
+                <ArrayDisplay selectCell={(i1 == null && setI1) || (i2 == null && setI2) || (() => { })}
+                    i1={i1}
+                    i2={i2}
+                    myArr={myArr} />
+                <p>temp:</p>
+                <div className="cell" style={{ margin: 'auto' }}>{temp}</div>
+                <button
+                    disabled={i1 == null || i2 == null}
+                    onClick={onSwapClicked}>Swap</button>
+                <br />
+                <button>Sort Array</button>
+            </div>
+        </StateContext.Provider>
     )
 }

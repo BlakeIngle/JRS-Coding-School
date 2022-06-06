@@ -1,0 +1,47 @@
+.url-form-root {
+  width: fit-content;
+  margin: auto;
+
+  --red: rgb(255, 56, 89);
+}
+
+.url-form-root > div {
+  margin-bottom: 0.3rem;
+}
+
+.url-form-root > div label {
+  display: inline-block;
+  width: 5rem;
+  text-align: right;
+  margin-right: 0.25rem;
+}
+
+.url-form-root > div label.required::before {
+  content: "*";
+  color: var(--red);
+}
+
+.url-form-root button {
+  border: none;
+  background-color: var(--red);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font: inherit;
+  color: white;
+}
+
+/* input-container id invalid */
+.url-form-root .input-container.id.invalid input {
+  border-color: var(--red);
+}
+
+.url-form-root .error-message {
+  color: var(--red);
+  margin: 0;
+  font-size: 0.5em;
+  opacity: 0;
+}
+
+.url-form-root .error-message.invalid {
+  opacity: 1;
+}

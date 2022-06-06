@@ -1,0 +1,54 @@
+HTML / CSS quiz! 
+30 points (33 possible)
+
+For the following questions,
+    write what each acronym is short for. (3pt)
+
+1) HTML (1pts)
+
+2) CSS (1pts)
+
+3) DOM (1pt)
+
+For the following questions,
+    write your answer in the space provided. (17pt)
+
+4) What is an attribute in HTML? (1pt)
+
+5) Which HTML tag/element can you use to 
+    write CSS styles in an HTML file? (1pt)
+
+6) Which HTML tag/element can you use to 
+    write JavaScript code in an HTML file? (1pt)
+
+7) What are 3 different ways to add CSS styles to elements? (3pt)
+
+8) What are the 4 parts of an element that 
+    constitute the 'box model?' (4pt)
+
+9) What are 3 ways to hide an element in HTML/CSS? (3pt)
+
+10) Name 8 units of measurement in CSS. (4pt)
+
+11) What is an event handler? (3pt BONUS)
+
+For the following question, write some HTML with 
+    proper HTML and CSS syntax to create any element 
+    that matches the description.
+Assume your HTML and CSS is written entirely in
+    a single HTML file. (10pt)
+
+12) Create some element that is a red circle 
+    with no content inside of it.
+
+<div class="circle">
+</div>
+
+<style>
+    .circle {
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        background-color: #F00;
+    }
+</style>

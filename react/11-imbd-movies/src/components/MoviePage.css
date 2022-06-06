@@ -1,0 +1,10 @@
+.movie-page-root {
+  background-color: #222;
+  color: #f1f1f1;
+
+  display: flex;
+  gap: 1rem;
+
+  padding: 2rem;
+  height: 100%;
+}

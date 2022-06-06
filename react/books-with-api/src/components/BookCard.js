@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../App'
+import { useAxios } from '../services/axios.service'
 import './bookCard.css'
 
-export default function BookCard({ id, title, author, publisher, year, cover, isFav }) {
+export default function BookCard({ id, title, author, coverImage, isFav }) {
 
-    const { http, state, localStorageService, setState } = useContext(Context);
+    const { state, localStorageService, setState } = useContext(Context);
+    const http = useAxios();
 
     function updateUser(book) {
 
@@ -27,17 +29,7 @@ export default function BookCard({ id, title, author, publisher, year, cover, is
         http.setFavoriteBook((isFav ? null : id), state.user.id)
             .then(res => {
                 // update successful
-                if (isFav) {
-                    updateUser(null);
-                } else {
-                    http.getBookById(id)
-                        .then(bookRes => {
-                            var sqlBook = bookRes.data.book;
-                            updateUser(sqlBook);
-                        }).catch(err => {
-                            console.error(err.response.status, 'error here is not actually an error')
-                        });
-                }
+                updateUser({ id, title, author, coverImage })
             }).catch(err => {
                 console.error(err.results);
             });
@@ -48,7 +40,6 @@ export default function BookCard({ id, title, author, publisher, year, cover, is
             <div className="background">
                 <div className="more-info">
                     <div>{author}</div>
-                    {publisher && <div>&copy;{publisher}{year && <span> - {year}</span>}</div>}
                 </div>
                 {state.user && <FontAwesomeIcon
                     className={`star ${isFav && 'fav'}`}
@@ -57,7 +48,7 @@ export default function BookCard({ id, title, author, publisher, year, cover, is
                     onClick={handleFavoriteClicked} />}
             </div>
             <div className="main-info">
-                <img src={cover} alt={title + " cover image"} />
+                <img src={coverImage} alt={title + " cover image"} />
                 <br />
                 <Link to={`/book/${id}`}>
                     <span>{title}</span>

@@ -4,6 +4,7 @@ import './login.css';
 
 import { Context } from '../App';
 import { Link } from 'react-router-dom';
+import { useAxios } from '../services/axios.service';
 
 export default function LoginPage() {
 
@@ -22,16 +23,17 @@ export default function LoginPage() {
 
 function LoginForm() {
 
-    var { http, state, setState, localStorageService } = useContext(Context);
+    var { state, setState, localStorageService } = useContext(Context);
     const navigate = useNavigate();
+    const http = useAxios();
     const animationTime = 300;
 
     const [user, setUser] = useState({
-        email: '',
+        username: '',
         password: ''
     });
 
-    const emailRef = useRef(null);
+    const usernameRef = useRef(null);
     const passwordRef = useRef(null);
 
     function handleChange(e) {
@@ -46,10 +48,10 @@ function LoginForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (user.email && user.password) {
+        if (user.username && user.password) {
 
             // do something
-            http.login(user)
+            http.login(user.username, user.password)
                 .then(res => {
                     // 200 -> login successful
                     console.log(res.data.user)
@@ -58,13 +60,13 @@ function LoginForm() {
                 }).catch(err => {
                     console.error(err)
 
-                    emailRef.current.classList.add("shake");
+                    usernameRef.current.classList.add("shake");
                     passwordRef.current.classList.add("shake");
 
-                    setUser({ email: '', password: '' });
+                    setUser({ username: '', password: '' });
 
                     setTimeout(() => {
-                        emailRef.current.classList.remove("shake");
+                        usernameRef.current.classList.remove("shake");
                         passwordRef.current.classList.remove("shake");
                     }, animationTime);
                 });
@@ -73,11 +75,11 @@ function LoginForm() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>Email:</label>
+            <label>Username:</label>
             <input type="text"
-                ref={emailRef}
-                name="email"
-                value={user.email}
+                ref={usernameRef}
+                name="username"
+                value={user.username}
                 style={{ "--animationTime": `${animationTime}ms` }}
                 onChange={handleChange} />
             <br />

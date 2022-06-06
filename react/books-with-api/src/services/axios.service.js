@@ -1,38 +1,75 @@
 const axios = require('axios');
 const URL = `http://localhost:8080/api`
 
-exports.getAllBooks = () => {
+function getAllBooks() {
     return axios.get(`${URL}/books`);
 }
 
-exports.getBookById = (bookId) => {
-    return axios.get(`${URL}/books/${bookId}`);
+function getUsersReadingList(userId) {
+    return axios.get(`${URL}/users/${userId}/favorites`);
 }
 
-exports.createNewBook = (book) => {
+function createNewBook(book) {
     return axios.post(`${URL}/books`, book);
 }
 
-exports.login = (user) => {
-    return axios.post(`${URL}/users/login`, user);
+function updateBook(updatedBook) {
+    return axios.put(`${URL}/books`, updatedBook);
 }
 
-exports.createNewUser = (user) => {
+function deleteBook(bookId) {
+    return axios.delete(`${URL}/books/${bookId}`);
+}
+
+/**
+ * Attempt to login to the books application
+ * @param {string} username 
+ * @param {string} password 
+ * @returns an HTTP promise
+ */
+function login(username, password) {
+    return axios.post(`${URL}/users/login`, { username, password });
+}
+
+/**
+ * Sends a POST request to the books API
+ * to create a new user
+ * @param {{username: string, password: string}} user 
+ * @returns 
+ */
+function createNewUser(user) {
     return axios.post(`${URL}/users`, user);
 }
 
-exports.getUserByEmail = (email) => {
-    return this.login({ email, password: '' });
+// userId is a string
+function setFavoriteBook(bookId, userId) {
+    return axios.put(`${URL}/users/favorite/${bookId}`, { id: userId });
 }
 
-const updateUser = (user) => {
-    return axios.put(`${URL}/users/${user.id}`, user);
+function addBookToReadingList(book, user) {
+    return axios.post(`${URL}/users/list`, { bookId: book.id, userId: user.id })
 }
 
-exports.setFavoriteBook = (bookId, userId) => {
-    return updateUser({ id: userId, favoriteBook: bookId });
+// user Id is a string
+function deleteAccount(userId) {
+    return axios.delete(`${URL}/users/${userId}`);
 }
 
-exports.getAllListsBookIsInByBookId = (bookId) => {
-    return axios.get(`${URL}/books/${bookId}/lists`);
+const api = {
+    getAllBooks,
+    getUsersReadingList,
+    createNewBook,
+    updateBook,
+    deleteBook,
+    login,
+    createNewUser,
+    setFavoriteBook,
+    addBookToReadingList,
+    deleteAccount
 }
+
+function useAxios() {
+    return api;
+}
+
+export { useAxios };

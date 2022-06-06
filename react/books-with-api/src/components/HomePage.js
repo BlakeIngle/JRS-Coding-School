@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom'
 import './books.css'
 import BookCard from './BookCard'
 import { Context } from '../App'
+import { useAxios } from '../services/axios.service'
 
 export default function HomePage() {
 
-    var { http, state } = useContext(Context);
+    var { state } = useContext(Context);
     const [books, setBooks] = useState([]);
+    const http = useAxios();
 
     function getAllBooks() {
         http.getAllBooks()
@@ -24,7 +26,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getAllBooks();
-    }, [])
+    }, []);
 
     return (
         <div>

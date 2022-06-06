@@ -1,0 +1,28 @@
+.navigator-root {
+  display: grid;
+  place-items: center;
+
+  position: fixed;
+  inset: 0;
+
+  background-color: rgb(77, 255, 71);
+}
+
+.navigator-root .loader {
+  width: 3rem;
+  height: 3rem;
+  border: solid black 1rem;
+  border-radius: 50%;
+  border-top-color: white;
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

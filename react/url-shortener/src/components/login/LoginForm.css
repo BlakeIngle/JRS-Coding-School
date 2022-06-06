@@ -1,0 +1,56 @@
+.login-form {
+  background-color: lightgray;
+
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.login-form h3 {
+  margin: 0 0 1rem;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 6em;
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+.login-form > div {
+  margin-bottom: 0.4rem;
+}
+
+.login-form button {
+  border: none;
+  font: inherit;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  margin: auto;
+  background-color: rgb(255, 50, 77);
+  color: rgb(248, 248, 248);
+  font-weight: bold;
+}
+
+.login-form .loader {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: solid black 3px;
+  border-top-color: tomato;
+  box-sizing: border-box;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

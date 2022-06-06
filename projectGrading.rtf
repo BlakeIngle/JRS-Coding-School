@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww38200\viewh21600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9355\tx10079\tx10804\tx11525\tx12242\tx12953\tx13678\tx14404\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+Grading 					Possible Points:  64\
+						Required Points: 50\
+\
+\
+				***	Project, in general, works +30 (Its gotta work)	***\
+\
+\
+Category	|	Excellent +4		|	Solid	+3    		|	Satisfactory	+2	|	Poor	+0\
+\
+FRONT END\
+\
+Theme/	webpage has a clear	website has a clear		website attempts to have	Styles are jumbled and disconnected.\
+Style 		theme throughout each	theme. some elements	a clear theme. Some	Elements do not have good contrast.\
+		page. Styles look 		do not fit into the		elements do not fit		Colors clash. Font choice is poor.\
+		professional. Website	webpage. Color tones	together. Elements have	Website is \'93ugly.\'94\
+		stands out from the rest.	are constrained and		contrast and matching \
+						consistent.			color tones.\
+\
+Responsive	website is consistently	Website is highly 		Website layout changes	Webpage is not responsive.\
+Layout	responsive. Layout is 	responsive. Many		with different screen		Many screen sizes disrupt the layout.\
+		clear at all screen sizes.	elements respond to	sizes. Display types		Some elements become unreachable \
+		No elements ever become	different screen sizes.	like Grid and Flex are	at different screen sizes.\
+		unreachable/hidden by 	At some screen sizes,	implemented with basic 	Grid and Flex display types do not\
+		screen resizing. Small	layout is disrupted.		features of responsive	demonstrate basic understanding.\
+		displays remain easy to 	Small/large screens are	design. Certain screen\
+		read/understand.		not easy to navigate.	sizes disrupt the layout.\
+\
+Responsive	Website responds to 	Many elements respond	Some elements on the 	Elements are unresponsive.\
+Elements	almost all user actions,	to user input. Styles		page are responsive to	Many failed actions do not indicate\
+		mouse hovers and clicks.	change on hover and	users actions. Elements	to the user that there was a problem.\
+		Styles and elements look	visual elements appear	change style on hover,	Many successful actions do not\
+		and feel responsive while	when appropriate.		on click, etc. Some 		look or feel successful.\
+		maintaining a consistent	Elements may appear	actions that are		Website overall is static and lifeless.\
+		look and feel. Nothing 	broken or unresponsive.  	unsuccessful, have a\
+		feels broken.							visual indication that\
+										something went wrong.\
+\
+Presentation	Elements are organized 	Website has a clear		All relevant content is 	Content is missing from the website.\
+		and neat. The content	purpose. Content flows.	visible to the user. Some	The purpose of the content is unclear.\
+		flows in an 			Website contains some	calls to action are missing	The are no calls to action.\
+		understandable way. 	unnecessary content	or ambiguous. Content is	Content has no clear objective.\
+		All relevant information, 	that may be distracting.	grouped together properly. 	Most elements appear to have the\
+		and nothing unnecessary 	All relevant content is 	The purpose of elements	same level of importance.\
+		is shown to the user. 	visible to the user.		is not clear, but can be	Website displays an apparent lack\
+		Calls to action are clear. 	Presentation serves the	figured out. Content 	of thoughtful presentation.\
+		Primary calls to action 	purpose of the website	serves the utility of the\
+		look more significant than 	but is not fun or themed.	website, but lacks care.\
+		secondary ones. \
+		Presentation is \
+		above and beyond. The \
+		website is fun to use and\
+		easy to understand.\
+\
+\
+BACK END	\
+\
+Routes	\'97\'97\'97\'97\'97\'97		Routes are clear and	Routes are unique. All 	Routes do not follow the REST guidelines.\
+						easy to understand.		routes are defined in 	routes do not start with \'91/api/foobars\'92\
+						Param segments have	respective \'91routes\'92 files.	param segments have ambiguous or bad\
+						good, clear names.		All routes start with:		names. Routes are not separated into\
+						Routes files are split	    \'91/api\'92			different files.\
+						into different files.		The second segment of\
+						One file per resource.	every route is the name\
+										of the relevant resource\
+										plural. Examples:\
+										  /api/books\
+										  /api/users\
+\
+\
+Functionality	Functions consistently	Functions return clear	Functions work! Data 	Functions do not work.\
+		return meaningful status	status codes and		validation is used often	Data is consistently not validated.\
+		codes and messages.	messages. Data is always	but remains simple.		Responses do not send appropriate \
+		Most data is validated 	validated. Server-side	Callback functions that	messages and/or status codes.\
+		in a significant way.		caching was attempted.	handle responses from 	Responses from the database\
+		Functions that handle	Any unimplemented		the database do not 	are not interpreted well. Incorrect\
+		a response from your 	functions respond		logically check for every 	responses are sent to the client.\
+		database check all		with a message		edge case. Data that is	Data sent as a response is unclear\
+		possible responses.		saying method is not	returned is named well.	or poorly named.\
+		Server-side caching is	implemented\
+		working and good.\
+\
+\
+\
+General	\'97\'97\'97\'97\'97\'97		\'97\'97\'97\'97\'97\'97		Server runs, files are 	\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9355\tx10079\tx10804\tx11525\tx12242\tx12953\tx13678\tx14404\pardirnatural\partightenfactor0
+\cf0 Function									separated\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9355\tx10079\tx10804\tx11525\tx12242\tx12953\tx13678\tx14404\pardirnatural\partightenfactor0
+\cf0 										All routes are hooked up\
+										into the server.js file.\
+\
+\
+DATABASE\
+\
+Schemas	\'97\'97\'97\'97\'97\'97		Data types are logical	\'97\'97\'97\'97\'97\'97		Data is unstructured and ambiguous.\
+						and names of columns/					No constraints are put on many pieces of data.\
+						properties are good.						Structure demonstrates a clear lack of\
+						Constraints like foreign keys				understanding and purpose.\
+						are implemented.\
+						Data is structured well.\
+										\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+BONUS		\
+POINTS		\
+			3 or more elements have an animation that is not distracting and professional +1\
+			Website is, in general, pleasant and fun to use +1 (subjective)\
+			Files contain meaningful comments throughout the code base and function are commented +1\
+\
+			Website contains 5 or less colors +1 (No exceptions. This is a challenge. Black and White count.)\
+			\
+			Your API has some external documentation that is accurate and complete +2\
+\
+			\
+\
+\
+\
+\
+\
+\
+\
+}

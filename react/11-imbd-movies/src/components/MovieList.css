@@ -1,0 +1,12 @@
+.movie-list-root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  gap: 1rem;
+  margin: auto;
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  max-height: 80vh;
+  overflow: auto;
+}
