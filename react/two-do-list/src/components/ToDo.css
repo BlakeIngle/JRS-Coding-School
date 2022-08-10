@@ -1,0 +1,25 @@
+.list-root {
+  list-style-type: none;
+}
+
+.list-root li {
+  font-size: 18pt;
+  width: 15rem;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.list-root span {
+  margin-right: 1rem;
+}
+
+.list-root li.checked {
+  text-decoration: line-through 3px;
+}
+
+.list-root li.dairy::before {
+  content: "🐮";
+}

@@ -14,8 +14,8 @@ export class DungeonViewerComponent implements OnInit {
   dWidth: number;
 
   constructor(private dungeonGeneratorService: DungeonGeneratorService) {
-    this.dHeight = 600;
-    this.dWidth = 600;
+    this.dHeight = 100;
+    this.dWidth = 100;
     this.dungeon = new Dungeon(this.dHeight, this.dHeight);
   }
 

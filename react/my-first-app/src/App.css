@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: rgb(0, 0, 22);
+}
+
+p {
+  background-color: rgba(0, 24, 24, 0.5);
+  padding: 3rem;
+  border-radius: 8px;
+  width: fit-content;
+  margin: auto;
+}

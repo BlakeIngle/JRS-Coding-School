@@ -62,3 +62,6 @@ function quickSort(arr) {
     qSort(arr, 0, arr.length - 1);
 }
 
+
+
+console.log(makeRandomArray(10))

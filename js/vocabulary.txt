@@ -1,7 +1,7 @@
 variable - something in code that is a value - that you can reference - it is changable
 identifier - the 'name' of a variable - the technical term
 
-operator - + - * / % = == >= < != === ^ ? : 
+operator - + - * / % = == >= < != === ^ ? : && || 
 operand - the pieces of the operation that are not the operator
 
 logical comparisons - == === < > && ||
@@ -14,6 +14,7 @@ logical comparisons - == === < > && ||
 decleration - state that a variable exists
 initialization - assign a value to the variable (the very first time)
 assignment - giving a variable a new value
+reference - looking back at the value of a variable that is declared 
 
 keyword - reserved word defined by the programming language and its libraries
 literal - a literal value directly in your code ex: 5, "5", "Hello world!", [], true
@@ -57,7 +58,7 @@ out of bounds - an index that does not exist in an array
 
 enumeration / enums - a constant set of values in a predefined list
 
-primitive - a 'literal' value - ex. string, number, bool 
+primitive - basic 'building block' of data - ex. number, string, boolean
 non-primitive - a complex data stucture made up of primitive data
               - a pointer or reference to another value - ex. array, obj
 

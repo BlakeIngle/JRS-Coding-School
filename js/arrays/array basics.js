@@ -27,7 +27,7 @@ var secondArr = ['😀', '🥴', '🙄']
 // bad things 😢
 secondArr[7] // index out of bounds
 secondArr[-1] // index out of bounds
-secondArr['abc'] // index out of bounds
+secondArr['🥴'] // index out of bounds
 
 secondArr[7] = 'whoops'
 secondArr[-1] = 'whoops'

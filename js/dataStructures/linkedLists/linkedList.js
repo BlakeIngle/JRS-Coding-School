@@ -1,144 +1,166 @@
-// class Node {
-//     value;
-//     next;
+class Node {
+    value;
+    nextNode;
 
-//     constructor(value) {
-//         this.value = value;
-//     }
-// }
+    constructor(value) {
+        this.value = value;
+    }
 
-// class LinkedList {
-//     head; // the start/head node
-//     pointer; // private
-//     tail; // last node
-//     length; // starts at 0
+    link(node) {
+        this.nextNode = node;
+    }
+}
 
-//     constructor(node) {
-//         // this is the starting state
-//         this.head = node;
-//         this.pointer = node;
-//         this.tail = node;
-//         this.length = 1;
-//     }
+class LinkedList {
 
-//     // functions to work with the linked list
-//     // instert node into list
-//     insertvalueToList(value) {
-//         let newNode = new Node(value)
+    length;
+    head; // node
+    tail; // node
 
-//         if (this.length == 0) {
-//             this.head = newNode
-//             this.tail = newNode
-//             this.pointer = newNode
-//             this.length = 1;
-//             return;
-//         }
+    constructor() {
+        this.length = 0;
+    }
 
-//         if (newNode.value > this.head.value) {
-//             // the new value is now the highest value
-//             newNode.next = this.head; // the new node is inserted to the list at the head - new acting head node
-//             this.head = newNode;
-//         } else {
-//             // then the node has to go somewhere in the list
-//             this.pointer = this.head;
-//             while (true) {
-//                 if (this.pointer.next) {
-//                     if (newNode.value < this.pointer.next.value) {
-//                         // then move pointer
-//                         this.pointer = this.pointer.next
-//                     } else {
-//                         // this is where the node belongs
-//                         newNode.next = this.pointer.next;
-//                         // two different nodes point to 'pointer.next'
-//                         this.pointer.next = newNode;
-//                         this.length++;
-//                         break;
-//                     }
-//                 } else {
-//                     // then the node goes at the end
-//                     this.pointer.next = newNode;
-//                     this.tail = newNode;
-//                     this.length++;
-//                     break;
-//                 }
-//             }
-//         }
-//     }
+    insert(value) {
 
-//     // delete
-//     deleteNodeByValue(value) {
-//         if (this.length == 0) {
-//             console.log("Cannot delete. Linked list is empty.")
-//             return;
-//         }
-//         // search for a node and delete the one with that value
-//         this.pointer = this.head
+        let newNode = new Node(value);
 
-//         if (value == this.head.value) {
-//             // remove the head node
-//             this.head = this.head.next // move the head pointer over 
-//             if (this.length == 1) {
-//                 // deleting last node
-//                 this.tail = this.head;
-//             }
-//             this.length--;
-//             this.pointer = this.head;
-//         } else {
-//             while (true) {
-//                 if (value == this.pointer.next.value) {
-//                     if (this.pointer.next == this.tail) {
-//                         // move tail
-//                         this.tail = this.pointer;
-//                     }
-//                     // remove the 'next' node
-//                     this.pointer.next = this.pointer.next.next;
-//                     this.length--;
-//                     break;
-//                 } else {
-//                     this.pointer = this.pointer.next
-//                 }
-//             }
-//         }
-//     }
+        if (this.length == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
 
-//     // search
-//     search(value) {
-//         if (this.length == 0) {
-//             return null;
-//         } else if (value == this.head.value) {
-//             return this.head
-//         } else {
-//             this.pointer = this.head;
-//             while (true) {
-//                 if (value == this.pointer.value) {
-//                     return this.pointer;
-//                 } else if (this.pointer.next) {
-//                     this.pointer = this.pointer.next
-//                 } else {
-//                     break;
-//                 }
-//             }
-//         }
-//     }
+            if (newNode.value <= this.head.value) {
+                newNode.link(this.head);
+                this.head = newNode;
+            } else if (newNode.value >= this.tail.value) {
+                this.tail.link(newNode);
+                this.tail = newNode;
+            } else {
+                // insert node into middle of list
+                let pointer = this.head;
+                while (true) {
+                    if (pointer.nextNode.value >= newNode.value) {
+                        // inject here
+                        newNode.link(pointer.nextNode);
+                        pointer.link(newNode);
+                        break;
+                    } else {
+                        pointer = pointer.nextNode;
+                    }
+                }
+            }
+        }
 
-//     // output the whole list
-//     print() {
-//         this.pointer = this.head;
-//         while (true) {
-//             console.log(this.pointer.value)
-//             if (this.pointer.next) {
-//                 this.pointer = this.pointer.next;
-//             } else {
-//                 break;
-//             }
-//         }
-//     }
+        this.length++;
+    }
 
-// }
+    remove(value) {
+        if (this.length == 0) {
+            return;
+        } else if (this.length == 1) {
+            if (value == this.head.value) {
+                this.head = undefined;
+                this.tail = undefined;
+                this.length = 0;
+            }
+            return;
+        } else {
+            if (value == this.head.value) {
+                // 1 - remove head
+                this.head = this.head.nextNode;
+                this.length--;
+                return;
+            }
 
-// let firstNode = new Node(50);
-// let myList = new LinkedList(firstNode);
+            let pointer = this.head;
+            while (pointer != this.tail) {
 
-// myList.deleteNodeByValue(50)
+                if (value == pointer.nextNode.value) {
+                    if (pointer.nextNode == this.tail) {
+                        // 3 - remove the tail
+                        this.tail = pointer;
+                    }
+                    // 2 - remove middle node
+                    pointer.link(pointer.nextNode.nextNode);
+                    this.length--;
+                    return;
+                }
+                pointer = pointer.nextNode;
+            }
+            // 4 - node not found
+            return;
+        }
+    }
 
-// myList.insertNodeToList(new Node(25))
+    find(value) {
+        let pointer = this.head;
+        while (pointer != undefined) {
+            if (pointer.value == value) {
+                return true;
+            }
+            pointer = pointer.nextNode;
+        }
+        return false;
+    }
+
+    print() {
+        if (this.length == 0) {
+            console.log('--- The list is empty ---');
+            return;
+        }
+        let pointer = this.head;
+        while (pointer != undefined) {
+            console.log(pointer.value, '->');
+            pointer = pointer.nextNode;
+        }
+        console.log("--- end of list ---");
+    }
+
+}
+
+let list = new LinkedList();
+list.print();
+
+list.insert(5);
+list.print();
+
+list.insert(8);
+list.print();
+
+list.insert(6);
+list.print();
+
+list.insert(1);
+list.print();
+
+list.insert(10);
+list.print();
+
+// console.log(list.find(1));
+// console.log(list.find(5));
+// console.log(list.find(10));
+// console.log(list.find(100000));
+
+
+list.remove(14);
+list.print();
+
+list.remove(10);
+list.print();
+
+list.remove(1);
+list.print();
+
+list.remove(8);
+list.print();
+
+list.remove(6);
+list.print();
+
+list.remove(5);
+list.print();
+
+list.remove(5);
+list.print();
+

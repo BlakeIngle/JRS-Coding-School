@@ -9,7 +9,16 @@ function printCharCodes(s) {
     }
 }
 
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 "🎴";
+console.log("🎴".charCodeAt(0));
+printCharCodes(alphabet)
 
 // CTRL + CMD + Space -> open emoji window on Mac
+
+// let start = 55000;
+// let howMany = 400;
+// for (let i = 0; i < howMany; i++) {
+//     let c = i + start;
+//     console.log(c, String.fromCharCode(c));
+// }

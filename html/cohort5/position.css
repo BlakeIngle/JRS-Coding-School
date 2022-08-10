@@ -1,0 +1,74 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+.back-to-top {
+  background-color: rgb(32, 93, 207);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  display: grid;
+  place-items: center;
+
+  font-size: 2rem;
+  color: white;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+.bg {
+  background-color: rgb(207, 207, 207);
+  position: relative;
+}
+h1 {
+  position: relative;
+  bottom: 15px;
+  left: 15px;
+  width: fit-content;
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.tooltip-root {
+  position: relative;
+  width: fit-content;
+}
+
+.tooltip {
+  background-color: #222;
+  color: #f1f1f1;
+  padding: 5px 1rem;
+  border-radius: 4px;
+}
+
+.arrow {
+  background-color: #222;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: -0.3rem;
+  top: 0.4rem;
+  transform: rotate(45deg);
+}

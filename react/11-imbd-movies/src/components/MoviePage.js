@@ -14,7 +14,10 @@ export default function MoviePage() {
             .then((response) => {
                 console.log(response.data.results[0]);
                 setMovie(response.data.results[0]);
-            });
+            })
+            .catch((err) => {
+
+            })
     }
 
     useEffect(() => {

@@ -1,6 +1,6 @@
 function makeRandomArray() {
     let arr = [];
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 100000; i++) {
         arr.push(Math.floor(Math.random() * 100));
     }
     return arr;
@@ -23,7 +23,7 @@ function insertionSort(arr) {
 function pushOverFromTo(a, b, arr) {
     let temp = arr[b];
 
-    if (a == b) {
+    if (a >= b) {
         return;
     }
     for (let i = b; i > a; i--) {

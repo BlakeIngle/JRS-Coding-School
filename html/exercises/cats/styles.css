@@ -1,0 +1,38 @@
+.material-symbols-outlined {
+  font-size: 6pt !important;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+
+body {
+  background-color: #21000f;
+}
+button {
+  background-color: #ee5935;
+  color: white;
+  border: none;
+  font-size: 14pt;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.2rem;
+}
+
+button.chip {
+  background-color: white;
+  gap: 0.5rem;
+  color: black;
+  justify-content: space-between;
+  height: 3em;
+  border-radius: 1.5em;
+  font-size: 6pt;
+}
+
+button.chip .icon {
+  background-color: #eed2b7;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+
+  display: grid;
+  place-items: center;
+}

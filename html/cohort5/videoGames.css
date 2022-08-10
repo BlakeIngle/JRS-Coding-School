@@ -1,0 +1,107 @@
+.games {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex > * {
+  padding: 1rem;
+  background-color: rgba(10, 10, 10, 0.5);
+  border-radius: 8px;
+
+  transition: background-color 0.3s;
+}
+
+.flex > *:hover {
+  background-color: black;
+}
+
+.flex > *:active {
+  color: black;
+  background-color: white;
+}
+
+.flex p {
+  width: 180px;
+  margin: auto;
+  text-align: center;
+}
+
+.red {
+  background-color: red;
+}
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.indigo {
+  background-color: indigo;
+}
+.violet {
+  background-color: violet;
+}
+
+img {
+  height: 300px;
+}
+
+.units {
+  background-color: #333;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.units > div:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 50%;
+}
+.units div:nth-child(2) {
+  width: 3in;
+  height: 3in;
+  background-color: orange;
+}
+.units div:nth-child(3) {
+  width: 1em;
+  height: 1em;
+  font-size: 50pt;
+  background-color: yellow;
+  color: black;
+}
+.units div:nth-child(4) {
+  width: 1rem;
+  height: 1rem;
+  font-size: 12pt;
+  background-color: green;
+  color: black;
+}
+.units div:nth-child(5) {
+  width: 30vw;
+  height: 30vh;
+  background-color: blue;
+
+  border-radius: 50%;
+}
+.units .indigo {
+  width: 80%;
+  height: 5rem;
+  background-color: indigo;
+}

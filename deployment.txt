@@ -1,0 +1,79 @@
+Deployment
+
+overview:
+
+
+Deploy Your Database:
+
+1) google search for 'Google Cloud Platform'
+2) you should see a Get started button. Click it!
+3) follow the on screen prompts to get started.
+    When it asks for 'What best describes your organization or needs?'
+    select 'Class Projct / assigmnent'
+
+4) after providing your phone number and billing information
+    you will get a confirmation window
+    It will ask you 'What are your interested in doing with Google Cloud?'
+    select 'Storage / backup' and click next
+5) 'What best describes your role' select 'Developer'
+6) Click done. If another window pops up, 'Skip'
+
+7) Find the SQL tab on the left menu 
+    'http://console.cloud.google.com/sql/instances'
+8) Click 'Create Instance'
+9) Choose 'MySQL'
+10) The next step will ask you to 'Enable API' -> Click 'Enable API'
+    ---This will take a while---
+
+11) You will have to define an 'instance id'
+        use something that relates to the name of your project
+12) You will have to create a password for the root user
+        do not use a 'personal' password if other people are going 
+            to use this project with you
+        use a good password and write it down -> this is now 'dbPassword'
+
+13) Change the Region to us-east1(South Carolina)
+
+14) Click 'Create Instance' 
+    --- This will take a while ---
+
+Once that finishes, the database has been created
+Next step: run your .sql script in the deployed database instance
+
+15) Click 'Database' in the left menu
+16) Click '+ Create Database'
+17) Give your database a name (the name of your project is good enough)
+18) Click 'Create'
+
+19) Click Connections on the left menu
+20) Click 'Add Network' to allow your personal computer/laptop to connect 
+        to the database
+21) Give your connection a name like 'Blake's Laptop' or something
+22) Find your IP address by google searching for 'my ip'
+23) Paste your IP address into the 'Network' input field
+24) Click done, then click Save
+
+25) Click Overview on the left menu
+26) Find the 'Connect to this instance' tab and copy the 'public IP address'
+
+27) Open MySQL Workbench
+28) On the home page of Workbench click the + button
+        to create a new connection
+29) Give your connection a name and paste the IP 
+        address from google cloud into the 'Hostname' input
+30) Click OK
+
+31) Click your new connection and type your 'dbPassword' 
+        that we created earlier
+
+32) After you connect then we want to execute our .sql script
+        that defines our tables and data, in this instance.
+33) Find your .sql script in you project files
+34) Paste the contents into a new query window and execute it.
+
+    -- Database: DONE -- 
+
+Next: Deploy your API
+1) Follow Google's steps from this webpage:
+        https://cloud.google.com/appengine/docs/standard/nodejs/building-app
+    to deploy your API.

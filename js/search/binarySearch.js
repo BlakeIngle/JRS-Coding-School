@@ -1,7 +1,7 @@
 function makeArray() {
     let arr = [];
 
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 1; i <= 100; i++) {
         arr.push(i);
     }
 
@@ -22,9 +22,9 @@ function binarySearch(value, arr) {
     // else
     // look on the right half
 
-    min = 0; // low
-    max = arr.length - 1; // high
-    mid = Math.floor((arr.length - 1) / 2); // the index to look at
+    let min = 0; // low
+    let max = arr.length - 1; // high
+    let mid = Math.floor(max / 2); // the index to look at
 
     while (true) {
         if (value == arr[mid]) {
@@ -33,31 +33,24 @@ function binarySearch(value, arr) {
         }
         // value not found
         // if the low == high
-        if (min == max) {
+        if (min >= max) {
             return -1;
         }
 
         if (value > arr[mid]) {
-            if (mid == max) {
-                return -1;
-            }
             // look on the right
             min = mid + 1;
         } else {
-            if (mid == min) {
-                return -1;
-            }
             // look on the left
             max = mid - 1;
         }
         mid = Math.floor((max + min) / 2)
     }
 
-    return -1;
 }
 
 let arr = makeArray();
-console.log(binarySearch(-4, arr))
+console.log(binarySearch(4, arr))
 console.log(binarySearch(9, arr))
 console.log(binarySearch(1, arr))
-console.log(binarySearch(14, arr))
+console.log(binarySearch(14.5, arr))

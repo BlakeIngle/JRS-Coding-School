@@ -5,77 +5,83 @@
 } */
 
 #fixedBox {
-    width: fit-content;
-    text-align: center;
-    padding: 0.5em 1em;
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    background: repeating-linear-gradient(-45deg, #000000, #000000 15px, #FFFF00 15px, #FFFF00 30px);
+  width: fit-content;
+  text-align: center;
+  padding: 0.5em 1em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background: repeating-linear-gradient(
+    -45deg,
+    #000000,
+    #000000 15px,
+    #ffff00 15px,
+    #ffff00 30px
+  );
 }
 
 #fixedBox div {
-    background-color: #FFFF00;
-    padding: 0.5em 1em;
+  background-color: #ffff00;
+  padding: 0.5em 1em;
 }
 
 img {
-    height: 300px;
+  height: 300px;
 }
 
 .movies-root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .movies-container {
-    background-color: rgb(128, 168, 255);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 60vh;
-    overflow: scroll;
-    width: 90%;
-    max-width: 1000px;
-    min-width: 700px;
+  background-color: rgb(128, 168, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 60vh;
+  overflow: scroll;
+  width: 90%;
+  max-width: 1000px;
+  min-width: 700px;
 }
 
 .movie-card {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    width: 28%;
-    text-align: center;
-    padding: 0.5em;
-    background-color: rgb(20, 20, 20);
-    color:rgb(255, 252, 74);
-    margin: 1em 0.5em;
-    position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  width: 28%;
+  text-align: center;
+  padding: 0.5em;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 252, 74);
+  margin: 1em 0.5em;
+  position: relative;
 }
 
 .movie-card div {
-    color: white;
-    position: absolute;
-    height: 300px;
-    top: 0.5em;
-    width: calc(100% - 1em);
-    text-align: center;
-    display: none;
-    /* background-color: rgba(197, 156, 209);
+  color: white;
+  position: absolute;
+  height: 300px;
+  top: 0.5em;
+  width: calc(100% - 1em);
+  text-align: center;
+  display: none;
+  /* background-color: rgba(197, 156, 209);
     box-shadow: 0 0 10px rgba(197, 156, 209); */
 }
 
 .movie-card:hover div {
-    display: block;
+  display: block;
 }
 
 .movie-card:hover img {
-    filter: blur(20px);
+  filter: blur(20px);
 }
 
 @media screen and (max-width: 800px) {
-    .movies-container {
-        background-color: rgb(32, 40, 59);
-    }
+  .movies-container {
+    background-color: rgb(32, 40, 59);
+  }
 }

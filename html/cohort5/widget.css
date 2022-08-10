@@ -1,0 +1,73 @@
+section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 200px;
+
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: Muli, sans-serif;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.card.green {
+  background: linear-gradient(45deg, #43a047, #1de9b6);
+  box-shadow: rgb(29, 233, 182, 0.5) 0 6px 20px 0;
+}
+
+.card.red {
+  background: linear-gradient(45deg, rgb(255, 82, 82), rgb(244, 143, 177));
+  box-shadow: rgb(244, 143, 177, 0.5) 0 6px 20px 0;
+}
+
+.card.orange {
+  background: linear-gradient(45deg, rgb(255, 111, 0), rgb(255, 202, 40));
+  box-shadow: rgb(255 202 40 / 50%) 0px 6px 20px 0px !important;
+}
+
+.card.blue {
+  background: linear-gradient(45deg, rgb(2, 136, 209), rgb(38, 198, 218));
+  box-shadow: rgb(38 198 218 / 50%) 0px 6px 20px 0px !important;
+}
+
+.card .right {
+  text-align: right;
+}
+
+.card .icon {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.18);
+  width: 3em;
+  height: 3em;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 1.4rem;
+}
+
+.card h3 {
+  font-weight: 500;
+  font-size: 26pt;
+}
+
+.card h4 {
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0.75rem;
+}
+
+.card p,
+.card h3 {
+  margin: 0;
+}
+
+.card p,
+.card h4 {
+  font-size: 12pt;
+}

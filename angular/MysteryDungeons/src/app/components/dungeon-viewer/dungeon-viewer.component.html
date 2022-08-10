@@ -1,7 +1,8 @@
 <div class="root">
     <table id="dungeonGrid">
         <tr *ngFor="let row of dungeon.spaces">
-            <td *ngFor="let cell of row" [ngClass]="{ wall: cell == 0, room: cell == 1, hall: cell == 2, stair: cell == 3, trap: cell == 4 }">
+            <td *ngFor="let cell of row"
+                [ngClass]="{ wall: cell == 0, room: cell == 1, hall: cell == 2, stair: cell == 3, trap: cell == 4 }">
                 <div>
                     {{cell}}
                 </div>
@@ -9,16 +10,26 @@
         </tr>
     </table>
     <div id="generationOptions">
-        <button type="button" (click)="makeDrunkardDungeon()">Drunk Dungeon</button>
-        <button type="button" (click)="makeBiasedDrunkardDungeon()">Biased Drunk Dungeon</button>
-        <button type="button" (click)="makeDLADungeon()">DLA Dungeon</button>
-        <button type="button" (click)="makeDLADungeon8Way()">DLA 8-Way Dungeon</button>
-        <button type="button" (click)="makeCentralAttractor()">Central Attractor</button>
-        <button type="button" (click)="makeCentralAttractorMirror()">Central Attractor Mirrored</button>
+        <button type="button"
+                (click)="makeDrunkardDungeon()">Drunk Dungeon</button>
+        <button type="button"
+                (click)="makeBiasedDrunkardDungeon()">Biased Drunk Dungeon</button>
+        <button type="button"
+                (click)="makeDLADungeon()">DLA Dungeon</button>
+        <button type="button"
+                (click)="makeDLADungeon8Way()">DLA 8-Way Dungeon</button>
+        <button type="button"
+                (click)="makeCentralAttractor()">Central Attractor</button>
+        <button type="button"
+                (click)="makeCentralAttractorMirror()">Central Attractor Mirrored</button>
 
         <br>
-        Width:  <input type="number" [(ngModel)]="dWidth" style="width: 30px;">
-        Height: <input type="number" [(ngModel)]="dHeight" style="width: 30px;">
+        Width: <input type="number"
+               [(ngModel)]="dWidth"
+               style="width: 30px;">
+        Height: <input type="number"
+               [(ngModel)]="dHeight"
+               style="width: 30px;">
         <button (click)="resetDungeon()">Reset</button>
     </div>
 </div>

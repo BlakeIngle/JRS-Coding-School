@@ -1,3 +1,17 @@
+
+
+while (false) {
+    console.log("Hello world!")
+}
+
+
+
+
+
+
+
+
+
 while (false) {
     // do something
 }
@@ -10,13 +24,14 @@ while (false) {
 
 
 
-var sum = 1;
+var myNum = 1;
 
-while (sum < 500) {
-    sum = sum * 2;
+while (myNum < 500) {
+    myNum = myNum * 2;
 }
 
-console.log(sum);
+console.log(myNum);
+
 
 
 //23) Write a function that returns the largest integer n where n*n is 
@@ -40,3 +55,11 @@ n = n - 1; // the correct answer
 do {
     n++;
 } while (n * n < 500)
+
+n = 1;
+
+while (((n + 1) * (n + 1)) < 500) {
+    n++;
+}
+
+console.log(n);

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>Video Games</title>
+
+        <link rel="stylesheet"
+              href="styles.css" />
+        <link rel="stylesheet"
+              href="videoGames.css" />
+        <link rel="stylesheet"
+              href="carousel.css" />
+
+        <script src="carousel.js"></script>
+
+    </head>
+
+    <body>
+
+        <h1>Video Games</h1>
+
+        <a href="index.html">
+            HOME
+        </a>
+        <a href="#sbk2">
+            Snowboard Kids 2
+        </a>
+
+        <div class="games flex">
+            <div>
+                <img src="images/video_games/celeste.jpg" />
+                <p>Celeste</p>
+            </div>
+            <div>
+                <img src="images/video_games/dark_souls.jpg" />
+                <p>Dark Souls Remastered</p>
+            </div>
+            <div>
+                <img src="images/video_games/elden_ring.jpg" />
+                <p>Elden Ring</p>
+            </div>
+            <div>
+                <img src="images/video_games/guitar_hero_3.jpg" />
+                <p>Guitar Hero 3: Legends Of Rock</p>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Snowboard_Kids_2">
+                <div id="sbk2">
+                    <img src="images/video_games/snowboard_kids_2.jpg" />
+                    <p>Snowboard Kids 2</p>
+                </div>
+            </a>
+            <div>
+                <img src="images/video_games/zelda_oot.jpg" />
+                <p>The Legend Of Zelda: Ocarina Of Time</p>
+            </div>
+        </div>
+
+        <div class="flex">
+            <div class="red"></div>
+            <div class="orange"></div>
+            <div class="yellow"></div>
+            <div class="green"></div>
+            <div class="blue"></div>
+            <div class="indigo"></div>
+            <div class="violet"></div>
+        </div>
+
+        <div class="carousel-root">
+            <div class="main">
+                <button class="prev"
+                        onclick="showPrev()">
+                    &#10094;
+                </button>
+                <button class="next"
+                        onclick="showNext()">
+                    &#10095;
+                </button>
+                <img src="images/video_games/zelda.jpg"
+                     alt="Zelda NES Box Art" />
+            </div>
+            <div class="progress">
+                <div class="circle-target"
+                     onclick="showImg(0)">
+                    <div class="circle active"></div>
+                </div>
+                <div class="circle-target"
+                     onclick="showImg(1)">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-target"
+                     onclick="showImg(2)">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-target"
+                     onclick="showImg(3)">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

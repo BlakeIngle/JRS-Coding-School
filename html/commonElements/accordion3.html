@@ -1,0 +1,139 @@
+<svg class="blob"
+     viewBox="0 0 200 200"
+     xmlns="http://www.w3.org/2000/svg">
+    <path fill="#6b6bd7"
+          d="M59.1,1.1C59.1,18.3,29.6,36.6,7.9,36.6C-13.8,36.6,-27.6,18.3,-27.6,1.1C-27.6,-16.1,-13.8,-32.1,7.9,-32.1C29.6,-32.1,59.1,-16.1,59.1,1.1Z"
+          transform="translate(100 100)" />
+</svg>
+
+<div class="accordion-root">
+    <section class="glass">
+        <div class="header"
+             onclick="handleTabClicked(0)">
+            <h3>Item 1</h3>
+            <h3>&#10095;</h3>
+        </div>
+        <div class="body">
+            <p>
+                Gluten-free venmo vegan, kickstarter migas cliche tattooed yr. Fashion axe biodiesel shoreditch, polaroid VHS banjo bitters
+                kickstarter
+                mumblecore everyday carry cronut mlkshk. Health goth marfa fam farm-to-table put a bird on it edison bulb dreamcatcher synth aesthetic
+                migas. Before they sold out franzen photo booth mumblecore.
+            </p>
+        </div>
+    </section>
+    <section class="glass">
+        <div class="header"
+             onclick="handleTabClicked(1)">
+            <h3>Item 2</h3>
+            <h3>&#10095;</h3>
+        </div>
+        <div class="body">
+            <p>
+                Pitchfork vegan air plant iceland next level. Kombucha PBR&B mixtape fanny pack tofu, squid seitan four dollar toast shabby chic
+                authentic sriracha. La croix etsy pok pok tattooed PBR&B man bun. Cliche polaroid echo park seitan shoreditch.
+            </p>
+        </div>
+    </section>
+    <section class="glass">
+        <div class="header"
+             onclick="handleTabClicked(2)">
+            <h3>Item 3</h3>
+            <h3>&#10095;</h3>
+        </div>
+        <div class="body">
+            <p>
+                Pitchfork vegan air plant iceland next level. Kombucha PBR&B mixtape fanny pack tofu, squid seitan four dollar toast shabby chic
+                authentic sriracha. La croix etsy pok pok tattooed PBR&B man bun. Cliche polaroid echo park seitan shoreditch.
+            </p>
+        </div>
+    </section>
+    <section class="glass">
+        <div class="header"
+             onclick="handleTabClicked(3)">
+            <h3>Item 4</h3>
+            <h3>&#10095;</h3>
+        </div>
+        <div class="body">
+            <p>
+                Pitchfork vegan air plant iceland next level. Kombucha PBR&B mixtape fanny pack tofu, squid seitan four dollar toast shabby chic
+                authentic sriracha. La croix etsy pok pok tattooed PBR&B man bun. Cliche polaroid echo park seitan shoreditch.
+            </p>
+        </div>
+    </section>
+</div>
+
+<script>
+
+    let accordion = document.getElementsByClassName("accordion-root")[0];
+    let tabs = accordion.getElementsByTagName('section');
+
+    function handleTabClicked(tabNumber) {
+        for (let i = 0; i < tabs.length; i++) {
+            let tab = tabs[i];
+            if (i == tabNumber) {
+                tab.classList.toggle('open')
+            } else {
+                tab.classList.remove('open');
+            }
+        }
+    }
+</script>
+
+<style>
+    .blob {
+        position: absolute;
+        top: -10rem;
+        left: -15rem;
+    }
+
+    .accordion-root {
+        max-width: 400px;
+        margin: auto;
+        color: white;
+    }
+
+    .accordion-root .header {
+        background-color: #6b6bd766;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .glass {
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .accordion-root section {
+        overflow: hidden;
+    }
+
+    .accordion-root .body {
+        height: 0;
+        transition: height 0.5s;
+        overflow: auto;
+    }
+
+    .accordion-root .body p {
+        padding: 0 1rem;
+    }
+
+    .accordion-root .open .body {
+        height: 8rem;
+    }
+
+    .accordion-root h3 {
+        transition: 0.3s;
+        margin: 0;
+    }
+
+    .accordion-root .open h3:last-of-type {
+        transform: rotate(90deg);
+    }
+</style>

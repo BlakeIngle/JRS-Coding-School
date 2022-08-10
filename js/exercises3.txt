@@ -1,0 +1,65 @@
+1. Write a JavaScript function that returns the reverse a number.
+Example x = 32246;
+Expected Output : 64223
+
+2. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+Example string : 'webmaster'
+Expected Output : 'abeemrstw'
+Assume punctuation and numbers symbols are not included in the passed string.
+
+3. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word to upper case. 
+Example string : 'the quick brown fox'
+Expected Output : 'The Quick Brown Fox'
+
+4. Write a JavaScript function that accepts a string as a parameter and returns the longest word within the string.
+Example string : 'Web Development Tutorial'
+Expected Output : 'Development'
+
+5. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+Note : Do not count 'y'.
+Example string : 'The quick brown fox'
+Expected Output : 5
+
+6. Write a JavaScript function which returns the n rows by n columns identity matrix.
+Example n: 2
+Expected Output : 
+[
+    [1, 0],
+    [0, 1]
+]
+Example n: 3
+Expected Output : 
+[
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
+]
+
+7. Write a JavaScript function to compute the factors of a positive integer n.
+Example n: 6
+Expected Output: [1, 2, 3, 6]
+
+8. Write a JavaScript function that returns a string that only containing unique characters from a given string.
+Example string : "thequickbrownfoxjumpsoverthelazydog"
+Expected Output : "thequickbrownfxjmpsvlazydg"
+
+9. Write a JavaScript function to  get the number of occurrences of each letter in specified string.
+Example string : "Hello"
+Expected Output : [["H", 1], ["e", 1], ["l", 2], ["o", 1]]
+
+10. Write a JavaScript function that generates a string id of random characters with a given length n.
+Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+Example n: 6
+Expected Output: "Scb89s"
+
+11. Write a JavaScript function that accepts two arguments, a string and a character and the function will count the number of occurrences of the specified character within the string.
+Sample arguments : 'Hello world', 'o'
+Expected output : 2
+
+12. Write a JavaScript function to find the first not repeated character in a given string.
+Example string : 'abacddbec'
+Expected output : 'e'
+
+13. Write a JavaScript function to find longest substring in a given a string without repeating characters.
+Example String: "Hello world"
+Expected Output: " world"

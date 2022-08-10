@@ -8,7 +8,6 @@ true;
 
 
 
-
 () => { }; // funciton literal
 
 
@@ -20,28 +19,34 @@ var funcName = (param1, param2) => {
     console.log(param1, param2)
 }
 
+funcName("Hello", "World!");
+
 funcName = () => {
     console.log("Goodbye World!")
 }
 
-funcName("Hello", "World!");
-
-
-var a = 5;
-a = 4
-console.log(a)
+funcName();
 
 
 
 
-var myArr = [1, 2, 3]
+var myArr = [2, 11, 1, 8, 7]
 
-myArr.forEach((value, i) => {
-    console.log(value + myArr[i])
+myArr.forEach((n, i) => {
+    console.log(n, i);
 });
 
-parentFunction();
 
-function parentFunction(callbackfn) {
-    callbackfn();
+function parentFunction(cb) {
+    for (let i = 0; i < 10; i++) {
+        cb();
+    }
 }
+
+parentFunction(() => {
+    console.log("i'm in the cb")
+});
+
+
+
+console.log(myArr.filter(n => n % 2 == 1))

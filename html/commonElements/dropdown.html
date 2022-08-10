@@ -1,0 +1,46 @@
+<style>
+    .dropdown-root {
+        width: fit-content;
+        color: white;
+        position: relative;
+    }
+
+    .hoverable {
+        background-color: black;
+        padding: 0.5rem;
+    }
+
+    .hidden-menu {
+        background-color: gray;
+        position: absolute;
+        display: none;
+    }
+
+    .dropdown-root:hover .hidden-menu {
+        display: block;
+    }
+
+    .hidden-menu div {
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: underline gray;
+    }
+
+    .hidden-menu div:hover {
+        background-color: black;
+        text-decoration: underline white;
+    }
+</style>
+
+<div class="dropdown-root">
+    <div class="hoverable">
+        MENU
+    </div>
+
+    <div class="hidden-menu">
+        <div>Home</div>
+        <div>Subscriptions</div>
+        <div>Library</div>
+    </div>
+</div>

@@ -9,24 +9,21 @@ changeA(a)
 console.log("a", a)
 
 let b = {
-    value: 4
+    n: 4
 }
-
 function changeB(b) {
-    b.value = 5;
+    b.n = 5;
 }
 
 changeB(b)
-console.log("b", b)
-
+console.log("b", b.n);
 
 let c = {
-    value: 4
+    foo: 4
 }
-
 function changeC(c) {
     c = {
-        newValue: 4
+        bar: 4
     }
 }
 
@@ -37,9 +34,19 @@ console.log("c", c)
 
 
 
-var d = { value: 7 }
+var d = { n: 7 }
 var e = d;
 
-e.value = 8;
+e.n = 8;
 
-console.log(d);
+console.log(d.n);
+
+
+let f = [5, 2, 5, 9];
+
+let changeF = (g) => {
+    g[0] = 7;
+}
+
+changeF(f);
+console.log(f[0]);

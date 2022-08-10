@@ -1,0 +1,145 @@
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<script>
+
+    function toggleTheme() {
+        let nav = document.getElementsByTagName('nav')[0];
+        nav.classList.toggle('dark-theme');
+    }
+
+</script>
+
+<nav>
+    <div class="left">
+        <a>
+            <span class="material-symbols-outlined">
+                home
+            </span>
+        </a>
+        <a>Movies</a>
+        <a>Colors</a>
+        <a>GitHub</a>
+    </div>
+
+    <div class="right">
+        <a>Login</a>
+        <span class="material-symbols-outlined"
+              onclick="toggleTheme()">
+            dark_mode
+        </span>
+    </div>
+</nav>
+
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere aliquid distinctio culpa deleniti aliquam odio, dolores inventore mollitia
+    quisquam suscipit vel quos. Soluta, enim? Explicabo, modi? Perferendis tempora ipsa doloribus, culpa tempore veniam asperiores quod iusto
+    architecto pariatur. Maiores ea dolorem corporis voluptatibus sunt ratione optio debitis vero. Autem dolore possimus tenetur magnam eaque
+    obcaecati ad? Ipsum placeat ducimus possimus qui, beatae aperiam? Fuga hic recusandae nam vero est, iste animi consequatur esse tempore beatae
+    dolor doloremque distinctio corporis cum ab eos dolorum odit magnam, veritatis unde! Dolore nemo natus ad atque tenetur culpa earum quibusdam nam
+    magni, quis architecto. Tenetur distinctio soluta porro facere laudantium ipsum aperiam repudiandae ex sequi adipisci itaque explicabo ea magnam
+    libero, est deleniti, iste optio quas qui rem repellendus quis sit? Minima cum ullam tempore minus, laboriosam eligendi odit ducimus deleniti
+    labore voluptas natus tenetur quis. Necessitatibus a totam autem porro error hic minima quos eum? Eum, id assumenda? Sint laudantium facilis
+    debitis sapiente vel! Similique, et eos! Maxime error provident unde alias reprehenderit adipisci quis veniam odio quam dicta cumque, totam sit,
+    repellendus fugit, voluptas nesciunt nostrum doloribus harum? Incidunt temporibus eaque delectus tenetur qui corporis totam, voluptates iusto,
+    eligendi aut quas pariatur ea! Maiores, illo. Dignissimos illo quibusdam fuga quidem sunt cumque minima esse ad quisquam aspernatur officia
+    temporibus blanditiis consequuntur deserunt odio recusandae voluptatum incidunt consequatur deleniti sint, ea repudiandae, officiis labore modi?
+    Voluptatibus veritatis necessitatibus deleniti est cupiditate ut itaque quas quos laboriosam quo. Eligendi, quae nobis ullam est debitis quasi
+    fuga adipisci voluptate culpa eius sequi earum magni a deserunt minus vel voluptatem consequatur numquam, excepturi recusandae! Ad libero
+    veritatis, blanditiis ipsam molestiae esse pariatur repudiandae consequatur asperiores officia maiores aut impedit veniam, illum tempore ipsa
+    error! Cupiditate, consequatur sequi iure recusandae atque odit soluta minima magnam minus quia molestiae magni aspernatur nam, quibusdam, omnis
+    illo voluptatum accusantium! Consequuntur odit nulla optio necessitatibus autem fuga eligendi officiis consectetur voluptates reprehenderit, odio
+    in quis ad, quia tempora quidem sit hic dicta illum facere distinctio? Nostrum distinctio ut cum ea quae ullam! Sint laboriosam omnis eaque
+    aliquam tempora, modi corrupti suscipit ducimus. Laudantium, aliquam? Incidunt, ad expedita vel amet iusto earum laborum, minus non, officiis
+    optio cumque eius voluptatibus id! Ad error nihil quam voluptate itaque doloribus, distinctio ut obcaecati temporibus optio magnam dolores, iusto
+    maxime velit totam atque quaerat maiores animi. Adipisci deleniti id voluptatem a vitae enim tempora, iusto aspernatur. Sapiente facilis beatae
+    debitis libero ad rem animi praesentium ipsum, quis laborum eius, doloremque corrupti voluptatem fugiat vitae eveniet consectetur nihil qui nisi
+    earum at aut repellat? Necessitatibus ullam quo placeat cumque labore laboriosam ad temporibus ab numquam adipisci. Labore officia sequi, nam
+    aspernatur modi minima ad vitae animi molestias. Iste vero facilis rerum suscipit accusamus iure facere sed nulla voluptate provident. Delectus
+    tenetur quod eligendi aut illum autem eius, facere maxime commodi, in fugit? Pariatur commodi quaerat accusamus, quisquam modi dolor animi.
+    Tempora temporibus pariatur repellendus molestiae dolorum, rem similique nisi, sint at, amet optio autem quod maxime!
+</p>
+
+<style>
+    :root {
+        --green: #3a8378;
+        --gray: #c6d7d0;
+
+        --ebony: #2c2843;
+        --bone: #e0d7c2;
+
+        --primary: var(--green);
+        --secondary: var(--gray);
+    }
+
+    .dark-theme {
+        --primary: var(--ebony);
+        --secondary: var(--bone);
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+
+        background-color: var(--primary);
+        color: var(--secondary);
+
+        display: flex;
+        justify-content: space-between;
+
+        position: sticky;
+        top: 0;
+
+        transition: 0.5s;
+
+        font-family: Muli, sans-serif;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL'0,
+            'wght'400,
+            'GRAD'0,
+            'opsz'48
+    }
+
+    .dark-theme .material-symbols-outlined {
+        font-variation-settings:
+            'FILL'1,
+            'wght'400,
+            'GRAD'0,
+            'opsz'48
+    }
+
+    .left,
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    nav>div>* {
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+        padding: 0.5rem;
+
+        display: grid;
+        place-items: center;
+    }
+
+    nav>div>a:hover,
+    nav>div>span:hover {
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+
+    @media screen and (max-width: 450px) {
+        .left>*:not(*:first-child) {
+            display: none;
+        }
+    }
+</style>

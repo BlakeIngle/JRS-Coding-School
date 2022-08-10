@@ -1,231 +1,240 @@
 html {
-    background-image: url('../cohort2/images/princess_mononoke.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    height: 100vh;
+  background-image: url("../cohort2/images/princess_mononoke.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
 }
 
-body{
-    max-height: 100%;
-    overflow: auto;
+body {
+  max-height: 100%;
+  overflow: auto;
 }
 
-table, th, td {
-    border: solid black 1px;
-    padding: 1em;
+table,
+th,
+td {
+  border: solid black 1px;
+  padding: 1em;
 }
 
 table {
-    border-collapse: collapse;
-    text-align: center;
+  border-collapse: collapse;
+  text-align: center;
 }
 
 .a td {
-    background-color: rgb(255, 82, 105);
+  background-color: rgb(255, 82, 105);
 }
 
 #a1:hover,
-#a3:hover, 
-#a2:active, 
+#a3:hover,
+#a2:active,
 #a4:active {
-    background-color: red;
+  background-color: red;
 }
 
-#a3, #a4 {
-    transition: background-color 0.5s;
+#a3,
+#a4 {
+  transition: background-color 0.5s;
 }
 
-#b1, #b2 {
-    background-color: rgb(83, 158, 255);
+#b1,
+#b2 {
+  background-color: rgb(83, 158, 255);
 }
 
 #b1:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 #b2:active {
-    transform: scale(0.5);
+  transform: scale(0.5);
 }
 
-
-#b3, #b4 {
-    background-color: rgb(83, 158, 255);
-    transition: 0.5s;
+#b3,
+#b4 {
+  background-color: rgb(83, 158, 255);
+  transition: 0.5s;
 }
 
 #b3:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 #b4:active {
-    transform: scale(0.5);
+  transform: scale(0.5);
 }
 
 .c td {
-    background-color: rgb(120, 255, 120);
+  background-color: rgb(120, 255, 120);
 }
 
 #c1:hover {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #c2:active {
-    transform: rotateY(405deg);
+  transform: rotateY(405deg);
 }
 
-#c3, #c4 {
-    transition: 0.5s;
+#c3,
+#c4 {
+  transition: 0.5s;
 }
 
 #c3:hover {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #c4:active {
-    transform: rotateY(405deg);
+  transform: rotateY(405deg);
 }
 
 .d td {
-    background-color: rgb(255, 255, 65);
+  background-color: rgb(255, 255, 65);
 }
 
-#d1:hover, #d3:hover {
-    transform: skewX(-30deg);
+#d1:hover,
+#d3:hover {
+  transform: skewX(-30deg);
 }
 
-#d2:active, #d4:active {
-    transform: skewY(0.5rad);
+#d2:active,
+#d4:active {
+  transform: skewY(0.5rad);
 }
 
-#d3, #d4 {
-    transition: 0.5s;
+#d3,
+#d4 {
+  transition: 0.5s;
 }
 
 .e td {
-    background-color: rgb(61, 255, 255);
+  background-color: rgb(61, 255, 255);
 }
 
 #e1:hover {
-    transform: translateX(1em);
+  transform: translateX(1em);
 }
 
 #e2:active {
-    transform: translateY(30px);
+  transform: translateY(30px);
 }
 
-#e3, #e4 {
-    transition: 0.5s;
+#e3,
+#e4 {
+  transition: 0.5s;
 }
 
 #e3:hover {
-    transform: translate(-50%, 15px);
+  transform: translate(-50%, 15px);
 }
 
 #e4:active {
-    transform: translate(10vw, -10vh);
+  transform: translate(10vw, -10vh);
 }
 
 img {
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
 img:hover {
-    transform: scale(1.1);
-    cursor: help;
+  transform: scale(1.1);
+  cursor: help;
 }
 
 button {
-    background: linear-gradient(90deg, rgb(241, 125, 79), rgb(250, 61, 108)) ;
-    color: white;
-    border: none;
-    padding: 1em;
-    font-size: 2em;
-    cursor: pointer;
-    margin-left: 1em;
-    transition: 0.1s;
-    border-radius: 8px;
+  background: linear-gradient(90deg, rgb(241, 125, 79), rgb(250, 61, 108));
+  color: white;
+  border: none;
+  padding: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 1em;
+  transition: 0.1s;
+  border-radius: 8px;
 }
 
-button:hover{
-    background-color: rgb(255, 49, 49);
-    transform: translateY(-5px);
+button:hover {
+  background-color: rgb(255, 49, 49);
+  transform: translateY(-5px);
 }
 
 button:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .parent {
-    width: 400px;
-    height: 400px;
-    border: solid black 1px;
-    position: relative;
-    margin: 2em;
+  width: 400px;
+  height: 400px;
+  border: solid black 1px;
+  position: relative;
+  margin: 2em;
 }
 
 .child {
-    background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* animation: changeColor 4s linear 2s infinite alternate; */
-    animation-name: changeColor;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    animation-delay: 2s;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* animation: changeColor 4s linear 2s infinite alternate; */
+  animation-name: changeColor;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: steps(1);
+  animation-delay: 2s;
 }
 
 .small {
-    height: 50px;
-    width: 50px;
-    border: solid black 5px;
+  height: 50px;
+  width: 50px;
+  border: solid black 5px;
 }
 
 .big {
-    height: 80px;
-    width: 80px;
-    border: solid red 5px;
+  height: 80px;
+  width: 80px;
+  border: solid red 5px;
 }
 
 @keyframes changeColor {
-    0% { 
-        top: 0;
-        left: 0;
-        background-color: red;
-    }
-    25% { 
-        top: 0;
-        left: calc(100% - 50px);
-        background-color: yellow;
-        transform: rotate(0deg);
-    }
-    50% {
-        top: calc(100% - 50px);
-        left: calc(100% - 50px);
-        background-color: green;
-        transform: rotate(360deg);
-    }
-    75% {
-        top: calc(100% - 50px);
-        left: 0;
-        background-color: blue;
-    }
-    100% { 
-        top: 0;
-        left: 0;
-        background-color: red;
-        transform: rotate(360deg);
-    }
+  0% {
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 50px);
+    background-color: yellow;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
+    background-color: green;
+    transform: rotate(360deg);
+  }
+  75% {
+    top: calc(100% - 50px);
+    left: 0;
+    background-color: blue;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: red;
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .parent {
-        width: 200px;
-        height: 600px;
-        border: solid black 1px;
-        position: relative;
-    }
-} 
+  .parent {
+    width: 200px;
+    height: 600px;
+    border: solid black 1px;
+    position: relative;
+  }
+}

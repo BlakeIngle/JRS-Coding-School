@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Cinzel:wght@500&family=Poiret+One&family=Press+Start+2P&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poiret One", cursive;
+}
+
+nav {
+  background-color: #2c2843;
+  color: #e0d7c2;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+nav > div > * {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  padding: 0.5rem;
+
+  display: grid;
+  place-items: center;
+}
+
+nav > div > a:hover,
+nav > div > span:hover {
+  background-color: #e0d7c2;
+  color: #2c2843;
+}

@@ -5,12 +5,11 @@ function doSomething() {
     console.log(a);
 }
 
-function add2() {
-    var x = 0;
-    // ....
+function add2(x) {
+    x = x + 2;
     console.log(x)
 }
 
-// ..., console, a, b, doSomething, add2
-
-console.log(x)
+let x = 4;
+add2(x);
+console.log(x);

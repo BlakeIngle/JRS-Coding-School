@@ -1,0 +1,191 @@
+body {
+  background: linear-gradient(to bottom right, #42275a, #734b6d);
+  min-height: 100vh;
+  color: rgb(248, 248, 248);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 40pt;
+  text-align: center;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1rem 3rem;
+  background-color: black;
+}
+
+h2 {
+  background-color: rgba(255, 41, 41, 0.75);
+}
+
+ul {
+  transition: 0.5s;
+  list-style-type: "👻";
+}
+
+ul {
+  background-color: rgba(71, 71, 255, 0.75);
+  color: rgb(255, 255, 255);
+
+  padding: 15px 35px;
+  border: solid white 3px;
+  margin-bottom: 40px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16pt;
+
+  border-radius: 7px;
+}
+
+.underline {
+  text-decoration: underline wavy white;
+}
+
+#mySneakers {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+table {
+  color: rgb(14, 14, 14);
+  border-collapse: collapse;
+  margin: auto;
+}
+
+tr {
+  background-color: rgb(250, 250, 250);
+}
+
+th,
+td {
+  border: solid rgb(14, 14, 14) 1px;
+  padding: 3px 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(190, 190, 190);
+}
+
+.parent > .child p {
+}
+
+.about-me {
+  border: solid white 3px;
+  background-color: rgb(82, 82, 82);
+
+  padding: 10px;
+
+  font-size: 18pt;
+  color: rgb(255, 57, 57);
+}
+
+.about-me h2 {
+  margin-top: 0;
+}
+.about-me p {
+  margin-bottom: 0;
+}
+
+.about-me * {
+  padding: 8px;
+  border: solid white 1px;
+}
+.fav-list {
+  background-color: green;
+  padding: 1rem;
+}
+
+.fav-list > h2 {
+  border: solid yellow 1px;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+.red {
+  background-color: #ff0000;
+  display: grid;
+  place-items: center;
+}
+.green {
+  background-color: #00ff00;
+}
+.yellow {
+  background-color: #ffff00;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 5px;
+  margin: auto;
+
+  width: fit-content;
+}
+
+.grid-child {
+  /* dont do these */
+  /* margin: 0; */
+  /* width: 200px; */
+  /* height: 200px; */
+}
+
+.grid p {
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(180, 180, 180);
+}
+
+.text-gradient {
+  font-family: "Press Start 2P", cursive;
+  font-weight: 1000;
+  font-size: 68pt;
+
+  background-image: linear-gradient(
+    to right top,
+    #ff9d2a,
+    #ff7d41,
+    #ff5b5c,
+    #ff3d7b,
+    #ef2d9b
+  );
+
+  background-image: url(./images/video_games/dark_souls.jpg);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+* {
+  filter: none;
+  /* animation-name: rainbow; */
+  animation-duration: 60s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes rainbow {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.overflow {
+  height: 10em;
+  border: solid purple 5px;
+  overflow: auto;
+}
