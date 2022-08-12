@@ -1,0 +1,17 @@
+.modal-root {
+  background-color: #000b;
+
+  position: fixed;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+}
+
+.modal-root .modal {
+  background-color: white;
+  border-radius: 4px;
+  width: fit-content;
+
+  padding: 1rem;
+}

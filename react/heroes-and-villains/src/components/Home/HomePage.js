@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { useApi } from '../../services/api.service'
 import HeroCard from '../HeroCard/HeroCard'
 import './HomePage.css'
@@ -23,7 +24,9 @@ export default function HomePage() {
         <div>
             HomePage
             {heroes.map(hero => (
-                <HeroCard key={hero.id} {...hero} />
+                <Link to={`/hero/${hero.id}`} key={hero.id} >
+                    <HeroCard {...hero} />
+                </Link>
             ))}
         </div>
     )

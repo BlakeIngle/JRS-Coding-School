@@ -1,0 +1,6 @@
+.hero-detail-root .delete {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}

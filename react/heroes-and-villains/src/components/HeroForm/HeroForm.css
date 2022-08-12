@@ -1,0 +1,15 @@
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.hero-form label {
+  display: block;
+}
+
+.hero-form input {
+  width: 100%;
+  box-sizing: border-box;
+}

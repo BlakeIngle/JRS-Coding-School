@@ -4,223 +4,270 @@ var heroes = [
     {
         id: 1,
         name: "Bowser",
-        power: ["Superstars"],
+        realName: "King Bowser",
+        powers: ["Superstars"],
         nemesisName: "Mario"
     }, {
         id: 2,
         name: "Darth Vader",
-        power: ["Force choke"],
+        realName: "Anakin Skywalker",
+        powers: ["Force choke"],
         nemesisName: "Luke Skywalker"
     }, {
         id: 3,
         name: "Andross",
-        power: ["Evil Scientist"],
+        realName: "Dr. Andross",
+        powers: ["Evil Scientist"],
         nemesisName: "Fox McCloud"
     }, {
         id: 4,
         name: "The Wicked Witch Of The West",
-        power: ["Witchcraft"],
+        realName: "Miss Gulch",
+        powers: ["Witchcraft"],
         nemesisName: "Bucket of water"
     }, {
         id: 5,
         name: "Gwyn, Lord of Cinder",
-        power: ["Plin plin plon"],
+        realName: "",
+        powers: ["Plin plin plon"],
         nemesisName: "Chosen Undead"
     }, {
         id: 6,
         name: "The Flood",
-        power: ["Possessing dead beings"],
+        realName: "Inferi redivivus",
+        powers: ["Possessing dead beings"],
         nemesisName: "Master Chief"
     }, {
         id: 7,
         name: "Mom",
-        power: ["Religious Dogma"],
+        realName: "Magdalen O. Moriah",
+        powers: ["Religious Dogma"],
         nemesisName: "Isaac"
     }, {
         id: 8,
         name: "Maximillion Pegasus",
-        power: ["Millennium Eye"],
+        realName: "Pegasus J. Crawford",
+        powers: ["Millennium Eye"],
         nemesisName: "Yugi Moto"
     }, {
         id: 9,
         name: "Gary Oak",
-        power: ["being a douche"],
+        realName: "Shigeru Okido",
+        powers: ["being a douche"],
         nemesisName: "Ash Ketchum"
     }, {
         id: 10,
         name: "King De-de-de",
-        power: ["Big Appetite"],
+        realName: "DayDayDay",
+        powers: ["Big Appetite"],
         nemesisName: "Kirby"
     },
     {
-        "id": 11,
-        "name": "Lex Luther",
-        "power": "Strength",
-        "nemesisName": "Darkseid"
+        id: 11,
+        name: "Lex Luther",
+        realName: "Alexander Joseph Luthor",
+        powers: ["Strength"],
+        nemesisName: "Darkseid"
     },
     {
-        "id": 12,
-        "name": "Thanos",
-        "power": "Strength",
-        "nemesisName": "Avengers"
+        id: 12,
+        name: "Thanos",
+        realName: "Dione",
+        powers: ["Strength"],
+        nemesisName: "Avengers"
     },
     {
-        "id": 13,
-        "name": "Hannibal Lecter",
-        "power": "Genius",
-        "nemesisName": "Mason Verger"
+        id: 13,
+        name: "Hannibal Lecter",
+        realName: "Alfredo Ballí Treviño",
+        powers: ["Genius"],
+        nemesisName: "Mason Verger"
     },
     {
-        "id": 14,
-        "name": "Darth Plagueis",
-        "power": "The Force",
-        "nemesisName": "Palpentine"
+        id: 14,
+        name: "Darth Plagueis",
+        realName: "Hego Damask II",
+        powers: ["The Force"],
+        nemesisName: "Palpentine"
     },
     {
-        "id": 15,
-        "name": "Joker",
-        "power": "Insanity",
-        "nemesisName": "Batman"
+        id: 15,
+        name: "Joker",
+        realName: "Jack Napier",
+        powers: ["Insanity"],
+        nemesisName: "Batman"
     },
     {
-        "id": 16,
-        "name": "Arthas Menethil",
-        "power": "Magic, Strength",
-        "nemesisName": "Anduin Wrynn"
+        id: 16,
+        name: "The Lich King",
+        realName: "Arthas Menethil",
+        powers: ["Magic, Strength"],
+        nemesisName: "Anduin Wrynn"
     }, {
-        "id": 17,
-        "name": "Magneto",
-        "power": "Magnetism, electromagnetic powers from force fields to shooting",
-        "nemesisName": "Charles Xavier's"
+        id: 17,
+        name: "Magneto",
+        realName: "Max Eisenhardt",
+        powers: ["Magnetism, electromagnetic powers from force fields to shooting"],
+        nemesisName: "Charles Xavier's"
     },
     {
-        "id": 18,
-        "name": "Doctor Doom",
-        "power": "Genius, Strength",
-        "nemesisName": "Reed Richards"
+        id: 18,
+        name: "Doctor Doom",
+        realName: "Victor von Doom",
+        powers: ["Genius, Strength"],
+        nemesisName: "Reed Richards"
     },
     {
-        "id": 19,
-        "name": "Green Goblin",
-        "power": "Green Gas and Bombs",
-        "nemesisName": "Spider-man"
+        id: 19,
+        name: "Green Goblin",
+        realName: "Norman Oswald",
+        powers: ["Green Gas and Bombs"],
+        nemesisName: "Spider-man"
     },
     {
-        "id": 20,
-        "name": "The Presence",
-        "power": "Resurrection, Omnipotence, Omnipresence, MindControl, GOD",
-        "nemesisName": "Nobody"
+        id: 20,
+        name: "The Presence",
+        realName: "God",
+        powers: ["Resurrection, Omnipotence, Omnipresence, MindControl, GOD"],
+        nemesisName: "Nobody"
     },
     {
         id: 21,
         name: "Madara",
-        power: ["Sharingan"],
+        realName: "Madara Uchiha",
+        powers: ["Sharingan"],
         nemesisName: "Hashirama"
     },
     {
         id: 22,
         name: "Killmonger",
-        power: ["Expert Martial artist, peak - level strength, genius - level intellect"],
+        realName: "Erik Killmonget",
+        powers: ["Expert Martial artist, peak - level strength, genius - level intellect"],
         nemesisName: "Black Panther"
     },
     {
         id: 23,
         name: "Nezuko",
-        power: ["Demon"],
+        realName: "Nezuko Kamado",
+        powers: ["Demon"],
         nemesisName: "Tanjiro"
     },
     {
         id: 24,
         name: "Bruce",
-        power: ["He's a shark"],
+        realName: "He's a shark",
+        powers: ["He's a shark"],
         nemesisName: "Marlin"
     },
     {
         id: 25,
         name: "Pain",
-        power: ["rinnegan"],
+        realName: "Nagato",
+        powers: ["rinnegan"],
         nemesisName: "Naruto"
     },
     {
         id: 26,
         name: "Itachi",
-        power: ["Sharingan"],
+        realName: "Itachi Uchiha",
+        powers: ["Sharingan"],
         nemesisName: "Sasuke"
     },
     {
         id: 27,
         name: "Freddy Krueger",
-        power: ["Invade dreams"],
+        realName: "Robert Englund",
+        powers: ["Invade dreams"],
         nemesisName: "Nancy"
     },
     {
         id: 28,
         name: "Ganondorf",
-        power: ["Magic"],
+        realName: "Ganondorf Dragmire",
+        powers: ["Magic"],
         nemesisName: "Link"
     },
     {
         id: 29,
         name: "Vegeta",
-        power: ["Super Saiyan"],
+        realName: "Prince Vegeta",
+        powers: ["Super Saiyan"],
         nemesisName: "Goku"
     },
     {
         id: 30,
         name: "Loki",
-        power: ["God"],
+        realName: "Loki Odinson",
+        powers: ["God"],
         nemesisName: "Thor"
     },
+
     {
-        "id": 31,
-        "name": "Mario",
-        "power": ["Superstars"],
-        "nemesisName": "Bowser"
+        id: 31,
+        name: "Mario",
+        realName: "Mario Mario",
+        powers: ["Superstars"],
+        nemesisName: "Bowser"
     }, {
-        "id": 32,
-        "name": "Luke Skywalker",
-        "power": ["The Force"],
-        "nemesisName": "Darth Vader"
+        id: 32,
+        name: "Luke Skywalker",
+        realName: "Mark Hamill",
+        powers: ["The Force"],
+        nemesisName: "Darth Vader"
     }, {
-        "id": 33,
-        "name": "Thor",
-        "power": ["Mjolnir"],
-        "nemesisName": "Frost Giants"
+        id: 33,
+        name: "Thor",
+        realName: "Thor Odinson",
+        powers: ["Mjolnir"],
+        nemesisName: "Frost Giants"
     }, {
-        "id": 34,
-        "name": "Doctor Strange",
-        "power": ["Wizardry"],
-        "nemesisName": "Baron Mordo"
+        id: 34,
+        name: "Doctor Strange",
+        realName: "Stephen Strange",
+        powers: ["Wizardry"],
+        nemesisName: "Baron Mordo"
     }, {
-        "id": 35,
-        "name": "Iron Man",
-        "power": ["Iron Man Suit"],
-        "nemesisName": "Thanos"
+        id: 35,
+        name: "Iron Man",
+        realName: "Tony Stark",
+        powers: ["Iron Man Suit"],
+        nemesisName: "Thanos"
     }, {
-        "id": 36,
-        "name": "Batman",
-        "power": ["Money"],
-        "nemesisName": "Joker"
+        id: 36,
+        name: "Batman",
+        realName: "Bruce Wayne",
+        powers: ["Money"],
+        nemesisName: "Joker"
     }, {
-        "id": 37,
-        "name": "Mr. Fantastic",
-        "power": ["Stretchy"],
-        "nemesisName": "Dr. Doom"
+        id: 37,
+        name: "Mr. Fantastic",
+        realName: "Reed Richards",
+        powers: ["Stretchy"],
+        nemesisName: "Dr. Doom"
     }, {
-        "id": 38,
-        "name": "Spider-man",
-        "power": ["Does whatever a spider can"],
-        "nemesisName": "Green Goblin"
+        id: 38,
+        name: "Spider-man",
+        realName: "Peter Parker",
+        powers: ["Does whatever a spider can"],
+        nemesisName: "Green Goblin"
     }, {
-        "id": 39,
-        "name": "Link",
-        "power": ["Courage"],
-        "nemesisName": "Ganon"
+        id: 39,
+        name: "Link",
+        realName: "Link Link",
+        powers: ["Courage"],
+        nemesisName: "Ganon"
     }, {
-        "id": 40,
-        "name": 'Mermaid Man',
-        "power": ['Talking to dolphins, breathing underwater'],
-        "nemesisName": "Manray"
+        id: 40,
+        name: 'Mermaid Man',
+        realName: "Ernie",
+        powers: ['Talking to dolphins, breathing underwater'],
+        nemesisName: "Manray"
+    }, {
+        id: 41,
+        name: "Day Man",
+        realName: "Charlie",
+        powers: ["Karate and Friendship"],
+        nemesisName: "Night Man"
     }
 ];
 

@@ -1,0 +1,43 @@
+.square-root {
+  width: 2em;
+  height: 2em;
+
+  border: solid rgb(14, 14, 14) 1px;
+  border-radius: 1px;
+  background-color: rgb(211, 211, 211);
+
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square-root.show {
+  transition: background-color 0.35s steps(1) calc(0.25s * var(--order));
+  animation: flip 0.75s linear calc(0.25s * var(--order));
+}
+
+.square-root.gray {
+  background-color: rgb(167, 167, 167);
+}
+
+.square-root.yellow {
+  background-color: rgb(231, 231, 84);
+}
+
+.square-root.green {
+  background-color: rgb(65, 192, 65);
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

@@ -1,0 +1,19 @@
+.input-root {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+}
+
+.input-root .square-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+
+.input-root input {
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+}
