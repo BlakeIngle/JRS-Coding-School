@@ -30,7 +30,7 @@ export default function HeroDetail() {
         http.getHeroById(id)
             .then((response) => {
                 // console.log(response)
-                setHero(response.data.hero);
+                setHero(response.data);
             });
     }
 

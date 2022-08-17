@@ -16,7 +16,7 @@ export default function HomePage() {
     function getHeroes() {
         http.getAllHeroes()
             .then((response) => {
-                setHeroes(response.data.heroes);
+                setHeroes(response.data);
             });
     }
 
