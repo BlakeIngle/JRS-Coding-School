@@ -14,16 +14,26 @@ function getUrlById(id) {
     return axios.get(`${URL}/urls/${id}`);
 }
 
+function deleteUrl(id) {
+    return axios.delete(`${URL}/urls/${id}`);
+}
+
 function login({ email, password }) {
     let body = { email, password }
     return axios.post(`${URL}/users/login`, body);
 }
 
+function createAccount({ email, password }) {
+    return axios.post(`${URL}/users`, { email, password });
+}
+
 const api = {
     getUrlById,
     createUrl,
+    deleteUrl,
     login,
-    getAllUrls
+    getAllUrls,
+    createAccount
 };
 
 function useApi() {

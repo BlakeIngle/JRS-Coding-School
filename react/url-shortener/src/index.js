@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavigatorComponent from './components/NavigatorComponent';
 import LoginPage from './components/login/LoginPage';
 import UserPage from './components/UserPage';
+import SignUpPage from './components/login/SignUpPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/:id" element={<NavigatorComponent />} />
         <Route path="/user/login" element={<LoginPage />} />
+        <Route path="/user/signup" element={<SignUpPage />} />
         <Route path="/user/:userId" element={<UserPage />} />
       </Routes>
     </BrowserRouter>

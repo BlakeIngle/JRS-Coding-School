@@ -11,6 +11,7 @@ export default function LoginForm() {
         password: ''
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoginFailed, setIsLoginFailed] = useState(false);
 
     const api = useApi();
     const localStorageService = useLocalStorage();
@@ -27,6 +28,7 @@ export default function LoginForm() {
     }
 
     function attemptLogIn() {
+        console.log("logging in")
 
         api.login(formData)
             .then(results => {
@@ -37,9 +39,12 @@ export default function LoginForm() {
                 //  nav to home page
                 navigate('/');
             }).catch(err => {
-                // failed login
+                console.error(err)
+                setIsLoginFailed(true);
+            }).finally(() => {
+                console.log("done loading")
                 setIsLoading(false);
-            });
+            })
 
     }
 
@@ -99,6 +104,12 @@ export default function LoginForm() {
                     ? 'Log In'
                     : <div className="loader" />}
             </button>
+
+            {isLoginFailed && (
+                <div className="failed">
+                    Username or password was incorrect
+                </div>
+            )}
         </form>
     );
 }
