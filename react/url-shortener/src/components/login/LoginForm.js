@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import { useApi } from '../../services/api.service';
 import { useLocalStorage } from '../../services/localStorage.service';
 import './LoginForm.css';
@@ -44,7 +45,7 @@ export default function LoginForm() {
             }).finally(() => {
                 console.log("done loading")
                 setIsLoading(false);
-            })
+            });
 
     }
 
@@ -55,7 +56,7 @@ export default function LoginForm() {
 
         setTimeout(() => {
             attemptLogIn();
-        }, 1000);
+        }, 500);
     }
 
     return (
@@ -110,6 +111,12 @@ export default function LoginForm() {
                     Username or password was incorrect
                 </div>
             )}
+
+            <hr />
+
+            <Link to="/user/signup">
+                New here? Create an account ->
+            </Link>
         </form>
     );
 }

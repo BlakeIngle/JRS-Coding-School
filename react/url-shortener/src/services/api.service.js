@@ -1,8 +1,8 @@
 const axios = require('axios');
 const URL = 'http://localhost:8080/api';
 
-function createUrl(id, url) {
-    const body = { id, url }
+function createUrl(id, url, userId) {
+    const body = { id, url, userId }
     return axios.post(`${URL}/urls`, body);
 }
 
@@ -12,6 +12,10 @@ function getAllUrls() {
 
 function getUrlById(id) {
     return axios.get(`${URL}/urls/${id}`);
+}
+
+function searchUrls(subStr) {
+    return axios.get(`${URL}/urls/search/${subStr}`);
 }
 
 function deleteUrl(id) {
@@ -33,7 +37,8 @@ const api = {
     deleteUrl,
     login,
     getAllUrls,
-    createAccount
+    createAccount,
+    searchUrls
 };
 
 function useApi() {

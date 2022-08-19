@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useApi } from '../services/api.service';
 import './UrlForm.css';
+import { useLocalStorage } from '../services/localStorage.service';
 
 export default function UrlForm() {
 
@@ -10,6 +11,8 @@ export default function UrlForm() {
     });
     const [isInvalid, setIsInvalid] = useState(false);
     const [didUserSubmit, setDidUserSubmit] = useState(false);
+    const ls = useLocalStorage();
+    const user = ls.getUser();
 
     var timeoutRef = useRef(null);
 
@@ -40,16 +43,20 @@ export default function UrlForm() {
         }
 
         // post to DB
-        api.createUrl(formData.id, formData.url)
+        api.createUrl(formData.id, formData.url, user.id)
             .then((results) => {
                 console.log(results.data.message);
                 alert(results.data.message);
             }).catch((err) => {
+
+                console.log("failed request")
                 let errno = err?.response?.data?.error?.errno
                 if (errno == 1062) {
                     setIsInvalid(true);
                 }
-            });
+            }).finally(() => {
+                console.log("request done")
+            })
     }
 
     function checkIfIdIsTaken() {

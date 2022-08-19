@@ -1,0 +1,47 @@
+.login-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.login-form-container {
+  background-color: rgb(204, 204, 204);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form > div label:first-of-type {
+  display: block;
+}
+
+.login-form input:not([type="checkbox"]) {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.login-form .show-password {
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+
+.login-form .login-failed {
+  color: rgb(255, 45, 45);
+  font-size: 0.8rem;
+  opacity: 0;
+}
+.login-form .login-failed.visible {
+  opacity: 1;
+}
+
+.login-form button {
+  border: none;
+  font: inherit;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+}

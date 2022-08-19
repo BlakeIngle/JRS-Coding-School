@@ -9,17 +9,25 @@ export default function NavigatorComponent() {
     const api = useApi();
 
     function doNavigate() {
+        console.log("loading url")
         api.getUrlById(id)
             .then((results) => {
                 // the results are in!
-                const destination = results.data?.url?.url;
+                console.log(results)
+                const destination = results.data?.url;
                 if (destination) {
                     setTimeout(() => {
                         window.location.href = destination;
 
-                    }, 1000);
+                    }, 700);
                 }
-            });
+            })
+            .catch(err => {
+                console.error(err)
+            })
+            .finally(() => {
+                console.log("request finished")
+            })
     }
 
     useEffect(() => {

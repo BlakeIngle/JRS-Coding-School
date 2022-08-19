@@ -26,7 +26,7 @@ export default function SignUpPage() {
             <br />
             <SignUpForm onSubmit={attemptSignUp} http={http} />
             <hr />
-            <Link to="/login">
+            <Link to="/user/login">
                 <button type="button">Log In</button>
             </Link>
         </div>

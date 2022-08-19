@@ -5,7 +5,52 @@ exports.getAllUrls = (req, res) => {
 }
 
 exports.getUrlById = (req, res) => {
+    const { id } = req.params;
 
+    const sql = `
+        SELECT * FROM urls
+            WHERE id = ?;
+    `;
+
+    db.query(sql, [id], (err, results) => {
+        if (err) {
+            res.status(500).send({
+                error: err
+            })
+        } else if (results.length == 0) {
+            res.status(404).send({
+                message: "No urls found :(",
+                id
+            })
+        } else {
+            res.send(results[0]);
+        }
+    });
+}
+
+exports.searchUrls = (req, res) => {
+    const { subStr } = req.params;
+
+    const sql = `
+        SELECT * FROM urls
+            WHERE url LIKE ?;
+    `;
+
+    const pValues = [`%${subStr}%`];
+
+    db.query(sql, pValues, (err, results) => {
+        if (err) {
+            res.status(500).send({
+                error: err
+            })
+        } else if (results.length == 0) {
+            res.status(404).send({
+                message: "No urls found :(",
+            })
+        } else {
+            res.send(results);
+        }
+    });
 }
 
 exports.createUrl = (req, res) => {
