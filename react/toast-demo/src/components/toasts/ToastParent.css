@@ -1,0 +1,16 @@
+.toast-parent {
+  position: fixed;
+  z-index: 10;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.toasts-container {
+  position: fixed;
+  top: 2rem;
+  right: 0;
+  z-index: 2;
+}

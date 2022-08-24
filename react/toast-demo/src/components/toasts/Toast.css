@@ -1,0 +1,128 @@
+.toast-root {
+  width: 18rem;
+  text-align: left;
+  padding: 0.5rem 1.5rem 0.5rem 3.5rem;
+  position: relative; /* this is now the 'parent' */
+  border-radius: 5px;
+
+  color: var(--color);
+  background-color: var(--background-color);
+  border-left: solid var(--color) 5px;
+}
+
+.toast-root .icon {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.toast-root .message {
+  padding-left: 1rem;
+}
+
+.toast-root .message h4 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.toast-root .summary {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast-root .x-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+  transition: all 200ms;
+}
+.toast-root .x-button:hover {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+
+.toast-root.success {
+  --color: hsl(100, 85%, 35%);
+  --background-color: hsla(100, 75%, 75%, 0.95);
+}
+
+.toast-root.info {
+  --color: hsl(225, 85%, 35%);
+  --background-color: hsla(225, 75%, 75%, 0.95);
+}
+
+.toast-root.warning {
+  --color: hsl(55, 85%, 35%);
+  --background-color: hsla(55, 75%, 75%, 0.95);
+}
+
+.toast-root.error {
+  --color: hsl(345, 85%, 35%);
+  --background-color: hsla(345, 75%, 75%, 0.95);
+}
+
+/* animations for sticky / non-stick toasts */
+.toast-root {
+  animation-name: fade-in-out;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-root.sticky {
+  animation-name: fade-in;
+}
+
+@keyframes fade-in-out {
+  0% {
+    /* start fade in */
+    opacity: 0;
+  }
+  7% {
+    /* end fade in */
+    opacity: 1;
+  }
+  75% {
+    /* start fade out */
+    opacity: 1;
+  }
+  98% {
+    /* end fade out */
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    /* start fade in */
+    opacity: 0;
+  }
+  7% {
+    /* end fade in */
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
